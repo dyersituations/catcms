@@ -1,0 +1,7 @@
+development:
+    needs_auth: true
+    admin_pass: $2a$10$8Ve7vTPLgoEsspel3OBHfud7a2NDn4B6qew4KDHaFgWEdY5HF9Wxq
+    
+production:
+    needs_auth: true
+    admin_pass: $2a$10$8Ve7vTPLgoEsspel3OBHfud7a2NDn4B6qew4KDHaFgWEdY5HF9Wxq

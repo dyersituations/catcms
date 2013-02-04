@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :authorize, :except => :show
+
   def show
     load_page
     @pages = Page.all
