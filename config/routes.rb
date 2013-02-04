@@ -1,6 +1,10 @@
 DynamicArtsite::Application.routes.draw do
+  match 'admin' => 'admin#admin'
+  match 'login' => 'admin#login'
+  match 'logout' => 'admin#logout'
+
   match ':path' => 'pages#show'
-  match ':path/edit' => 'pages#edit'
+  #match ':path/edit' => 'pages#edit'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
