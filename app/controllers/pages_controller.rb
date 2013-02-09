@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   before_filter :authorize, :except => :show
 
+  def new
+
+  end
+
   def show
     load_page
     @pages = Page.all
@@ -15,7 +19,7 @@ class PagesController < ApplicationController
     
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
+        format.html { redirect_to page_view_path(@page.path), notice: 'Page was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
