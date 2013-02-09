@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :authorize, :except => :show
 
   def new
-
+    @page = Page.new
   end
 
   def show
@@ -12,6 +12,21 @@ class PagesController < ApplicationController
 
   def edit
     load_page
+  end
+
+  def create
+    @page = Page.new(params[:page])
+
+    respond_to do |format|
+      if @page.save
+        location = page_view_path(@page.path)
+        format.html { redirect_to location, notice: 'Page was successfully created.' }
+        format.json { render json: @page, status: :created, location: location }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @page.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
@@ -31,6 +46,10 @@ class PagesController < ApplicationController
   private
   
   def load_page
-    @page = Page.find_by_path!(params[:path])
+    if params[:path]
+      @page = Page.find_by_path!(params[:path])
+    else
+      @page = Page.find_by_id!(params[:id])
+    end
   end
 end
