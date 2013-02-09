@@ -6,7 +6,8 @@ DynamicArtsite::Application.routes.draw do
   match 'pages/new' => 'pages#new'
   match ':path' => 'pages#show', :as => 'page_view'
   match ':path/edit' => 'pages#edit'
-  match ':path/update' => 'pages#update', :as => 'page_update'
+  post 'pages' => 'pages#create'
+  put 'pages/:id' => 'pages#update'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
