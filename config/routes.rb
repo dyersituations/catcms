@@ -1,13 +1,14 @@
 DynamicArtsite::Application.routes.draw do
+  # admin user management routes
   match 'admin' => 'admin#admin'
   match 'login' => 'admin#login'
   match 'logout' => 'admin#logout'
-  
+
+  # pages routes
   match 'pages/new' => 'pages#new'
+  resources :pages, :only => [:create, :update]
   match ':path' => 'pages#show', :as => 'page_view'
   match ':path/edit' => 'pages#edit'
-  post 'pages' => 'pages#create'
-  put 'pages/:id' => 'pages#update'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
