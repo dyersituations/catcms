@@ -19,12 +19,9 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        location = page_view_path(@page.path)
-        format.html { redirect_to location, notice: 'Page was successfully created.' }
-        format.json { render json: @page, status: :created, location: location }
+        format.html { redirect_to page_view_path(@page.path), notice: 'Page was successfully created.' }
       else
         format.html { render action: 'new' }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -35,11 +32,18 @@ class PagesController < ApplicationController
     respond_to do |format|
       if @page.update_attributes(params[:page])
         format.html { redirect_to page_view_path(@page.path), notice: 'Page was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    load_page
+    @page.destroy
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
     end
   end
   

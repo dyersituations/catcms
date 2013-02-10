@@ -3,3 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Cancel', page_view_path(@page.path) %>
+<%= link_to 'Remove Page', @page, :confirm => 'Are you sure you want to remove this page permanently?', :method => :delete %>
