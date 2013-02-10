@@ -6,7 +6,7 @@ DynamicArtsite::Application.routes.draw do
 
   # pages routes
   match 'pages/new' => 'pages#new'
-  resources :pages, :only => [:create, :update]
+  resources :pages, :only => [:create, :update, :destroy]
   match ':path' => 'pages#show', :as => 'page_view'
   match ':path/edit' => 'pages#edit'
 

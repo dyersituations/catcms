@@ -18182,3 +18182,4423 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:47:58 -0800
 Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Connecting to database specified by database.yml
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.4ms)
+  Rendered pages/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 97ms (Views: 51.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /global.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:33 -0800
+Served asset /banner.png - 304 Not Modified (1ms)
+
+
+Started GET "/home/edit" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"home"}
+Redirected to http://localhost:3000/admin
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Processing by AdminController#admin as HTML
+  Rendered admin/admin.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:35 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:36 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Processing by AdminController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "admin_pass"=>"[FILTERED]", "commit"=>"Login"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:39 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/edit" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  Rendered pages/_form.html.erb (7.3ms)
+  Rendered pages/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:43 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started PUT "/pages/1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "page"=>{"title"=>"Home", "path"=>"home", "content"=>"Welcome home! Yay!"}, "commit"=>"Update Page", "id"=>"1"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  UPDATE "pages" SET "content" = 'Welcome home! Yay!', "updated_at" = '2013-02-10 21:49:47.339215' WHERE "pages"."id" = 1
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 34ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:47 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"about"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'about' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:48 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"contact"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'contact' LIMIT 1
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"links"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'links' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:49 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/gallery1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"gallery1"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'gallery1' LIMIT 1
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:50 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/mew" for 127.0.0.1 at 2013-02-10 13:49:55 -0800
+
+ActionController::RoutingError (No route matches [GET] "/pages/mew"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (1.7ms)
+  Rendered pages/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:49:58 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started POST "/pages" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "page"=>{"title"=>"YO!", "path"=>"yo", "content"=>"YOYO"}, "commit"=>"Create Page"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "pages" ("content", "created_at", "path", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "YOYO"], ["created_at", Sun, 10 Feb 2013 21:50:09 UTC +00:00], ["path", "yo"], ["title", "YO!"], ["updated_at", Sun, 10 Feb 2013 21:50:09 UTC +00:00]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/yo
+Completed 302 Found in 9ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/yo" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:09 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:10 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/woo" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"woo"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'woo' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:11 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/gallery2" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"gallery2"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'gallery2' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:12 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/gallery1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"gallery1"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'gallery1' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"contact"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'contact' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-02-10 13:50:13 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"about"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'about' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:50:14 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (2.2ms)
+  Rendered pages/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:57:26 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Connecting to database specified by database.yml
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (5.0ms)
+  Rendered pages/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 83ms (Views: 43.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 13:57:32 -0800
+Served asset /banner.png - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:12:35 -0800
+Connecting to database specified by database.yml
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:12:35 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.4ms)
+  Rendered pages/show.html.erb within layouts/application (4.4ms)
+Compiled tests.css  (5ms)  (pid 8736)
+Compiled application.css  (10ms)  (pid 8736)
+Compiled tests.js  (112ms)  (pid 8736)
+Compiled application.js  (119ms)  (pid 8736)
+Completed 200 OK in 234ms (Views: 200.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:35 -0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:35 -0800
+Served asset /tests.css - 200 OK (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:35 -0800
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /global.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /tests.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:12:36 -0800
+Served asset /banner.png - 304 Not Modified (1ms)
+
+
+Started GET "/gallery2/edit" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"gallery2"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'gallery2' LIMIT 1[0m
+  Rendered pages/_form.html.erb (22.8ms)
+  Rendered pages/edit.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:12:45 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/pages/6" for 127.0.0.1 at 2013-02-10 14:12:49 -0800
+
+ActionController::RoutingError (No route matches [DELETE] "/pages/6"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:03 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:13:04 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/gallery2/edit" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"gallery2"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'gallery2' LIMIT 1
+  Rendered pages/_form.html.erb (2.3ms)
+  Rendered pages/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:13:39 -0800
+Served asset /banner.png - 304 Not Modified (16ms)
+
+
+Started DELETE "/pages/6" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "id"=>"6"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mDELETE FROM "pages" WHERE "pages"."id" = ?[0m  [["id", 6]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:13:45 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/extra" for 127.0.0.1 at 2013-02-10 14:13:50 -0800
+
+ActionController::RoutingError (No route matches [GET] "/home/extra"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/extra" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:13:53 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (1.8ms)
+  Rendered pages/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:00 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:14:22 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+ERROR: compiling _app_views_pages_edit_html_erb__3267799103010796226_22803580 RAISED /home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:6: syntax error, unexpected '{', expecting ')'
+...pend= ( link_to 'Remove Page' { :confirm => 'Are you sure yo...
+...                               ^
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:6: syntax error, unexpected ',', expecting ')'
+...you want to delete this page?', :method => :delete} );@outpu...
+...                               ^
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_pages_edit_html_erb__3267799103010796226_22803580(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "pages/edit";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Editing page</h1>
+
+');@output_buffer.append= ( render 'form' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Cancel', page_view_path(@page.path) );@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Remove Page' { :confirm => 'Are you sure you want to delete this page?', :method => :delete} );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:425:in `_run__708007368373428497__process_action__3786146417868690624__callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/etag.rb:23:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__2724504113578806268__call__3663605162333610089__callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/lock.rb:15:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/casey/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.4/lib/rack/handler/webrick.rb:59:in `service'
+/home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered pages/edit.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:6: syntax error, unexpected '{', expecting ')'
+...pend= ( link_to 'Remove Page' { :confirm => 'Are you sure yo...
+...                               ^
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:6: syntax error, unexpected ',', expecting ')'
+...you want to delete this page?', :method => :delete} );@outpu...
+...                               ^
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/casey/Documents/dynamic_artsite/app/views/pages/edit.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Cancel', page_view_path(@page.path) %>
+    6: <%= link_to 'Remove Page' { :confirm => 'Are you sure you want to delete this page?', :method => :delete} %>
+  actionpack (3.2.11) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.11) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.11) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.11) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.11) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__708007368373428497__process_action__3786146417868690624__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.4) lib/rack/etag.rb:23:in `call'
+  rack (1.4.4) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__2724504113578806268__call__3663605162333610089__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:14:26 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (3.2ms)
+  Rendered pages/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:27 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:14:34 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (1.8ms)
+  Rendered pages/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:35 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.7ms)
+  Rendered pages/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:36 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (1.8ms)
+  Rendered pages/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:37 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.8ms)
+  Rendered pages/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /global.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /tests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:39 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (2.7ms)
+  Rendered pages/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.8ms)
+  Rendered pages/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /admin.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:40 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (1.5ms)
+  Rendered pages/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit?confirm=Are+you+sure+you+want+to+delete+this+page%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to delete this page?", "method"=>"delete", "path"=>"extra"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.9ms)
+  Rendered pages/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:14:41 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (3.3ms)
+  Rendered pages/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:16:05 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:16:22 -0800
+Connecting to database specified by database.yml
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1[0m
+  Rendered pages/_form.html.erb (5.2ms)
+  Rendered pages/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 96ms (Views: 62.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /tests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /global.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /tests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:16:23 -0800
+Served asset /banner.png - 304 Not Modified (1ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (1.7ms)
+  Rendered pages/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:17:15 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/pages/7" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "id"=>"7"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.8ms)[0m  [1mDELETE FROM "pages" WHERE "pages"."id" = ?[0m  [["id", 7]]
+  [1m[35m (7.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.7ms)
+  Rendered pages/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:17:24 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/edit" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.9ms)
+  Rendered pages/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:17:51 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/edit?confirm=Are+you+sure+you+want+to+remove+this+page+permanently%3F&method=delete" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"confirm"=>"Are you sure you want to remove this page permanently?", "method"=>"delete", "path"=>"home"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  Rendered pages/_form.html.erb (1.7ms)
+  Rendered pages/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:17:53 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:17:57 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/add" for 127.0.0.1 at 2013-02-10 14:18:26 -0800
+
+ActionController::RoutingError (No route matches [GET] "/pages/add"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (1.7ms)
+  Rendered pages/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:18:28 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started POST "/pages" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "page"=>{"title"=>"Extra", "path"=>"extra", "content"=>"here we go again!"}, "commit"=>"Create Page"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (17.1ms)[0m  INSERT INTO "pages" ("content", "created_at", "path", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "here we go again!"], ["created_at", Sun, 10 Feb 2013 22:18:36 UTC +00:00], ["path", "extra"], ["title", "Extra"], ["updated_at", Sun, 10 Feb 2013 22:18:36 UTC +00:00]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/extra
+Completed 302 Found in 26ms (ActiveRecord: 21.7ms)
+
+
+Started GET "/extra" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.3ms)
+  Rendered pages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:18:36 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/extra/edit" for 127.0.0.1 at 2013-02-10 14:21:57 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"extra"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'extra' LIMIT 1
+  Rendered pages/_form.html.erb (3.5ms)
+  Rendered pages/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:21:58 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/pages/10" for 127.0.0.1 at 2013-02-10 14:22:01 -0800
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "id"=>"10"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 10 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "pages" WHERE "pages"."id" = ?[0m  [["id", 10]]
+  [1m[35m (5.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:22:01 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:22:01 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:01 -0800
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:22:02 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:28:09 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/woo" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"woo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'woo' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:28:12 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/woo/edit" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"woo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'woo' LIMIT 1[0m
+  Rendered pages/_form.html.erb (3.4ms)
+  Rendered pages/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:28:16 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/pages/8" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "id"=>"8"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "pages" WHERE "pages"."id" = ?  [["id", 8]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:28:39 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:28:40 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:14 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:29:15 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo/edit" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1
+  Rendered pages/_form.html.erb (3.1ms)
+  Rendered pages/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:29:16 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:29:17 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/9" for 127.0.0.1 at 2013-02-10 14:40:14 -0800
+
+ActionController::RoutingError (No route matches [GET] "/pages/9"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:21 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:22 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered pages/_nav.html.erb (0.2ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:23 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:24 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo/edit" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  Rendered pages/_form.html.erb (2.2ms)
+  Rendered pages/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:26 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:27 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/yo/edit" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1
+  Rendered pages/_form.html.erb (1.8ms)
+  Rendered pages/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:35 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:36 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/pages/9" for 127.0.0.1 at 2013-02-10 14:40:39 -0800
+
+ActionController::RoutingError (No route matches [GET] "/pages/9"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/casey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/casey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/yo/edit" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Processing by PagesController#edit as HTML
+  Parameters: {"path"=>"yo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."path" = 'yo' LIMIT 1[0m
+  Rendered pages/_form.html.erb (3.4ms)
+  Rendered pages/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:44 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:45 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/pages/9" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HErJG7lE+Qn1uT3liAXdy+jSl90K+1i0sDcGGOnrezU=", "id"=>"9"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 9 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "pages" WHERE "pages"."id" = ?  [["id", 9]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /tests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:40:50 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-02-10 14:41:37 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"about"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'about' LIMIT 1
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /admin.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 14:41:38 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-02-10 15:10:00 -0800
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"home"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."path" = 'home' LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered pages/_nav.html.erb (0.1ms)
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /tests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /tests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/banner.png" for 127.0.0.1 at 2013-02-10 15:10:01 -0800
+Served asset /banner.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
