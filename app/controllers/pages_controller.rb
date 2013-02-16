@@ -8,6 +8,17 @@ class PagesController < ApplicationController
   def show
     load_page
     @pages = Page.all
+
+    # render appropriate view
+    case @page.page_type
+    when Page::PAGETYPES[:GALLERY]
+      render :gallery
+    when Page::PAGETYPES[:BLOG]
+      @posts = Post.where('posts.page_path=?', @page.path)
+      render :blog
+    else
+      render :plain
+    end
   end
 
   def edit

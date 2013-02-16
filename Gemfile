@@ -24,6 +24,12 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+# File uploads
+gem 'carrierwave'
+
+# Image processing
+gem 'rmagick'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

@@ -1,0 +1,9 @@
+<% if @posts.each do |post| %>
+  <div>
+    <div class="title"><%= post.title %></div>
+    <div class="image"><%= post.image %></div>
+    <div class="content"><%= post.content %></div>
+  </div>
+<% end.empty? %>
+  No posts.
+<% end %>
