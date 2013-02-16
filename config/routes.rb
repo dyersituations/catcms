@@ -1,10 +1,12 @@
 DynamicArtsite::Application.routes.draw do
-  # admin user management routes
+  resources :posts
+
+  # Admin user management routes
   match 'admin' => 'admin#admin'
   match 'login' => 'admin#login'
   match 'logout' => 'admin#logout'
 
-  # pages routes
+  # Pages routes
   match 'pages/new' => 'pages#new'
   resources :pages, :only => [:create, :update, :destroy]
   match ':path' => 'pages#show', :as => 'page_view'

@@ -1,10 +1,10 @@
-<%= form_for @page do |f| %>
-  <% if @page.errors.any? %>
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
-      <% @page.errors.full_messages.each do |msg| %>
+      <% @post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -16,12 +16,12 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :path %><br />
-    <%= f.text_field :path %>
+    <%= f.label :page_path %><br />
+    <%= f.collection_select(:page_path, Page.where('pages.page_type=?', Page::PAGETYPES[:BLOG]), :path, :path) %>
   </div>
   <div class="field">
-    <%= f.label :page_type %><br />
-    <%= f.select :page_type, Page::PAGETYPES %>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
   </div>
   <div class="field">
     <%= f.label :content %><br />
