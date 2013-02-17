@@ -11,13 +11,9 @@ class PagesController < ApplicationController
 
     # render appropriate view
     case @page.page_type
-    when Page::PAGETYPES[:GALLERY]
-      render :gallery
     when Page::PAGETYPES[:BLOG]
       @posts = Post.where('posts.page_path=?', @page.path)
-      render :blog
-    else
-      render :plain
+      @view = 'posts/blog'
     end
   end
 
@@ -30,7 +26,10 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to page_view_path(@page.path), notice: 'Page was successfully created.' }
+        format.html { 
+          redirect_to page_view_path(@page.path), 
+          notice: 'Page was successfully created.' 
+        }
       else
         format.html { render action: 'new' }
       end
@@ -42,7 +41,10 @@ class PagesController < ApplicationController
     
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to page_view_path(@page.path), notice: 'Page was successfully updated.' }
+        format.html { 
+          redirect_to page_view_path(@page.path), 
+          notice: 'Page was successfully updated.' 
+        }
       else
         format.html { render action: 'edit' }
       end

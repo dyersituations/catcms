@@ -1,7 +1,7 @@
 <% if @posts.each do |post| %>
-  <div>
+  <div class="blog-post-wrap">
     <div class="title"><%= post.title %></div>
-    <div class="image"><%= post.image %></div>
+    <div class="image"><%= image_tag post.image_url(:topper).to_s %></div>
     <div class="content"><%= post.content %></div>
   </div>
 <% end.empty? %>
