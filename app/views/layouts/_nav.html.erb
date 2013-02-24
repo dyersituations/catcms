@@ -1,0 +1,11 @@
+<div id="top">
+  <div id="logo">
+    <img src="assets/logo.png" alt="Logo" />
+  </div>
+
+  <div id="nav">
+    <% @pages.each do |page| %>
+      <%= link_to page.title, '/' + page.path %>
+    <% end %>
+  </div>
+</div>

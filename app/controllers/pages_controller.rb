@@ -1,15 +1,10 @@
 class PagesController < ApplicationController
   before_filter :authorize, :except => :show
-
-  def new
-    @page = Page.new
-  end
+  before_filter :load_page, :except => :create
+  before_filter :load_pages, :only => [:show, :new, :edit]
 
   def show
-    load_page
-    @pages = Page.all
-
-    # render appropriate view
+    # Find appropriate partial view
     case @page.page_type
     when Page::PAGETYPES[:BLOG]
       @posts = Post.where('posts.page_path=?', @page.path)
@@ -17,8 +12,10 @@ class PagesController < ApplicationController
     end
   end
 
+  # Page loading handled by :load_page
+  def new
+  end
   def edit
-    load_page
   end
 
   def create
@@ -37,8 +34,6 @@ class PagesController < ApplicationController
   end
 
   def update
-    load_page
-    
     respond_to do |format|
       if @page.update_attributes(params[:page])
         format.html { 
@@ -52,7 +47,6 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    load_page
     @page.destroy
 
     respond_to do |format|
@@ -62,11 +56,14 @@ class PagesController < ApplicationController
   
   private
   
+  # Load current page
   def load_page
     if params[:path]
       @page = Page.find_by_path!(params[:path])
-    else
+    elsif params[:id]
       @page = Page.find_by_id!(params[:id])
+    else
+      @page = Page.new
     end
   end
 end

@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def admin?
     session[:admin]
   end
+
+  def load_pages
+    @pages = Page.all
+  end
 end

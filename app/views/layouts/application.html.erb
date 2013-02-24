@@ -7,13 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- page wrapper -->
+  <!-- Top bar with logo and nav -->
+  <%= render 'layouts/nav' %>
+
+  <!-- Page wrapper -->
   <div id="page-wrapper">
-    <!-- banner -->
-    <div id="page-banner"></div>
-    
-    <!-- rendered content -->
-    <%= yield %>
+    <!-- Banner -->
+    <div id="banner">
+      
+    </div>
+
+    <!-- Rendered content -->
+    <div id="content">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>
