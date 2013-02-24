@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  before_filter :load_pages, :only => :admin
+
   def admin
     if (session[:admin])
       redirect_to root_path
