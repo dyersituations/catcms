@@ -1,4 +1,7 @@
+// *************
 // Scheme colors
+// *************
+
 $c-main: #333;
 $c-second: #665f5c;
 $c-banner: #7f7f7f;
@@ -8,7 +11,10 @@ $c-text-nav: #f2e2db;
 $c-text-content: #bfbfbf;
 $c-border-light: #aaa;
 
+// ******
 // Mixins
+// ******
+
 @mixin box-shadow($shadows) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
@@ -28,19 +34,23 @@ $c-border-light: #aaa;
   background-image:      -o-linear-gradient(left, $from, $to);
 }
 
+// *******
 // General
+// *******
+
 body { 
   margin: 0;
   background: $c-main;
   color: #fff;
   font-size: 62.5%;
 }
+
 div.clear {
   clear: both;
 }
 
-// Top bar
-div#top {
+// Top/bottom bar
+div.bar {
   height: 50px;
   background: $c-second;
   float: left;
@@ -49,14 +59,35 @@ div#top {
   z-index: 1;
   @include box-shadow(1px 1px 4px 2px #222);
   
-  // Logo
-  div#logo {
+  // Title/logo
+  div.title {
     width: 200px;
-    height: 125px;
+    height: 75px;
     float: left;
     background: $c-second;
     @include box-shadow(1px 1px 4px 2px #222);
     @include border-radius(0 0 5px 0);
+  }
+  
+  // Options
+  div.options {
+    background: $c-second;
+    float: left;
+    border-left: 2px solid $c-border-light;
+  }
+}
+
+// *******
+// Top bar
+// *******
+
+// Wrapper
+div#top {
+  z-index: 1;
+  
+  // Logo
+  div#logo {
+    height: 125px;
     img {
       width: 200px;
       height: 125px;
@@ -69,8 +100,6 @@ div#top {
   
   // Navigation
   div#nav {
-    background: $c-second;
-    float: left;
     border-left: 2px solid $c-border-light;
     a {
       text-decoration: none;
@@ -87,7 +116,10 @@ div#top {
   }
 }
 
+// ******
 // Banner
+// ******
+
 div#banner {
   padding-top: 50px;
   height: 175px;
@@ -95,7 +127,18 @@ div#banner {
   @include box-shadow(1px 1px 4px 2px #222);
 }
 
+// **********
+// Bottom bar
+// **********
+
+div#bottom {
+  bottom: 0;
+}
+
+// *******
 // Content
+// *******
+
 div#content {
   font-size: 1.3em;
   width: 900px;
@@ -103,7 +146,11 @@ div#content {
   padding: 5px;
 }
 
-// Post blog wrapper
+// *********
+// Post blog
+// *********
+
+// Wrapper
 div.post-blog {
   padding: 5px 0;
   

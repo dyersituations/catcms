@@ -1,9 +1,9 @@
-<div id="top">
-  <div id="logo">
+<div id="top" class="bar">
+  <div id="logo" class="title">
     <img src="/assets/logo.png" alt="Logo" />
   </div>
 
-  <div id="nav">
+  <div id="nav" class="options">
     <% @pages.each do |page| %>
       <%= link_to page.title, '/' + page.path %>
     <% end %>
