@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authorize, :except => :show
+  before_filter :load_pages, :only => [:show, :new, :edit]
 
   # GET /posts
   # GET /posts.json
