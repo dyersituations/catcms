@@ -1,7 +1,12 @@
 // Scheme colors
-$c-main: #141615;
-$c-second: #82868a;
-$text-dark: #0f1010;
+$c-main: #333;
+$c-second: #665f5c;
+$c-banner: #7f7f7f;
+$c-highlight-main: #304030;
+$c-highlight-sub: #5f665c;
+$c-text-nav: #f2e2db;
+$c-text-content: #bfbfbf;
+$c-border-light: #aaa;
 
 // Mixins
 @mixin box-shadow($shadows) {
@@ -14,12 +19,24 @@ $text-dark: #0f1010;
   -webkit-border-radius: $radius;
   border-radius: $radius;
 }
+@mixin gradient-linear-left($from, $to) {
+  background-color: $from;  
+  background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
+  background-image: -webkit-linear-gradient(left, $from, $to); 
+  background-image:    -moz-linear-gradient(left, $from, $to);
+  background-image:     -ms-linear-gradient(left, $from, $to);
+  background-image:      -o-linear-gradient(left, $from, $to);
+}
 
 // General
 body { 
   margin: 0;
   background: $c-main;
   color: #fff;
+  font-size: 62.5%;
+}
+div.clear {
+  clear: both;
 }
 
 // Top bar
@@ -28,6 +45,8 @@ div#top {
   background: $c-second;
   float: left;
   width: 100%;
+  position: fixed;
+  z-index: 1;
   @include box-shadow(1px 1px 4px 2px #222);
   
   // Logo
@@ -52,27 +71,88 @@ div#top {
   div#nav {
     background: $c-second;
     float: left;
-    border-left: 2px solid #aaa;
+    border-left: 2px solid $c-border-light;
     a {
       text-decoration: none;
       line-height: 50px;
       width: 70px;
       float: left;
       text-align: center;
-      border-right: 2px solid #aaa;
-      color: $text-dark;
+      border-right: 2px solid $c-border-light;
+      color: $c-text-nav;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
     }
   }
 }
 
-// Page layout
-div#page-wrapper {
+// Banner
+div#banner {
+  padding-top: 50px;
+  height: 175px;
+  background: $c-banner;
+  @include box-shadow(1px 1px 4px 2px #222);
+}
+
+// Content
+div#content {
+  font-size: 1.3em;
+  width: 900px;
   margin: 0 auto;
-  div#banner { 
-    height: 280px;
+  padding: 5px;
+}
+
+// Post blog wrapper
+div.post-blog {
+  padding: 5px 0;
+  
+  // Post title
+  div.title {
+    font-size: 1.2em;
+    padding-left: 75px;
+    height: 50px;
+    position: relative;
+    background: $c-highlight-main;
+    @include border-radius(3px);
+    
+    // Title date
+    div.date {
+      background: $c-highlight-sub;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      text-align: center;
+      padding: 2px;
+      width: 55px;
+      height: 36px;
+      @include border-radius(3px);
+      
+      // Date day
+      div.day {
+        font-size: 1.2em;
+      }
+      
+      // Date month
+      div.month {
+        font-size: .7em;
+      }
+    }
+    
+    // Title text
+    div.text {
+      line-height: 50px;  
+    }
   }
-  div#content {
-    width: 90%;
-    margin: 0 auto;
+  
+  // Post image
+  div.image {
+    padding: 5px;
+    float: right;
+  }
+  
+  // Post content
+  div.content {
+    padding: 5px;
   }
 }

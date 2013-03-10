@@ -8,7 +8,8 @@ class PagesController < ApplicationController
     case @page.page_type
     when Page::PAGETYPES[:BLOG]
       @posts = Post.where('posts.page_path=?', @page.path)
-      @view = 'posts/blog'
+        .order('created_at DESC')
+      @view = 'layouts/blog'
     end
   end
 
