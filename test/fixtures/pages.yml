@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
+  page_type: 
   path: MyString
+  title: MyString
   content: MyText
 
 two:
-  title: MyString
+  page_type: 
   path: MyString
+  title: MyString
   content: MyText
