@@ -17,3 +17,6 @@
 # Ignore komodo
 *.komodoproject
 .komodotools
+
+# Client uploads shouldn't be in repository
+/public/uploads/*
