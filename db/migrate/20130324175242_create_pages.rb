@@ -4,8 +4,9 @@ class CreatePages < ActiveRecord::Migration
       t.integer :page_type
       t.string :path
       t.string :title
+      t.string :header
       t.text :content
-
+      
       t.timestamps
     end
   end

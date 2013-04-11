@@ -2,6 +2,15 @@
 // Scheme colors
 // *************
 
+$c-bg-body: #eee;
+$c-bg-bar: #555;
+$c-bg-content: #fff;
+
+$c-font-body: #333;
+$c-font-bar: #eee;
+$c-font-copyright: #666;
+
+
 $c-main: #333;
 $c-second: #665f5c;
 $c-banner: #7f7f7f;
@@ -40,9 +49,11 @@ $c-border-light: #aaa;
 
 body { 
   margin: 0;
-  background: $c-main;
-  color: #fff;
+  background: $c-bg-body;
+  color: $c-font-body;
   font-size: 62.5%;
+  width: 950px;
+  margin: 0 auto;
 }
 
 div.clear {
@@ -51,80 +62,91 @@ div.clear {
 
 // Top/bottom bar
 div.bar {
-  height: 50px;
-  background: $c-second;
-  float: left;
-  width: 100%;
+  height: 60px;
+  background: $c-bg-bar;
+  color: $c-font-bar;
+  width: inherit;
   position: fixed;
   z-index: 1;
-  @include box-shadow(1px 1px 4px 2px #222);
-  
-  // Title/logo
-  div.title {
-    width: 200px;
-    height: 75px;
-    float: left;
-    background: $c-second;
-    @include box-shadow(1px 1px 4px 2px #222);
-    @include border-radius(0 0 5px 0);
-  }
-  
-  // Options
-  div.options {
-    background: $c-second;
-    float: left;
-    border-left: 2px solid $c-border-light;
-  }
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
+  @include box-shadow(0px 0px 4px 2px #000);
 }
 
-// *******
-// Top bar
-// *******
+// ******
+// Layout
+// ******
 
-// Wrapper
-div#top {
-  z-index: 1;
-  
-  // Logo
-  div#logo {
-    height: 125px;
-    img {
-      width: 200px;
-      height: 125px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include border-radius(0 0 5px 0);
+div#page-top {
+  // Title/logo
+  div.name {
+    padding: 5px 10px;
+    text-align: right;
+    float: left;
+    div {
+      width: 100%;
+    }
+    div.main {
+      font-size: 2.4em;
+    }
+    div.sub {
+      font-size: 1.6em;
     }
   }
   
   // Navigation
-  div#nav {
-    border-left: 2px solid $c-border-light;
-    a {
-      text-decoration: none;
-      line-height: 50px;
-      width: 70px;
+  div.tabs {
+    float: right;
+    div {
+      line-height: 60px;
+      padding-right: 25px;
       float: left;
       text-align: center;
-      border-right: 2px solid $c-border-light;
-      color: $c-text-nav;
       font-size: 1.4em;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
+      a {
+        color: $c-font-bar;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
     }
   }
 }
 
-// ******
-// Banner
-// ******
+// Image banner
+div#page-banner {
+  padding: 85px 0 25px;
+  height: 225px;
+}
 
-div#banner {
-  padding-top: 50px;
-  height: 175px;
-  background: $c-banner;
-  @include box-shadow(1px 1px 4px 2px #222);
+// Banner inset shadow
+div#page-banner::before
+{
+    content: '';
+    position: absolute;
+    width: 950px;
+    height: 225px;
+    @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
+}
+
+// Content
+div#page-content {
+  font-size: 1.4em;
+  padding: 10px;
+  background: $c-bg-content;
+  @include box-shadow(0px 0px 5px 1px #cbcbcb);
+  div.header {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  div.content {
+    
+  }
+}
+
+div#page-copyright {
+  padding-top: 15px;
+  float: right;
+  color: $c-font-copyright;
 }
 
 // **********
@@ -139,12 +161,7 @@ div#bottom {
 // Content
 // *******
 
-div#content {
-  font-size: 1.3em;
-  width: 900px;
-  margin: 0 auto;
-  padding: 5px;
-}
+
 
 // *********
 // Post blog
