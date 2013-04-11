@@ -1,5 +1,9 @@
-<% if @view %>
-  <%= render @view %>
-<% else %>
-  <%= @page.content %>
-<% end %>
+<div class="header"><%= @page.header %></div>
+
+<div class="content">
+    <% if @view %>
+      <%= render @view %>
+    <% else %>
+      <%= simple_format(@page.content) %>
+    <% end %>
+</div>

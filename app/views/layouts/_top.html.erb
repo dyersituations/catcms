@@ -1,11 +1,12 @@
-<div id="top" class="bar">
-  <div id="logo" class="title">
-    <img src="/assets/logo.png" alt="Logo" />
+<div id="page-top" class="bar">
+  <div class="name">
+    <div class="main">Ann Fleming</div>
+    <div class="sub">Sculptural Art</div>
   </div>
 
-  <div id="nav" class="options">
+  <div class="tabs">
     <% @pages.each do |page| %>
-      <%= link_to page.title, '/' + page.path %>
+      <div><%= link_to page.title, '/' + page.path %></div>
     <% end %>
   </div>
 </div>

@@ -11,11 +11,17 @@
   <%= render 'layouts/top' %>
 
   <!-- Image banner -->
-  <div id="banner"></div>
+  <div id="page-banner">
+    <img src="/assets/banner_test.png" alt="Banner" />
+  </div>
   
   <!-- Content -->
-  <div id="content">
+  <div id="page-content">
     <%= yield %>
+  </div>
+  
+  <div id="page-copyright">
+    All content © <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
   </div>
   
   <!-- Bottom bar with admin options -->
