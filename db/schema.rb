@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20130324175242) do
   create_table "pages", :force => true do |t|
     t.integer  "page_type"
     t.string   "path"
+    t.string   "banner"
     t.string   "title"
     t.string   "header"
     t.text     "content"

@@ -1,6 +1,9 @@
-<div class="header"><%= @page.header %></div>
+<div class="banner">
+  <%= image_tag @page.banner_url(:banner).to_s %>
+</div>
 
 <div class="content">
+    <div class="header"><%= @page.header %></div>
     <% if @view %>
       <%= render @view %>
     <% else %>
