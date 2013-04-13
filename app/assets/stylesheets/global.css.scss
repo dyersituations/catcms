@@ -112,37 +112,35 @@ div#page-top {
   }
 }
 
-// Image banner
-div#page-banner {
-  padding: 85px 0 25px;
-  height: 225px;
-}
-
-// Banner inset shadow
-div#page-banner::before
-{
+// Banner and text content
+div#page-content {
+  padding-top: 80px;
+  div.banner {
+    height: 225px;
+    padding-bottom: 20px;
+  }
+  // Banner inset shadow
+  div.banner::before
+  {
     content: '';
     position: absolute;
     width: 950px;
     height: 225px;
     @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
-}
-
-// Content
-div#page-content {
-  font-size: 1.4em;
-  padding: 10px;
-  background: $c-bg-content;
-  @include box-shadow(0px 0px 5px 1px #cbcbcb);
+  }
   div.header {
     font-size: 1.2em;
     font-weight: bold;
   }
   div.content {
-    
+    font-size: 1.4em;
+    padding: 10px;
+    background: $c-bg-content;
+    @include box-shadow(0px 0px 5px 1px #cbcbcb);
   }
 }
 
+// Footer copyright
 div#page-copyright {
   padding-top: 15px;
   float: right;
