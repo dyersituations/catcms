@@ -5,22 +5,10 @@
 $c-bg-body: #efefef;
 $c-bg-bar: #555;
 $c-bg-content: #fff;
-
 $c-border-content: #ddd;
-
 $c-font-body: #333;
 $c-font-bar: #eee;
 $c-font-copyright: #666;
-
-
-$c-main: #333;
-$c-second: #665f5c;
-$c-banner: #7f7f7f;
-$c-highlight-main: #304030;
-$c-highlight-sub: #5f665c;
-$c-text-nav: #f2e2db;
-$c-text-content: #bfbfbf;
-$c-border-light: #aaa;
 
 // ******
 // Mixins
@@ -59,15 +47,15 @@ body {
 }
 
 p {
-  padding: 0 0 10px 0;
+  padding: 0 0 10px;
   margin: 0;
+  text-align: justify;
 }
 
 div.clear {
   clear: both;
 }
 
-// Top/bottom bar
 div.bar {
   height: 60px;
   background: $c-bg-bar;
@@ -134,21 +122,25 @@ div#page-content {
     width: 950px;
     height: 225px;
     @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
-  }
-  div.header {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+  }  
   div.content {
     font-size: 1.4em;
     background: $c-bg-content;
     @include box-shadow(0px 0px 5px 1px #cbcbcb);
+    div.header {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    div.plain {
+      padding: 0 10px;
+    }
   }
 }
 
 // Footer copyright
 div#page-copyright {
-  padding-top: 15px;
+  padding: 15px 0;
   float: right;
   color: $c-font-copyright;
 }
@@ -166,7 +158,6 @@ div#bottom {
 // *********
 
 div.blog-post {
-  padding-top: 10px;
   div.title {
     font-size: 1.2em;
     padding-left: 90px;
@@ -198,6 +189,7 @@ div.blog-post {
   }
   div.image {
     padding: 10px;
+    text-align: center;
   }
   > div.text {
     padding: 0 20px;
