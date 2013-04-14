@@ -37,7 +37,7 @@ class PostUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [200, 200]
   end
   version :blog do
-    process :resize_to_fill => [850, 200]
+    process :resize_to_fill => [700, 250]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

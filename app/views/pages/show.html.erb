@@ -5,8 +5,10 @@
 <div class="content">
     <div class="header"><%= @page.header %></div>
     <% if @view %>
-      <%= render @view %>
+        <%= render @view %>
     <% else %>
-      <%= simple_format(@page.content) %>
+        <div class="plain">
+            <%= simple_format(@page.content) %>
+        </div>
     <% end %>
 </div>
