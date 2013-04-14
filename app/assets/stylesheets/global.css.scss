@@ -2,9 +2,11 @@
 // Scheme colors
 // *************
 
-$c-bg-body: #eee;
+$c-bg-body: #efefef;
 $c-bg-bar: #555;
 $c-bg-content: #fff;
+
+$c-border-content: #ddd;
 
 $c-font-body: #333;
 $c-font-bar: #eee;
@@ -54,6 +56,11 @@ body {
   font-size: 62.5%;
   width: 950px;
   margin: 0 auto;
+}
+
+p {
+  padding: 0 0 10px 0;
+  margin: 0;
 }
 
 div.clear {
@@ -134,7 +141,6 @@ div#page-content {
   }
   div.content {
     font-size: 1.4em;
-    padding: 10px;
     background: $c-bg-content;
     @include box-shadow(0px 0px 5px 1px #cbcbcb);
   }
@@ -155,66 +161,48 @@ div#bottom {
   bottom: 0;
 }
 
-// *******
-// Content
-// *******
-
-
-
 // *********
-// Post blog
+// Blog post
 // *********
 
-// Wrapper
-div.post-blog {
-  padding: 5px 0;
-  
-  // Post title
+div.blog-post {
+  padding-top: 10px;
   div.title {
     font-size: 1.2em;
-    padding-left: 75px;
+    padding-left: 90px;
     height: 50px;
     position: relative;
-    background: $c-highlight-main;
-    @include border-radius(3px);
-    
-    // Title date
+    border: 1px solid $c-border-content;
+    border-left: 0;
+    width: 60%;
+    background: #eee;
     div.date {
-      background: $c-highlight-sub;
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 2px;
+      left: 0;
       text-align: center;
       padding: 2px;
-      width: 55px;
-      height: 36px;
-      @include border-radius(3px);
-      
-      // Date day
+      width: 70px;
+      height: 42px;
+      border-right: 1px solid $c-border-content;
       div.day {
-        font-size: 1.2em;
+        font-size: 1.3em;
       }
-      
-      // Date month
       div.month {
-        font-size: .7em;
+        font-size: .6em;
       }
     }
-    
-    // Title text
     div.text {
       line-height: 50px;  
     }
   }
-  
-  // Post image
   div.image {
-    padding: 5px;
-    float: right;
+    padding: 10px;
   }
-  
-  // Post content
-  div.content {
-    padding: 5px;
+  > div.text {
+    padding: 0 20px;
   }
+}
+div.blog-post.alpha {
+  border:0;
 }
