@@ -1,0 +1,11 @@
+<div id="gallery-wrapper">
+  <% if @posts.each do |post| %>
+    <div class="gallery-image" href="<%= post.image_url().to_s %>"
+      data-text="<%= post.content %>">
+      <%= image_tag post.image_url(:thumb).to_s %>
+    </div>
+  <% end.empty? %>
+    No images.
+  <% end %>
+  <div class="clear"></div>
+</div>

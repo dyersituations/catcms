@@ -5,7 +5,6 @@ class CreatePages < ActiveRecord::Migration
       t.string :path
       t.string :banner
       t.string :title
-      t.string :header
       t.text :content
       
       t.timestamps

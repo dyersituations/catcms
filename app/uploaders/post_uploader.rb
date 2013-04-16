@@ -34,10 +34,10 @@ class PostUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [200, 200]
+    process :resize_to_fill => [220, 220, Magick::NorthGravity]
   end
   version :blog do
-    process :resize_to_fill => [700, 250]
+    process :resize_to_fill => [700, 250, Magick::NorthGravity]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

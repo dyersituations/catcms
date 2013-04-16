@@ -52,6 +52,10 @@ p {
   text-align: justify;
 }
 
+img {
+  vertical-align: top;
+}
+
 div.clear {
   clear: both;
 }
@@ -125,15 +129,10 @@ div#page-content {
   }  
   div.content {
     font-size: 1.4em;
-    background: $c-bg-content;
+    background: $c-bg-content;    
     @include box-shadow(0px 0px 5px 1px #cbcbcb);
-    div.header {
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 10px;
-    }
     div.plain {
-      padding: 0 10px;
+      padding: 10px 10px 0;
     }
   }
 }
@@ -158,6 +157,7 @@ div#bottom {
 // *********
 
 div.blog-post {
+  padding-top: 10px;  
   div.title {
     font-size: 1.2em;
     padding-left: 90px;
@@ -197,4 +197,17 @@ div.blog-post {
 }
 div.blog-post.alpha {
   border:0;
+}
+
+// *****************
+// Gallery thumbnail
+// *****************
+
+div#gallery-wrapper {
+  padding: 7px;
+  div.gallery-image {
+    float: left;
+    cursor: pointer;
+    padding: 7px;
+  }
 }

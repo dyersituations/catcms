@@ -7,9 +7,11 @@ class PagesController < ApplicationController
     # Find appropriate partial view
     case @page.page_type
     when Page::PAGETYPES[:BLOG]
-      @posts = Post.where('posts.page_path=?', @page.path)
-        .order('created_at DESC')
+      load_posts_desc
       @view = 'layouts/blog'
+    when Page::PAGETYPES[:GALLERY]
+      load_posts_desc
+      @view = 'layouts/gallery'
     end
   end
 
@@ -66,5 +68,10 @@ class PagesController < ApplicationController
     else
       @page = Page.new
     end
+  end
+  
+  def load_posts_desc
+    @posts = Post.where('posts.page_path=?', @page.path)
+        .order('created_at DESC')
   end
 end
