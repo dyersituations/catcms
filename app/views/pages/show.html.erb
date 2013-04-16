@@ -3,12 +3,11 @@
 </div>
 
 <div class="content">
-    <div class="header"><%= @page.header %></div>
     <% if @view %>
         <%= render @view %>
     <% else %>
         <div class="plain">
-            <%= simple_format(@page.content) %>
+            <%= simple_format(@page.content).html_safe %>
         </div>
     <% end %>
 </div>

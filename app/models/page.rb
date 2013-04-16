@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :page_type, :path, :banner, :title, :header, :content
+  attr_accessible :page_type, :path, :banner, :title, :content
   
   mount_uploader :banner, BannerUploader
 

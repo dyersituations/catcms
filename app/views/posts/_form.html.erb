@@ -1,7 +1,10 @@
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %>
+        prohibited this post from being saved:
+      </h2>
 
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
@@ -17,7 +20,8 @@
   </div>
   <div class="field">
     <%= f.label :page_path %><br />
-    <%= f.collection_select(:page_path, Page.where('pages.page_type=?', Page::PAGETYPES[:BLOG]), :path, :path) %>
+    <%= f.collection_select(:page_path, Page.where('pages.page_type IN (?, ?)',
+      Page::PAGETYPES[:BLOG], Page::PAGETYPES[:GALLERY]), :path, :path) %>
   </div>
   <div class="field">
     <%= f.label :image %><br />
