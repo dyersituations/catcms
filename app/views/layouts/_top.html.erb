@@ -6,7 +6,7 @@
 
   <div class="tabs">
     <% @pages.each do |page| %>
-      <div><%= link_to page.title, '/' + page.path %></div>
+      <div><%= link_to page.title, root_url + page.path %></div>
     <% end %>
   </div>
 </div>

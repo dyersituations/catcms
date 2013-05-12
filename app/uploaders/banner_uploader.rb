@@ -37,7 +37,7 @@ class BannerUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [150, 150]
   end
   version :banner do
-    process :resize_to_fill => [950, 225]
+    process :resize_to_fill => [950, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

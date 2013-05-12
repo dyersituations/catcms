@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415043204) do
+ActiveRecord::Schema.define(:version => 20130324175242) do
 
   create_table "pages", :force => true do |t|
     t.integer  "page_type"
