@@ -33,6 +33,21 @@ $c-font-copyright: #666;
   background-image:      -o-linear-gradient(left, $from, $to);
 }
 
+// *****
+// Fonts
+// *****
+
+@font-face {
+    font-family: 'annifontitalic';
+    src: url('annifont-webfont.eot');
+    src: url('annifont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('annifont-webfont.woff') format('woff'),
+         url('annifont-webfont.ttf') format('truetype'),
+         url('annifont-webfont.svg#annifontitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // *******
 // General
 // *******
@@ -61,7 +76,7 @@ div.clear {
 }
 
 div.bar {
-  height: 60px;
+  height: 72px;
   background: $c-bg-bar;
   color: $c-font-bar;
   width: inherit;
@@ -79,9 +94,10 @@ div.bar {
 div#page-top {
   // Title/logo
   div.name {
-    padding: 5px 10px;
+    padding: 0 10px;
     text-align: right;
     float: left;
+    font-family: 'annifontitalic';
     div {
       width: 100%;
     }
@@ -90,6 +106,8 @@ div#page-top {
     }
     div.sub {
       font-size: 1.6em;
+      position: relative;
+      top: -6px;
     }
   }
   
@@ -97,7 +115,7 @@ div#page-top {
   div.tabs {
     float: right;
     div {
-      line-height: 60px;
+      line-height: 72px;
       padding-right: 25px;
       float: left;
       text-align: center;
@@ -113,7 +131,7 @@ div#page-top {
 
 // Banner and text content
 div#page-content {
-  padding-top: 80px;
+  padding-top: 92px;
   div.banner {
     height: 300px;
     padding-bottom: 20px;
@@ -124,7 +142,7 @@ div#page-content {
     content: '';
     position: absolute;
     width: 950px;
-    height: 225px;
+    height: 300px;
     @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
   }  
   div.content {
