@@ -10,7 +10,7 @@ class PagesController < ApplicationController
       load_posts_desc
       @view = 'layouts/blog'
     when Page::PAGETYPES[:GALLERY]
-      load_posts_desc
+      load_posts_alpha
       @view = 'layouts/gallery'
     end
   end
@@ -70,6 +70,13 @@ class PagesController < ApplicationController
     end
   end
   
+  # Load pages alphabetically
+  def load_posts_alpha
+    @posts = Post.where('posts.page_path=?', @page.path)
+        .order('title ASC')
+  end
+  
+  # Load posts newest first
   def load_posts_desc
     @posts = Post.where('posts.page_path=?', @page.path)
         .order('created_at DESC')
