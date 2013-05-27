@@ -15,12 +15,6 @@ class PagesController < ApplicationController
     end
   end
 
-  # Page loading handled by :load_page
-  def new
-  end
-  def edit
-  end
-
   def create
     @page = Page.new(params[:page])
 

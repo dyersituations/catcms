@@ -96,12 +96,14 @@ span.copyright {
 // Layout
 // ******
 
-div#page-top {
+div#page_top {
   // Title/logo
-  div.name {
+  div#page_top_title {
     padding: 10px;
     text-align: right;
     float: left;
+    cursor: pointer;
+    color: #fff;
     div {
       width: 100%;
     }

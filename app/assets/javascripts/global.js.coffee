@@ -1,6 +1,4 @@
 $(document).ready ->
-  $('div#page-banner').click -> window.location = '/'
-  
   $('div.gallery-image').each ->
     $this = $(this)
     $this.colorbox({
