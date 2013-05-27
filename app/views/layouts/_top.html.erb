@@ -1,8 +1,10 @@
-<div id="page-top" class="bar">
-  <div class="name">
-    <div class="main">Ann Fleming</div>
-    <div class="sub">Sculptural Art</div>
-  </div>
+<div id="page_top" class="bar">
+  <%= link_to root_url do %>
+      <div id="page_top_title">
+        <div class="main">Ann Fleming</div>
+        <div class="sub">Sculptural Art</div>
+      </div>
+  <% end %>
 
   <div class="tabs">
     <% @pages.each do |page| %>
