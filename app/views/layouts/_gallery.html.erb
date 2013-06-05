@@ -1,9 +1,10 @@
 <div id="gallery-wrapper">
   <% if @posts.each do |post| %>
-    <div class="gallery-image" href="<%= image_path(post.image) %>"
-      data-text="<%= post.content %>">
-      <%= image_tag post.image_url(:thumb) %>
-    </div>
+    <a href="<%= image_path(post.image.full) %>" rel="lightbox[gallery]"
+        data-title="<%= post.title %>"
+        data-caption="<%= simple_format(h(post.content)) %>">
+      <%= image_tag post.image.thumb %>
+    </a>
   <% end.empty? %>
     No images.
   <% end %>

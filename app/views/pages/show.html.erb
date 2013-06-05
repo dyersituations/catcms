@@ -1,7 +1,11 @@
-<div class="banner">
-  <%= image_tag @page.banner_url(:banner).to_s %>
-</div>
+<!-- Banner, not shown on gallery page -->
+<% if !@view || !@view.include?('gallery') %>
+    <div class="banner">
+      <%= image_tag @page.banner_url(:banner).to_s %>
+    </div>
+<% end %>
 
+<!-- Page content, based on view or lack of -->
 <div class="content">
     <% if @view %>
         <%= render @view %>
