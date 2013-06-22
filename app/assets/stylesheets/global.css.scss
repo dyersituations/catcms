@@ -40,10 +40,11 @@ $c-font-copyright: #666;
 @font-face {
   font-family: 'aaargh';
   src: url('aaargh.eot');
-  src: url('aaargh.eot?#iefix') format('embedded-opentype'),
+  src: url('aaargh.svg#aaarghnormal') format('svg'),
+       url('aaargh.eot?#iefix') format('embedded-opentype'),
        url('aaargh.woff') format('woff'),
-       url('aaargh.ttf') format('truetype'),
-       url('aaargh.svg#aaarghnormal') format('svg');
+       url('aaargh.ttf') format('truetype');
+
   font-weight: normal;
   font-style: normal;
 }
