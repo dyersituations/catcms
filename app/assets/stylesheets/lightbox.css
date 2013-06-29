@@ -91,6 +91,7 @@
   background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
   /* Trick IE into showing hover */
   display: block;
+  cursor: pointer;
 }
 
 /* line 72, ../sass/lightbox.sass */
@@ -117,10 +118,10 @@
 
 /* line 88, ../sass/lightbox.sass */
 .lb-dataContainer {
-  color: #ddd;
+  color: #eee;
   padding: 5px 10px;
   *zoom: 1;
-  width: 100%;
+  width: 300px;
   text-align: left;
   float: left;
   -moz-border-radius-bottomleft: 4px;
@@ -159,18 +160,17 @@
 /* line 103, ../sass/lightbox.sass */
 .lb-dataContainer #lb-caption {
   padding-top: 10px;
-  font-size: 13px;
   font-weight: bold;
   float: left;
 }
 
 .lb-dataContainer #lb-caption #lb-captionTitle {
-  font-size: 13px;
+  font-size: 14px;
   padding-bottom: 5px;
 }
 
 .lb-dataContainer #lb-caption #lb-captionContent {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 

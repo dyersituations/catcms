@@ -1,14 +1,30 @@
-<div id="page_top" class="bar">
-  <%= link_to root_url do %>
-      <div id="page_top_title">
-        <div class="main">Ann Fleming</div>
-        <div class="sub">Sculptural Art</div>
-      </div>
-  <% end %>
-
-  <div class="tabs">
-    <% @pages.each do |page| %>
-      <div><%= link_to page.title, root_url + page.path %></div>
+<div id="page_top" class="pageBar">
+  <div class="contentWrapper">
+    <%= link_to root_url do %>
+        <div id="page_top_title">
+          <div class="main">Ann Fleming</div>
+          <div class="sub">Sculptural Art</div>
+        </div>
     <% end %>
+
+    <div class="pageBar_nav">
+      <% @pages.each do |page| %>
+          <% if page.page_type == Page::PAGETYPES[:GALLERY] %>
+            <div class="pageBar_nav_btn pageBar_dropdown_btn">
+              <%= page.title %>
+              <div class="pageBar_dropdown_content">
+                <% Post.uniq.pluck(:tag).each do |tag| %>
+                  <%= link_to tag, root_url + page.path + '/' + tag.downcase,
+                    :class => 'pageBar_dropdown_content_btn pageBar_nav_btn' %>
+                <% end %>
+              </div>
+            </div>
+          <% else %>
+            <%= link_to root_url + page.path, :class => 'pageBar_nav_btn' do %>
+              <%= page.title %>
+            <% end %>
+          <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

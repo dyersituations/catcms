@@ -3,20 +3,23 @@
 <head>
   <title>Artsite</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300,300italic" rel="stylesheet" type="text/css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <!-- Top bar with logo and nav -->
   <%= render 'layouts/top' %>
-  
-  <!-- Content -->
-  <div id="page-content">
-    <%= yield %>
-  </div>
-  
-  <div id="page-copyright">
-    All content <span class="copyright">©</span> <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
+
+  <div class="contentWrapper">
+    <!-- Content -->
+    <div id="page-content">
+      <%= yield %>
+    </div>
+
+    <div id="page-copyright">
+      All content <span class="copyright">©</span> <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
+    </div>
   </div>
   
   <!-- Bottom bar with admin options -->
