@@ -12,6 +12,7 @@ class PagesController < ApplicationController
     when Page::PAGETYPES[:GALLERY]
       load_posts_alpha
       @view = 'layouts/gallery'
+    else @view = nil
     end
   end
 
