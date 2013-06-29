@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :image
       t.text :content
-
+      t.string :tag
       t.timestamps
     end
   end

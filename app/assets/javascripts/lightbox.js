@@ -189,8 +189,8 @@ lightbox = new Lightbox options
       $image = $lightbox.find('.lb-image');
       this.sizeOverlay();
       $('#lightboxOverlay').fadeIn(this.options.fadeDuration);
-      $('.loader').fadeIn('slow');
       $lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, #lb-caption').hide();
+      $lightbox.find('.lb-loader').show();
       $lightbox.find('#lb-imgContainer').addClass('animating');
       preloader = new Image;
       preloader.onload = function() {
@@ -220,10 +220,8 @@ lightbox = new Lightbox options
 
       var newImgContWidth = imageWidth + containerDirectionPadding;
       var newImgContHeight = imageHeight + containerDirectionPadding;
-      var newDataWidth = $('body').width() - newImgContWidth;
-      $data.width(newDataWidth - parseInt($data.css('padding-left'), 10) * 2);
       var newDataHeight = $data.height();
-      var newWrapWidth = newImgContWidth + newDataWidth;
+      var newWrapWidth = newImgContWidth + $data.width() + (parseInt($data.css('padding-left'), 10) * 2);
       var newWrapHeight = newImgContHeight > newDataHeight ? newImgContHeight : newDataHeight;
 
       if (newImgContWidth !== oldImgContWidth && newImgContHeight !== oldImgContHeight) {

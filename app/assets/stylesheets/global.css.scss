@@ -33,34 +33,18 @@ $c-font-copyright: #666;
   background-image:      -o-linear-gradient(left, $from, $to);
 }
 
-// *****
-// Fonts
-// *****
-
-@font-face {
-  font-family: 'aaargh';
-  src: url('aaargh.eot');
-  src: url('aaargh.svg#aaarghnormal') format('svg'),
-       url('aaargh.eot?#iefix') format('embedded-opentype'),
-       url('aaargh.woff') format('woff'),
-       url('aaargh.ttf') format('truetype');
-
-  font-weight: normal;
-  font-style: normal;
-}
-
 // *******
 // General
 // *******
 
-body { 
+body {
+  width: 100%;
   margin: 0;
   background: $c-bg-body;
   color: $c-font-body;
   font-size: 62.5%;
-  width: 948px;
-  margin: 0 auto;
-  font-family: 'aaargh';
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
 }
 
 p {
@@ -70,13 +54,20 @@ p {
 
 img {
   vertical-align: top;
+  border: none;
 }
 
 div.clear {
   clear: both;
 }
 
-div.bar {
+div.contentWrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+div.pageBar {
+  width: 100%;
   height: 78px;
   background: $c-bg-bar;
   color: $c-font-bar;
@@ -85,7 +76,33 @@ div.bar {
   z-index: 1;
   font-weight: bold;
   text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
-  @include box-shadow(0px 0px 4px 2px #000);
+  div.pageBar_nav {
+    float: right;
+    .pageBar_nav_btn {
+      line-height: 78px;
+      padding: 0 10px;
+      float: left;
+      text-align: center;
+      font-size: 1.4em;
+      color: $c-font-bar;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+  div.pageBar_dropdown_content {
+    position: absolute;
+    top: 78px;
+    right: 0;
+    padding: 5px 10px;
+    background: $c-bg-bar;
+    display: none;
+    a.pageBar_nav_btn {
+      font-size: .9em;
+      line-height: 1.5em;
+    }
+  }
 }
 
 span.copyright {
@@ -115,22 +132,7 @@ div#page_top {
     }
   }
   
-  // Navigation
-  div.tabs {
-    float: right;
-    div {
-      line-height: 78px;
-      padding-right: 25px;
-      float: left;
-      text-align: center;
-      font-size: 1.4em;
-      a {
-        color: $c-font-bar;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-    }
-  }
+
 }
 
 // Banner and text content
@@ -145,7 +147,7 @@ div#page-content {
   {
     content: '';
     position: absolute;
-    width: 950px;
+    width: 940px;
     height: 300px;
     @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
   }  
@@ -231,7 +233,8 @@ div#gallery-wrapper {
     cursor: pointer;
     padding: 15px;
     img {
-      border: 1px solid #999;
+      width: 205px;
+      height: 205px;
       @include border-radius(4px);
     }
   }
