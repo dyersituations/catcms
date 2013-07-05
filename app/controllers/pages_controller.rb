@@ -65,15 +65,16 @@ class PagesController < ApplicationController
     end
   end
   
-  # Load pages alphabetically
+  # Load posts alphabetically
   def load_posts_alpha
-    @posts = Post.where('posts.page_path=? and lower(posts.tag)=?', @page.path, params[:tag])
-        .order('title ASC')
+    @posts = Post.where("posts.page_path=? and replace(lower(posts.tag), ' ', '')=?",
+        @page.path, params[:tag].downcase)
+      .order('title ASC')
   end
   
   # Load posts newest first
   def load_posts_desc
     @posts = Post.where('posts.page_path=?', @page.path)
-        .order('created_at DESC')
+      .order('created_at DESC')
   end
 end

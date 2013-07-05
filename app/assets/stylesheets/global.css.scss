@@ -67,18 +67,15 @@ div.contentWrapper {
 
 div.pageBar {
   width: 100%;
-  height: 78px;
   background: $c-bg-bar;
   color: $c-font-bar;
   width: inherit;
   position: fixed;
   z-index: 1;
-  font-weight: bold;
   text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
   div.pageBar_nav {
     float: right;
     .pageBar_nav_btn {
-      line-height: 78px;
       padding: 0 10px;
       float: left;
       text-align: center;
@@ -92,7 +89,7 @@ div.pageBar {
   }
   div.pageBar_dropdown_content {
     position: absolute;
-    top: 78px;
+    top: 75px;
     right: 0;
     padding: 5px 10px;
     background: $c-bg-bar;
@@ -100,6 +97,10 @@ div.pageBar {
     a.pageBar_nav_btn {
       font-size: .9em;
       line-height: 1.5em;
+      white-space: nowrap;
+      width: 100%;
+      padding: 0;
+      text-align: right;
     }
   }
 }
@@ -113,25 +114,16 @@ span.copyright {
 // ******
 
 div#page_top {
+  line-height: 75px;
   // Title/logo
   div#page_top_title {
-    padding: 10px;
+    padding: 0 10px;
     text-align: right;
     float: left;
     cursor: pointer;
     color: #fff;
-    div {
-      width: 100%;
-    }
-    div.main {
-      font-size: 2.6em;
-    }
-    div.sub {
-      font-size: 1.6em;
-    }
+    font-size: 3em;
   }
-  
-
 }
 
 // Banner and text content

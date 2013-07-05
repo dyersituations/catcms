@@ -1,10 +1,7 @@
 <div id="page_top" class="pageBar">
   <div class="contentWrapper">
     <%= link_to root_url do %>
-        <div id="page_top_title">
-          <div class="main">Ann Fleming</div>
-          <div class="sub">Sculptural Art</div>
-        </div>
+        <div id="page_top_title">Ann Fleming Sculptural Art</div>
     <% end %>
 
     <div class="pageBar_nav">
@@ -14,7 +11,7 @@
               <%= page.title %>
               <div class="pageBar_dropdown_content">
                 <% Post.uniq.pluck(:tag).each do |tag| %>
-                  <%= link_to tag, root_url + page.path + '/' + tag.downcase,
+                  <%= link_to tag, root_url + page.path + '/' + tag.downcase.delete(' '),
                     :class => 'pageBar_dropdown_content_btn pageBar_nav_btn' %>
                 <% end %>
               </div>
