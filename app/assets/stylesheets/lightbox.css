@@ -118,10 +118,10 @@
 
 /* line 88, ../sass/lightbox.sass */
 .lb-dataContainer {
-  color: #eee;
+  color: #fff;
   padding: 5px 10px;
   *zoom: 1;
-  width: 300px;
+  width: 250px;
   text-align: left;
   float: left;
   -moz-border-radius-bottomleft: 4px;
@@ -160,7 +160,6 @@
 /* line 103, ../sass/lightbox.sass */
 .lb-dataContainer #lb-caption {
   padding-top: 10px;
-  font-weight: bold;
   float: left;
 }
 
@@ -170,7 +169,7 @@
 }
 
 .lb-dataContainer #lb-caption #lb-captionContent {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 
