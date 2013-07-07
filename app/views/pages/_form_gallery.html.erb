@@ -1,0 +1,8 @@
+<% if @posts.each do |post| %>
+  <%= render 'posts/form_gallery', :post => post %>
+  <%= button_to 'Remove Image', post,
+    :confirm => 'Are you sure you want to remove this image permanently?',
+    :method => :delete%>
+<% end.empty? %>
+  No images.
+<% end %>

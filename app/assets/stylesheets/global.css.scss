@@ -2,13 +2,13 @@
 // Scheme colors
 // *************
 
-$c-bg-body: #efefef;
+$c-bg-body: #debd87;
 $c-bg-bar: #555;
 $c-bg-content: #fff;
 $c-border-content: #ddd;
 $c-font-body: #333;
 $c-font-bar: #eee;
-$c-font-copyright: #666;
+$c-font-copyright: #333;
 
 // ******
 // Mixins
@@ -46,8 +46,8 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-p {
-  padding: 0 0 10px;
+h1, h2, h3, h4, p {
+  padding: 10px 0;
   margin: 0;
 }
 
@@ -60,7 +60,7 @@ div.clear {
   clear: both;
 }
 
-div.contentWrapper {
+div.contentWidth {
   width: 940px;
   margin: 0 auto;
 }
@@ -105,10 +105,6 @@ div.pageBar {
   }
 }
 
-span.copyright {
-  font-family: sans-serif;
-}
-
 // ******
 // Layout
 // ******
@@ -128,10 +124,9 @@ div#page_top {
 
 // Banner and text content
 div#page-content {
-  padding-top: 98px;
+  padding-top: 90px;
   div.banner {
     height: 300px;
-    padding-bottom: 20px;
   }
   // Banner inset shadow
   div.banner::before
@@ -140,23 +135,28 @@ div#page-content {
     position: absolute;
     width: 940px;
     height: 300px;
-    @include box-shadow(inset 0 0 3px 2px rgba(0,0,0,0.4));
+    @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
   }  
   div.content {
-    font-size: 1.4em;
-    background: $c-bg-content;    
-    @include box-shadow(0px 0px 5px 1px #cbcbcb);
+    font-size: 1.6em;
+    line-height: 1.4em;
+    background: $c-bg-content;
+    @include box-shadow(0 0 2px 2px rgba(0, 0, 0, 0.1));
     div.plain {
-      padding: 10px 10px 0;
+      padding: 20px 25px;
     }
   }
 }
 
 // Footer copyright
-div#page-copyright {
+div#page_copyright {
   padding: 15px 0;
-  float: right;
+  text-align: right;
+  font-size: 1.1em;
   color: $c-font-copyright;
+  span#page_copyright_symbol {
+    font-family: sans-serif;
+  }
 }
 
 // **********
@@ -226,7 +226,15 @@ div#gallery-wrapper {
     img {
       width: 205px;
       height: 205px;
-      @include border-radius(4px);
     }
   }
+}
+
+// *********
+// Edit form
+// *********
+
+form.form_edit_page_gallery_image {
+  width: 100%;
+  padding: 5px 0;
 }

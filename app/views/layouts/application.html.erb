@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Artsite</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <link href="http://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet" type="text/css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,14 +11,14 @@
   <!-- Top bar with logo and nav -->
   <%= render 'layouts/top' %>
 
-  <div class="contentWrapper">
+  <div class="contentWidth">
     <!-- Content -->
     <div id="page-content">
       <%= yield %>
     </div>
 
-    <div id="page-copyright">
-      All content <span class="copyright">©</span> <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
+    <div id="page_copyright">
+      All content <span id="page_copyright_symbol">©</span> <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
     </div>
   </div>
   
