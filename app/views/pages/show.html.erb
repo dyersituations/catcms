@@ -1,17 +1,15 @@
-<!-- Banner, not shown on gallery page -->
-<% if !@view || !@view.include?('gallery') %>
+<div class="content">
+  <% if !@view || !@view.include?('gallery') %>
     <div class="banner">
       <%= image_tag @page.banner_url(:banner).to_s %>
     </div>
-<% end %>
+  <% end %>
 
-<!-- Page content, based on view or lack of -->
-<div class="content">
-    <% if @view %>
-        <%= render @view %>
-    <% else %>
-        <div class="plain">
-            <%= simple_format(@page.content).html_safe %>
-        </div>
-    <% end %>
+  <% if @view %>
+    <%= render @view %>
+  <% else %>
+    <div class="plain">
+      <%= raw @page.content %>
+    </div>
+  <% end %>
 </div>

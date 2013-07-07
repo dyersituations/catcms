@@ -31,6 +31,15 @@ class PagesController < ApplicationController
     end
   end
 
+  def edit
+    case @page.page_type
+      when Page::PAGETYPES[:GALLERY]
+        load_posts_all
+        @form = 'form_gallery'
+      else @form = 'form_plain'
+    end
+  end
+
   def update
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -63,6 +72,10 @@ class PagesController < ApplicationController
     else
       @page = Page.new
     end
+  end
+
+  def load_posts_all
+    @posts = Post.where('posts.page_path=?', @page.path).order('title ASC')
   end
   
   # Load posts alphabetically
