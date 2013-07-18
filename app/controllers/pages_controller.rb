@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_filter :authorize, :except => :show
   before_filter :load_page, :except => :create
   before_filter :load_pages, :only => [:show, :new, :edit]
+  before_filter :plain, :only => [:new, :edit]
 
   def show
     # Find appropriate partial view
@@ -36,7 +37,8 @@ class PagesController < ApplicationController
       when Page::PAGETYPES[:GALLERY]
         load_posts_all
         @form = 'form_gallery'
-      else @form = 'form_plain'
+      else
+        @form = nil
     end
   end
 
@@ -60,8 +62,12 @@ class PagesController < ApplicationController
       format.html { redirect_to root_path }
     end
   end
-  
+
   private
+
+  def plain
+    @plain = @page.page_type == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
+  end
   
   # Load current page
   def load_page

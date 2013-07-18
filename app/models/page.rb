@@ -3,5 +3,5 @@ class Page < ActiveRecord::Base
   
   mount_uploader :banner, BannerUploader
 
-  PAGETYPES = { :HOME => 0, :PLAIN => 1, :BLOG => 2, :GALLERY => 3 }
+  PAGETYPES = { :PLAIN => 1, :BLOG => 2, :GALLERY => 3 }
 end
