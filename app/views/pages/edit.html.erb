@@ -12,34 +12,13 @@
   </div>
 <% end %>
 
-<%= form_for @page, :html => { :id => 'form_edit_page' } do |f| %>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :path %><br />
-    <%= f.text_field :path %>
-  </div>
-  <div class="field">
-    <%= f.label :page_type %><br />
-    <%= f.select :page_type, Page::PAGETYPES %>
-  </div>
-
-  <% if @page.page_type == Page::PAGETYPES[:PLAIN] %>
-    <%= render @form, :f => f %>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Cancel', page_view_path(@page.path) %>
 <%= button_to 'Remove Page', @page,
   :confirm => 'Are you sure you want to remove this page permanently?',
   :method => :delete %>
 
-<% if @page.page_type != Page::PAGETYPES[:PLAIN] %>
+<% if !@plain %>
   <%= render @form %>
 <% end %>
