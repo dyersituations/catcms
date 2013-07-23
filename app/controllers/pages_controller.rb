@@ -7,13 +7,16 @@ class PagesController < ApplicationController
   def show
     # Find appropriate partial view
     case @page.page_type
-    when Page::PAGETYPES[:BLOG]
-      load_posts_desc
-      @view = 'layouts/blog'
-    when Page::PAGETYPES[:GALLERY]
-      load_posts_alpha
-      @view = 'layouts/gallery'
-    else @view = nil
+      when Page::PAGETYPES[:HOME]
+        @view = 'layouts/home'
+      when Page::PAGETYPES[:BLOG]
+        load_posts_desc
+        @view = 'layouts/blog'
+      when Page::PAGETYPES[:GALLERY]
+        load_posts_alpha
+        @view = 'layouts/gallery'
+      else
+        @view = 'layouts/plain'
     end
   end
 
@@ -22,9 +25,9 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { 
-          redirect_to page_view_path(@page.path), 
-          notice: 'Page was successfully created.' 
+        format.html {
+          redirect_to page_view_path(@page.path),
+                      notice: 'Page was successfully created.'
         }
       else
         format.html { render action: 'new' }
@@ -45,9 +48,9 @@ class PagesController < ApplicationController
   def update
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { 
-          redirect_to page_view_path(@page.path), 
-          notice: 'Page was successfully updated.' 
+        format.html {
+          redirect_to page_view_path(@page.path),
+                      notice: 'Page was successfully updated.'
         }
       else
         format.html { render action: 'edit' }
@@ -68,7 +71,7 @@ class PagesController < ApplicationController
   def plain
     @plain = @page.page_type == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
   end
-  
+
   # Load current page
   def load_page
     if params[:path]
@@ -83,17 +86,17 @@ class PagesController < ApplicationController
   def load_posts_all
     @posts = Post.where('posts.page_path=?', @page.path).order('title ASC')
   end
-  
+
   # Load posts alphabetically
   def load_posts_alpha
     @posts = Post.where("posts.page_path=? and replace(lower(posts.tag), ' ', '')=?",
-        @page.path, params[:tag].downcase)
-      .order('title ASC')
+                        @page.path, params[:tag].downcase)
+    .order('title ASC')
   end
-  
+
   # Load posts newest first
   def load_posts_desc
     @posts = Post.where('posts.page_path=?', @page.path)
-      .order('created_at DESC')
+    .order('created_at DESC')
   end
 end
