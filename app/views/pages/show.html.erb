@@ -1,15 +1,3 @@
 <div class="content">
-  <% if !@view || !@view.include?('gallery') %>
-    <div class="banner">
-      <%= image_tag @page.banner_url(:banner).to_s %>
-    </div>
-  <% end %>
-
-  <% if @view %>
-    <%= render @view %>
-  <% else %>
-    <div class="plain">
-      <%= raw @page.content %>
-    </div>
-  <% end %>
+  <%= render @view %>
 </div>

@@ -128,7 +128,6 @@ div#page-content {
   div.banner {
     height: 300px;
   }
-  // Banner inset shadow
   div.banner::before
   {
     content: '';
@@ -136,7 +135,18 @@ div#page-content {
     width: 940px;
     height: 300px;
     @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
-  }  
+  }
+  div.homeImage {
+    height: 650px;
+  }
+  div.homeImage::before
+  {
+    content: '';
+    position: absolute;
+    width: 940px;
+    height: 650px;
+    @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
+  }
   div.content {
     font-size: 1.6em;
     line-height: 1.4em;
