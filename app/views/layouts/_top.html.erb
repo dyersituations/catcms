@@ -1,26 +1,26 @@
 <div id="page_top" class="pageBar">
   <div class="contentWidth">
     <%= link_to root_url do %>
-        <div id="page_top_title">Ann Fleming Sculptural Art</div>
+      <div id="page_top_title">Ann Fleming Sculptural Art</div>
     <% end %>
 
     <div class="pageBar_nav">
       <% @pages.each do |page| %>
-          <% if page.page_type == Page::PAGETYPES[:GALLERY] %>
-            <div class="pageBar_nav_btn pageBar_dropdown_btn">
-              <%= page.title %>
-              <div class="pageBar_dropdown_content">
-                <% Post.uniq.pluck(:tag).sort.each do |tag| %>
-                  <%= link_to tag, root_url + page.path + '/' + tag.downcase.delete(' '),
-                    :class => 'pageBar_dropdown_content_btn pageBar_nav_btn' %>
-                <% end %>
-              </div>
+        <% if page.page_type == Page::PAGETYPES[:GALLERY] %>
+          <div class="pageBar_nav_btn pageBar_dropdown_btn">
+            <%= page.title %>
+            <div class="pageBar_dropdown_content">
+              <% Post.uniq.pluck(:category).sort_by { |c| c.downcase }.each do |category| %>
+                <%= link_to category, root_url + page.path + '/' + category.downcase.delete(' '),
+                            :class => 'pageBar_dropdown_content_btn pageBar_nav_btn' %>
+              <% end %>
             </div>
-          <% else %>
-            <%= link_to root_url + page.path, :class => 'pageBar_nav_btn' do %>
-              <%= page.title %>
-            <% end %>
+          </div>
+        <% else %>
+          <%= link_to root_url + page.path, :class => 'pageBar_nav_btn' do %>
+            <%= page.title %>
           <% end %>
+        <% end %>
       <% end %>
     </div>
   </div>
