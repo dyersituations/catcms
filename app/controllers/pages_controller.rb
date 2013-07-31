@@ -89,8 +89,8 @@ class PagesController < ApplicationController
 
   # Load posts alphabetically
   def load_posts_alpha
-    @posts = Post.where("posts.page_path=? and replace(lower(posts.tag), ' ', '')=?",
-                        @page.path, params[:tag].downcase)
+    @posts = Post.where("posts.page_path=? and replace(lower(posts.category), ' ', '')=?",
+                        @page.path, params[:category].downcase)
     .order('title ASC')
   end
 

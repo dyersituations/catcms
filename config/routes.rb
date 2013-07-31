@@ -15,7 +15,7 @@ DynamicArtsite::Application.routes.draw do
   resources :pages, :only => [:create, :update, :destroy]
   match ':path' => 'pages#show', :as => 'page_view'
   match ':path/edit' => 'pages#edit'
-  match 'gallery/:tag' => 'pages#show', :defaults => {:path => 'gallery'}
+  match 'gallery/:category' => 'pages#show', :defaults => {:path => 'gallery'}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
