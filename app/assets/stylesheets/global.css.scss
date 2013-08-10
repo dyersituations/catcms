@@ -2,13 +2,13 @@
 // Scheme colors
 // *************
 
-$c-bg-body: #debd87;
-$c-bg-bar: #555;
+$c-bg-body: #e7e1c3;
+$c-bg-bar: #898989;
 $c-bg-content: #fff;
 $c-border-content: #ddd;
 $c-font-body: #333;
 $c-font-bar: #eee;
-$c-font-copyright: #333;
+$c-font-copyright: #555;
 
 // ******
 // Mixins
@@ -72,7 +72,7 @@ div.pageBar {
   width: inherit;
   position: fixed;
   z-index: 1;
-  text-shadow: 0 -1px 0 rgba(34,34,34,0.4);
+  text-shadow: 1px 1px 0 rgba(34,34,34,0.4);
   div.pageBar_nav {
     float: right;
     .pageBar_nav_btn {
@@ -137,14 +137,14 @@ div#page-content {
     @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
   }
   div.homeImage {
-    height: 650px;
+    height: 596px;
   }
   div.homeImage::before
   {
     content: '';
     position: absolute;
     width: 940px;
-    height: 650px;
+    height: 596px;
     @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
   }
   div.content {
