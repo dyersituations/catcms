@@ -120,11 +120,7 @@ lightbox = new Lightbox options
           return false;
         });
 
-      $lightbox = $('#lightbox');
-      $lightbox.hide().on('click', function(e) {
-        if ($(e.target).attr('id') === 'lightbox') _this.end();
-        return false;
-      });
+      $lightbox = $('#lightbox').hide();
       $lightbox.find('#lb-imgContainer').on('click', function(e) {
         if ($(e.target).attr('id') === 'lightbox') _this.end();
         return false;
