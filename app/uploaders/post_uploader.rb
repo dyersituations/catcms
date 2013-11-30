@@ -19,7 +19,7 @@ class PostUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [650, 650]
   end
   version :blog do
-    process :resize_to_fill => [700, 250, Magick::NorthGravity]
+    process :resize_to_fit => [700, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
