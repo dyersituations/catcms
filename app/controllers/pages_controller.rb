@@ -21,7 +21,9 @@ class PagesController < ApplicationController
   end
 
   def create
+    # Create page and set path based on title
     @page = Page.new(params[:page])
+    @page.path = @page.title.downcase.gsub(/\s+/, '')
 
     respond_to do |format|
       if @page.save
