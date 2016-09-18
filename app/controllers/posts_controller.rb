@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attributes(params[:post])
+      if @post.update_attributes(post_params)
         format.html { redirect_to request.referer, notice: 'Successfully updated.' }
       else
         format.html { redirect_to request.referer, notice: 'Updated not successful.' }
@@ -69,5 +69,11 @@ class PostsController < ApplicationController
         format.html { redirect_to request.referer, notice: 'Remove not successful.' }
       end
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:content, :image, :title, :page_path, :category)
   end
 end

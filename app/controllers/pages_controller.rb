@@ -22,7 +22,7 @@ class PagesController < ApplicationController
 
   def create
     # Create page and set path based on title
-    @page = Page.new(params[:page])
+    @page = Page.new(page_params)
     @page.path = @page.title.downcase.gsub(/\s+/, '')
 
     respond_to do |format|
@@ -69,6 +69,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def page_params
+    params.require(:page).permit(:page_type, :banner, :title, :content)
+  end
 
   def plain
     @plain = @page.page_type == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
