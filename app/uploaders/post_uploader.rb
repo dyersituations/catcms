@@ -13,7 +13,7 @@ class PostUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [205, 205, Magick::NorthGravity]
+    process :resize_to_fill => [205, 205, 'North']
   end
   version :full do
     process :resize_to_fit => [650, 650]

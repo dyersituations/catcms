@@ -1,15 +1,18 @@
-# Ignore bundler config
+# Ignore bundler config.
 /.bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
+/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 
 # Ignore user CarrierWave uploads.
 /public/uploads/*
 
-# Ignore RubyMine files.
-/.idea
+# Ignore Mac OS X Finder files.
+.DS_Store

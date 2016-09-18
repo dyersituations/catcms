@@ -1,6 +1,4 @@
 class Page < ActiveRecord::Base
-  attr_accessible :page_type, :path, :banner, :title, :content
-  
   mount_uploader :banner, BannerUploader
 
   PAGETYPES = { :PLAIN => 0, :HOME => 1, :BLOG => 2, :GALLERY => 3 }
