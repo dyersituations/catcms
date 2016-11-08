@@ -1,0 +1,6 @@
+<%= form_tag(:controller => :admin, :action => :save) do %>
+  <%= label_tag 'Admin Password' %>
+  <%= password_field_tag :admin_pass %>
+  <br />
+  <%= submit_tag 'Save Settings' %>
+<% end %>
