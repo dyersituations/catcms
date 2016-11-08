@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  before_filter :authorize, :except => :show
-  before_filter :load_page, :except => :create
-  before_filter :load_pages, :only => [:show, :new, :edit]
-  before_filter :plain, :only => [:new, :edit]
+  before_action :authorize, :except => :show
+  before_action :load_page, :except => :create
+  before_action :load_pages, :only => [:show, :new, :edit]
+  before_action :plain, :only => [:new, :edit]
 
   def show
     # Find appropriate partial view
@@ -80,7 +80,9 @@ class PagesController < ApplicationController
 
   # Load current page
   def load_page
-    if params[:path]
+    if Page.count == 0
+      redirect_to admin_path
+    elsif params[:path]
       @page = Page.find_by_path!(params[:path])
     elsif params[:id]
       @page = Page.find_by_id!(params[:id])

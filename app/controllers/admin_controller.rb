@@ -1,14 +1,13 @@
 class AdminController < ApplicationController
-  before_filter :load_pages, :only => :admin
+  before_action :load_pages, :only => :admin
 
-  def admin
-    if (session[:admin])
-      redirect_to root_path
-    end
+  def save
+    Settings.instance.admin_pass = params[:admin_pass]
+    redirect_to admin_path
   end
-  
+
   def login
-    if (BCrypt::Password.new(APP_CONFIG['admin_pass']) == params[:admin_pass])
+    if (Settings.instance.admin_authenticate?(params[:admin_pass]))
       session[:admin] = true
       redirect_to root_path
     else
@@ -16,7 +15,7 @@ class AdminController < ApplicationController
       redirect_to admin_path
     end
   end
-  
+
   def logout
     reset_session
     redirect_to root_path
