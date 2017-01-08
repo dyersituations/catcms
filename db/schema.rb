@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20160221203927) do
     t.string   "title",      limit: 255
     t.string   "image",      limit: 255
     t.text     "content"
+    t.string   "category",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "category",   limit: 255
   end
 
   create_table "settings", force: :cascade do |t|

@@ -25,9 +25,9 @@ $c-font-copyright: #555;
   border-radius: $radius;
 }
 @mixin gradient-linear-left($from, $to) {
-  background-color: $from;  
+  background-color: $from;
   background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
-  background-image: -webkit-linear-gradient(left, $from, $to); 
+  background-image: -webkit-linear-gradient(left, $from, $to);
   background-image:    -moz-linear-gradient(left, $from, $to);
   background-image:     -ms-linear-gradient(left, $from, $to);
   background-image:      -o-linear-gradient(left, $from, $to);
@@ -136,9 +136,6 @@ div#page-content {
     height: 300px;
     @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
   }
-  div.homeImage {
-    height: 596px;
-  }
   div.homeImage::before
   {
     content: '';
@@ -182,7 +179,7 @@ div#bottom {
 // *********
 
 div.blog-post {
-  padding-top: 10px;  
+  padding-top: 10px;
   div.title {
     font-size: 1.2em;
     padding-left: 90px;
@@ -209,7 +206,7 @@ div.blog-post {
       }
     }
     div.text {
-      line-height: 50px;  
+      line-height: 50px;
     }
   }
   div.image {
