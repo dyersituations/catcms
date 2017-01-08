@@ -2,7 +2,7 @@
   <% if @posts.each do |post| %>
     <a href="<%= image_path(post.image.full) %>" rel="lightbox[gallery]"
         data-title="<%= post.title %>"
-        data-caption="<%= simple_format(h(post.content)) %>">
+        data-caption="<%= post.content %>">
       <%= image_tag post.image.thumb %>
     </a>
   <% end.empty? %>
