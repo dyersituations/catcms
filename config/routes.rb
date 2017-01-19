@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get 'pages/new' => 'pages#new'
+  post 'pages/new' => 'pages#new'
   resources :pages, :only => [:create, :update, :destroy]
   get ':path' => 'pages#show', :as => 'page_view'
   get ':path/edit' => 'pages#edit'

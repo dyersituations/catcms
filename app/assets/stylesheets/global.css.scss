@@ -141,7 +141,6 @@ div#page-content {
     content: '';
     position: absolute;
     width: 940px;
-    height: 596px;
     @include box-shadow(inset 0 0 2px 2px rgba(0, 0, 0, 0.2));
   }
   div.content {
