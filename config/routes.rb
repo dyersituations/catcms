@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'pages#show', 'path' => 'home'
+  root :to => 'pages#show'
 
   get 'admin' => 'admin#admin'
   post 'admin/save' => 'admin#save'
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  post 'pages/new' => 'pages#new'
+  get 'pages/new' => 'pages#new'
   resources :pages, :only => [:create, :update, :destroy]
   get ':path' => 'pages#show', :as => 'page_view'
   get ':path/edit' => 'pages#edit'

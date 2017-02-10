@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_page, :except => :create
+  before_action :load_page, :only => [:show, :edit, :update]
   before_action :load_pages, :only => [:show, :new, :edit]
   before_action :plain, :only => [:new, :edit]
 
@@ -18,6 +18,10 @@ class PagesController < ApplicationController
       else
         @view = 'layouts/plain'
     end
+  end
+
+  def new
+    @page = Page.new
   end
 
   def create
@@ -75,19 +79,17 @@ class PagesController < ApplicationController
   end
 
   def plain
-    @plain = @page.page_type == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
+    @plain = @page == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
   end
 
   # Load current page
   def load_page
-    if Page.count == 0
-      redirect_to admin_path
-    elsif params[:path]
+    if params[:path]
       @page = Page.find_by_path!(params[:path])
-    elsif params[:id]
-      @page = Page.find_by_id!(params[:id])
+    elsif Page.any?
+      @page = Page.find_by_path!(Page.first.path)
     else
-      @page = Page.new
+      redirect_to pages_new_path
     end
   end
 
@@ -97,9 +99,13 @@ class PagesController < ApplicationController
 
   # Load posts alphabetically
   def load_posts_alpha
-    @posts = Post.where("posts.page_path=? and replace(lower(posts.category), ' ', '')=?",
-                        @page.path, params[:category].downcase)
-    .order('title ASC')
+    if Post.count > 0
+      @posts = Post.where("posts.page_path=? and replace(lower(posts.category), ' ', '')=?",
+                          @page.path, params[:category].downcase)
+                          .order('title ASC')
+    else
+      @posts = []
+    end
   end
 
   # Load posts newest first

@@ -15,6 +15,14 @@ class Settings
     save_setting(:admin_pass_exists, true)
   end
 
+  def gallery_captions
+    get_setting(:gallery_captions).value
+  end
+
+  def gallery_captions=(val)
+    save_setting(:gallery_captions, val)
+  end
+
   def admin_authenticate?(password)
     salt = get_setting(:admin_pass_salt).value
     hash = get_setting(:admin_pass_hash).value
