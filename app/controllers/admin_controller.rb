@@ -2,7 +2,10 @@ class AdminController < ApplicationController
   before_action :load_pages, :only => :admin
 
   def save
-    Settings.instance.admin_pass = params[:admin_pass]
+    if params[:admin_pass]
+      Settings.instance.admin_pass = params[:admin_pass]
+    end
+    Settings.instance.gallery_captions = params[:gallery_captions]
     redirect_to admin_path
   end
 
