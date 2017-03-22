@@ -84,13 +84,15 @@ class PagesController < ApplicationController
 
   # Load current page
   def load_page
+    path = Page.first.path
     if params[:path]
-      @page = Page.find_by_path!(params[:path])
-    elsif Page.any?
-      @page = Page.find_by_path!(Page.first.path)
+      path = params[:path]
+    elsif params[:page]
+      path = params[:page][:path]
     else
       redirect_to pages_new_path
     end
+    @page = Page.find_by_path!(path)
   end
 
   def load_posts_all
