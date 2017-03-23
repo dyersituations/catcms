@@ -84,11 +84,12 @@ class PagesController < ApplicationController
 
   # Load current page
   def load_page
-    path = Page.first.path
     if params[:path]
       path = params[:path]
     elsif params[:page]
       path = params[:page][:path]
+    elsif Page.any?
+      path = Page.first.path
     else
       redirect_to pages_new_path
     end
