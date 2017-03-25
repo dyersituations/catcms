@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
 
   def authorize
     if !session[:admin]
-      redirect_to admin_path
+      session[:login_redirect] = request.original_url
+      redirect_to login_path
     end
   end
 

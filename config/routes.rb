@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root :to => 'pages#show'
 
+  get 'login' => 'admin#login'
+  post 'login_admin' => 'admin#login_admin'
   get 'admin' => 'admin#admin'
   post 'admin/save' => 'admin#save'
-  post 'login' => 'admin#login'
   get 'logout' => 'admin#logout'
 
   resources :posts

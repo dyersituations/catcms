@@ -1,10 +1,3 @@
 <% if !Settings.instance.admin_pass || session[:admin] %>
   <%= render 'form' %>
-<% else %>
-  <%= form_tag('login') do %>
-    Password: <%= password_field_tag :admin_pass %>
-    <%= submit_tag 'Login' %>
-    <% end %>
-
-    <%= flash[:error] %>
 <% end %>
