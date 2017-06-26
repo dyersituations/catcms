@@ -2,8 +2,6 @@
 // Scheme colors
 // *************
 
-$c-bg-body: #e7e1c3;
-$c-bg-bar: #898989;
 $c-bg-content: #fff;
 $c-border-content: #ddd;
 $c-font-body: #333;
@@ -40,7 +38,6 @@ $c-font-copyright: #555;
 body {
   width: 100%;
   margin: 0;
-  background: $c-bg-body;
   color: $c-font-body;
   font-size: 62.5%;
   font-family: 'Raleway', sans-serif;
@@ -67,7 +64,6 @@ div.contentWidth {
 
 div.pageBar {
   width: 100%;
-  background: $c-bg-bar;
   color: $c-font-bar;
   width: inherit;
   position: fixed;
@@ -93,7 +89,6 @@ div.pageBar {
     top: 75px;
     right: 0;
     padding: 5px 10px;
-    background: $c-bg-bar;
     display: none;
     a.pageBar_nav_btn {
       font-size: .9em;
@@ -160,7 +155,6 @@ div#page_copyright {
   padding: 15px 0;
   text-align: right;
   font-size: 1.1em;
-  color: $c-font-copyright;
   span#page_copyright_symbol {
     font-family: sans-serif;
   }

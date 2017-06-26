@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Artsite</title>
+  <title><%= Settings.instance.site_name %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <link href="http://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet" type="text/css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/user_styles' %>
 </head>
 <body>
   <!-- Top bar with logo and nav -->
@@ -18,7 +19,7 @@
     </div>
 
     <div id="page_copyright">
-      All content <span id="page_copyright_symbol">©</span> <b>Ann Fleming</b> | Website by <b>Casey Dyer</b>
+      All content <span id="page_copyright_symbol">©</span> <b><%= Settings.instance.copyright_name %></b> | Website powered by <b>CatCMS</b>
     </div>
   </div>
 

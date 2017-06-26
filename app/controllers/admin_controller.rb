@@ -3,11 +3,14 @@ class AdminController < ApplicationController
   before_action :load_pages, :only => [:login, :admin]
 
   def save
-    if params[:admin_pass]
-      Settings.instance.admin_pass = params[:admin_pass]
-    end
-    Settings.instance.gallery_captions = params[:gallery_captions]
+    Settings.instance.save(params)
     redirect_to admin_path
+  end
+
+  def login
+    if !Settings.instance.admin_pass
+      redirect_to :admin
+    end
   end
 
   def login_admin
