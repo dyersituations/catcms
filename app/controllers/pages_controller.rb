@@ -82,18 +82,24 @@ class PagesController < ApplicationController
     @plain = @page == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
   end
 
-  # Load current page
   def load_page
-    if params[:path]
-      path = params[:path]
-    elsif params[:page]
-      path = params[:page][:path]
-    elsif Page.any?
-      path = Page.first.path
+    # Redirects to admin page if no admin pass
+    if !Settings.instance.admin_pass
+      redirect_to :admin
+    # Redirects to new page if no pages
+    elsif !Page.any?
+      redirect_to :pages_new
     else
-      redirect_to pages_new_path
+      path = params[:path]
+      @page = Page.find_by_path(path)
+      if !@page
+        # Redirects to root if pages exist but path has no match
+        if path
+          redirect_to root_path
+        end
+        @page = Page.first
+      end
     end
-    @page = Page.find_by_path!(path)
   end
 
   def load_posts_all

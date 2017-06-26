@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  # Root loads first page
   root :to => 'pages#show'
 
+  # Admin routes
   get 'login' => 'admin#login'
   post 'login_admin' => 'admin#login_admin'
   get 'admin' => 'admin#admin'

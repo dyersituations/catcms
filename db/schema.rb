@@ -14,22 +14,22 @@ ActiveRecord::Schema.define(version: 20160221203927) do
 
   create_table "pages", force: :cascade do |t|
     t.integer  "page_type"
-    t.string   "path",       limit: 255
-    t.string   "banner",     limit: 255
-    t.string   "title",      limit: 255
+    t.string   "path"
+    t.string   "banner"
+    t.string   "title"
     t.text     "content"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "page_path",  limit: 255
-    t.string   "title",      limit: 255
-    t.string   "image",      limit: 255
+    t.string   "page_path"
+    t.string   "title"
+    t.string   "image"
     t.text     "content"
-    t.string   "category",   limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "settings", force: :cascade do |t|
