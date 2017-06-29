@@ -1,11 +1,10 @@
 class PagesController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_page, :only => [:show, :edit, :update]
+  before_action :load_page, :only => [:show, :edit]
   before_action :load_pages, :only => [:show, :new, :edit]
   before_action :plain, :only => [:new, :edit]
 
   def show
-    # Find appropriate partial view
     case @page.page_type
       when Page::PAGETYPES[:HOME]
         @view = 'layouts/home'
@@ -52,12 +51,10 @@ class PagesController < ApplicationController
   end
 
   def update
+    page = Page.find_by_path(params[:page][:path])
     respond_to do |format|
-      if @page.update_attributes(page_params)
-        format.html {
-          redirect_to page_view_path(@page.path),
-                      notice: 'Page was successfully updated.'
-        }
+      if page.update_attributes(page_params)
+        format.html { redirect_to page_view_path(page.path) }
       else
         format.html { render action: 'edit' }
       end
