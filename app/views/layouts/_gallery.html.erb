@@ -1,5 +1,8 @@
 <div id="gallery-wrapper">
-  <% if @posts.each do |post| %>
+  <% if @posts.each_with_index do |post, index| %>
+    <% if index % 4 == 0 %>
+      <div class="gallery-thumbnail-wrapper">
+    <% end %>
     <div class="gallery-thumbnail">
       <a href="<%= image_path(post.image.full) %>" rel="lightbox[gallery]"
           data-title="<%= post.title %>"
@@ -10,6 +13,9 @@
         <%= post.title %>
       <% end %>
     </div>
+    <% if index % 4 == 3 || index == @posts.length - 1 %>
+      </div>
+    <% end %>
   <% end.empty? %>
     <div class="gallery-empty">No images.</div>
   <% end %>

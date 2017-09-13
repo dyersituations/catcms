@@ -216,14 +216,17 @@ img {
   .gallery-empty {
     padding: 20px 25px;
   }
-  .gallery-thumbnail {
-    width: 205px;
-    padding: 15px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: .9em;
+  .gallery-thumbnail-wrapper {
     float: left;
+    .gallery-thumbnail {
+      width: 205px;
+      padding: 15px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: .9em;
+      float: left;
+    }
   }
 }
 
