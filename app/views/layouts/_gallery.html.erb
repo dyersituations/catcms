@@ -10,7 +10,7 @@
         <%= image_tag post.image.thumb %>
       </a>
       <% if Settings.instance.gallery_captions %>
-        <%= post.title %>
+        <%= post.title.html_safe %>
       <% end %>
     </div>
     <% if index % 4 == 3 || index == @posts.length - 1 %>
