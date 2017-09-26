@@ -10,7 +10,7 @@
           <div class="pageBar_nav_btn pageBar_dropdown_btn">
             <%= page.title %>
             <div class="pageBar_dropdown_content">
-              <% Post.uniq.pluck(:category).sort_by { |c| c.downcase }.each do |category| %>
+              <% Post.pluck(:category).uniq{ |c| c.downcase }.sort.each do |category| %>
                 <%= link_to category, root_url + page.path + '/' + category.downcase.delete(' '),
                             :class => 'pageBar_dropdown_content_btn pageBar_nav_btn' %>
               <% end %>
