@@ -2,6 +2,10 @@ class AdminController < ApplicationController
   before_action :authorize, :except => [:login, :login_admin]
   before_action :load_pages, :only => [:login, :admin]
 
+  def admin
+    @settings = Settings.instance.get_settings
+  end
+
   def save
     Settings.instance.save(params)
     redirect_to admin_path

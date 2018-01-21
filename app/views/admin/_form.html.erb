@@ -1,27 +1,54 @@
+<div class="jumbotron">
+  <h1 class="display-5">Admin</h1>
+  <p class="lead">Below are general settings and appearance options.</p>
+</div>
+<% if !@settings.admin_pass %>
+<div class="alert alert-success">
+  Welcome to CatCMS! To start building, enter at least an admin password below and click "Save Settings".
+</div>
+<% end %>
 <%= form_tag(:controller => :admin, :action => :save) do %>
-  <%= label_tag 'Admin Password' %>
-  <%= password_field_tag :admin_pass %>
-  <br />
-  <%= label_tag 'Site Name' %>
-  <%= text_field_tag :site_name %>
-  <br />
-  <%= label_tag 'Bar Background Color' %>
-  <%= text_field_tag :bar_bg_color %>
-  <br />
-  <%= label_tag 'Bar Font Color' %>
-  <%= text_field_tag :bar_font_color %>
-  <br />
-  <%= label_tag 'Page Background Color' %>
-  <%= text_field_tag :page_bg_color %>
-  <br />
-  <%= label_tag 'Copyright Name' %>
-  <%= text_field_tag :copyright_name %>
-  <br />
-  <%= label_tag 'Copyright Color' %>
-  <%= text_field_tag :copyright_color %>
-  <br />
-  <%= label_tag 'Display Gallery Captions' %>
-  <%= check_box_tag :gallery_captions %>
-  <br />
-  <%= submit_tag 'Save Settings' %>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Admin Password' %>
+      <%= password_field_tag :admin_pass, @settings.admin_pass ? '****' : '', class: 'form-control' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Site Name' %>
+      <%= text_field_tag :site_name, @settings.site_name, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Nav Bar Background Color' %>
+      <%= text_field_tag :navbar_bg_color, @settings.navbar_bg_color, class: 'form-control' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Nav Bar Font Color' %>
+      <%= text_field_tag :navbar_font_color, @settings.navbar_font_color, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Page Background Color' %>
+      <%= text_field_tag :page_bg_color, @settings.page_bg_color, class: 'form-control' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= label_tag 'Copyright Name' %>
+      <%= text_field_tag :copyright_name, @settings.copyright_name, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <div class="form-check form-check-inline">
+        <%= check_box_tag :gallery_captions, nil, @settings.gallery_captions, class: 'form-check-input' %>
+        <%= label_tag :gallery_captions, 'Display Gallery Captions', class: 'form-check-label' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <%= button_tag 'Save Settings', class: 'btn btn-primary' %>
+    </div>
+  </div>
 <% end %>

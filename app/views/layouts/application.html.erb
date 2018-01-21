@@ -2,28 +2,17 @@
 <html>
 <head>
   <title><%= Settings.instance.site_name %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <link href="http://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet" type="text/css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/user_styles' %>
 </head>
 <body>
-  <!-- Top bar with logo and nav -->
-  <%= render 'layouts/top' %>
-
-  <div class="contentWidth">
-    <!-- Content -->
-    <div id="page-content">
-      <%= yield %>
-    </div>
-
-    <div id="page_copyright">
-      All content <span id="page_copyright_symbol">©</span> <b><%= Settings.instance.copyright_name %></b> | Website powered by <b>CatCMS</b>
-    </div>
-  </div>
-
-  <!-- Bottom bar with admin options -->
-  <!--<%= render 'layouts/bottom' %>-->
+  <%= render 'layouts/nav' %>
+  <section class="container">
+    <%= yield %>
+  </section>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
