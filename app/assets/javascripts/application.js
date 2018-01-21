@@ -1,4 +1,6 @@
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
-//= require_tree .
+//= require popper
+//= require bootstrap
 //= require lightbox
+//= require_tree .

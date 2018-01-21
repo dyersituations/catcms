@@ -85,7 +85,7 @@ class PagesController < ApplicationController
       redirect_to :admin
     # Redirects to new page if no pages
     elsif !Page.any?
-      redirect_to :pages_new
+      redirect_to new_page_path
     else
       path = params[:path]
       @page = Page.find_by_path(path)
