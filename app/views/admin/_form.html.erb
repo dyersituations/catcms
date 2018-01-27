@@ -3,9 +3,9 @@
   <p class="lead">Below are general settings and appearance options.</p>
 </div>
 <% if !@settings.admin_pass %>
-<div class="alert alert-success">
-  Welcome to CatCMS! To start building, enter at least an admin password below and click "Save Settings".
-</div>
+  <div class="alert alert-success">
+    Welcome to CatCMS! To start building, enter at least an admin password below and click "Save Settings".
+  </div>
 <% end %>
 <%= form_tag(:controller => :admin, :action => :save) do %>
   <div class="form-group row">
