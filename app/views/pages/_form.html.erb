@@ -1,27 +1,41 @@
+<div class="jumbotron">
+  <h1 class="display-5">New Page</h1>
+  <p class="lead">
+    Title: The name of the page and the path to access it.<br />
+    Page Type: The basic page format.<br />
+    Banner: The optional image that spans the top of the page.<br />
+    Content: The HTML content of the page.<br />
+  </p>
+</div>
 <%= form_for @page do |f| %>
   <%= f.hidden_field :path %>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :page_type %><br />
-    <%= f.select :page_type, Page::PAGETYPES %>
-  </div>
-
-  <% if @plain %>
-    <div class="field">
-      <%= f.label :banner %><br />
-      <%= f.file_field :banner %>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => 'form-control' %>
     </div>
-    <div class="field">
-      <%= f.label :content %><br />
-      <%= f.text_area :content %>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= f.label :page_type %>
+      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= f.label :banner %>
+      <%= f.file_field :banner, :class => 'form-control-file' %>
+    </div>
+  </div>
+  <% if @plain %>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <%= f.label :content %>
+        <%= f.text_area :content, :class => 'form-control' %>
+      </div>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <%= button_tag 'Create', class: 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>
-
