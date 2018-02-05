@@ -82,7 +82,7 @@ class PagesController < ApplicationController
   def load_page
     # Redirects to admin page if no admin pass
     if !Settings.instance.admin_pass
-      redirect_to :admin
+      redirect_to admin_path
     # Redirects to new page if no pages
     elsif !Page.any?
       redirect_to new_page_path

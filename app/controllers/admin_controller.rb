@@ -13,7 +13,7 @@ class AdminController < ApplicationController
 
   def login
     if !Settings.instance.admin_pass
-      redirect_to :admin
+      redirect_to admin_path
     end
   end
 

@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def authorize
-    if !session[:admin] && Settings.instance.admin_pass
+    if !Settings.instance.admin_pass && params[:controller] != 'admin'
+      redirect_to admin_path
+    elsif !session[:admin] && Settings.instance.admin_pass && params[:action] != 'login'
       session[:login_redirect] = request.original_url
       redirect_to login_path
     end

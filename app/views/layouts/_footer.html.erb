@@ -1,9 +1,11 @@
 <footer>
-  <span class="btn-group btn-group-sm">
-    <%= link_to 'Admin', admin_path, :class => 'btn btn-primary' %>
-    <%= link_to 'New Page', new_page_path, :class => 'btn btn-primary' %>
-    <%= link_to 'New Post', new_post_path, :class => 'btn btn-primary' %>
-  </span>
+  <% if session[:admin] %>
+    <span class="btn-group btn-group-sm">
+      <%= link_to 'Admin', admin_path, :class => 'btn btn-primary' %>
+      <%= link_to 'New Page', new_page_path, :class => 'btn btn-primary' %>
+      <%= link_to 'New Post', new_post_path, :class => 'btn btn-primary' %>
+    </span>
+  <% end %>
   <span>
     All content ©
     <% if !Settings.instance.copyright_name.to_s.empty? %>
