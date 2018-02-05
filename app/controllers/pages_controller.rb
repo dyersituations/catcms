@@ -24,10 +24,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    # Create page and set path based on title
     @page = Page.new(page_params)
-    @page.path = @page.title.downcase.gsub(/\s+/, '')
-
     respond_to do |format|
       if @page.save
         format.html {
@@ -51,7 +48,7 @@ class PagesController < ApplicationController
   end
 
   def update
-    page = Page.find_by_path(params[:page][:path])
+    page = Page.find_by_id(params[:id])
     respond_to do |format|
       if page.update_attributes(page_params)
         format.html { redirect_to page_view_path(page.path) }
@@ -62,8 +59,7 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page.destroy
-
+    Page.find_by_id(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to root_path }
     end
@@ -72,7 +68,7 @@ class PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:page_type, :banner, :title, :content)
+    params.require(:page).permit(:page_type, :banner, :path, :content)
   end
 
   def plain
