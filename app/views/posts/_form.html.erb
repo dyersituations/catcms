@@ -1,41 +1,43 @@
+<div class="jumbotron">
+  <h1 class="display-5">New Post</h1>
+  <p class="lead">
+    Title: The title of the image or blog post.<br />
+    Page: The page of the post.<br />
+    Category: The sub-section of the page.<br />
+    Image: The image content of the post.<br />
+    Content: The HTML content of the post.<br />
+  </p>
+</div>
 <%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@post.errors.count, "error") %>
-        prohibited this post from being saved:
-      </h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => 'form-control' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <div class="col-md-6 col-sm-12">
+      <%= f.label 'Page' %>
+      <%= f.collection_select(:page_path, pages_with_posts, :path, :path, {}, { :class => 'form-control' }) %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :page_path %><br />
-    <%= f.collection_select(:page_path, Page.where('pages.page_type IN (?, ?)',
-      Page::PAGETYPES[:BLOG], Page::PAGETYPES[:GALLERY]), :path, :path) %>
+  <div class="form-group row">
+    <div class="col-md-6 col-sm-12">
+      <%= f.label :category %>
+      <%= f.text_field :category, :class => 'form-control' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= f.label :image %>
+      <%= f.file_field :image, :class => 'form-control-file' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <%= f.label :content %>
+      <%= f.text_area :content, :class => 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <%= button_tag 'Create', class: 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>

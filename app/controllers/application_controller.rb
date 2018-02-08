@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
-  protected
+  helper_method :pages_with_posts
 
   def authorize
     if !Settings.instance.admin_pass && params[:controller] != 'admin'
@@ -14,5 +13,11 @@ class ApplicationController < ActionController::Base
 
   def load_pages
     @pages = Page.all
+  end
+
+  private
+
+  def pages_with_posts
+    Page.where('pages.page_type IN (?, ?)', Page::PAGETYPES[:BLOG], Page::PAGETYPES[:GALLERY])
   end
 end
