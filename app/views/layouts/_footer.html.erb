@@ -1,13 +1,16 @@
 <footer>
   <% if session[:admin] %>
     <span class="btn-group btn-group-sm">
-      <%= link_to 'Admin', admin_path, :class => 'btn btn-primary' %>
-      <%= link_to 'New Page', new_page_path, :class => 'btn btn-primary' %>
+      <%= link_to 'Admin', admin_path, :class => 'btn btn-light' %>
+      <%= link_to 'New Page', new_page_path, :class => 'btn btn-light' %>
       <% if pages_with_posts.any? %>
-        <%= link_to 'New Post', new_post_path, :class => 'btn btn-primary' %>
+        <%= link_to 'New Post', new_post_path, :class => 'btn btn-light' %>
       <% end %>
       <% if params[:controller] != 'admin' && @page && @page.id %>
-        <%= link_to 'Edit Page', edit_page_path(:id => @page.id), :class => 'btn btn-primary' %>
+        <%= link_to 'Edit Page', edit_page_path(:id => @page.id), :class => 'btn btn-light' %>
+      <% end %>
+      <% if @page && (@page.page_type == Page::PAGETYPES[:GALLERY] || @page.page_type == Page::PAGETYPES[:BLOG]) %>
+        <%= link_to 'Edit Posts', edit_posts_path(:id => @page.id), :class => 'btn btn-light' %>
       <% end %>
     </span>
   <% end %>

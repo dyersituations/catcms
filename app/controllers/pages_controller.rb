@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_page, :only => [:show, :edit]
-  before_action :load_pages, :only => [:show, :new, :edit]
+  before_action :load_page, :only => [:show, :edit, :edit_posts]
+  before_action :load_pages, :only => [:show, :new, :edit, :edit_posts]
   before_action :plain, :only => [:new, :edit]
 
   def show
@@ -37,16 +37,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def edit
-    case @page.page_type
-      when Page::PAGETYPES[:GALLERY]
-        load_posts_all
-        @form = 'form_gallery'
-      else
-        @form = nil
-    end
-  end
-
   def update
     page = Page.find_by_id(params[:id])
     respond_to do |format|
@@ -63,6 +53,10 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to root_path }
     end
+  end
+
+  def edit_posts
+    @posts = Post.where('posts.page_path=?', @page.path).order('title ASC')
   end
 
   private
@@ -93,22 +87,17 @@ class PagesController < ApplicationController
     end
   end
 
-  def load_posts_all
-    @posts = Post.where('posts.page_path=?', @page.path).order('title ASC')
-  end
-
-  # Load posts alphabetically
   def load_posts_alpha
     if Post.count > 0
-      @posts = Post.where("posts.page_path=? and replace(lower(posts.category), ' ', '')=?",
-                          @page.path, params[:category].downcase)
-                          .order('title ASC')
+      cat = params[:category]
+      cat = cat ? cat : post_cats.first
+      @posts = Post.where("posts.page_path=? and posts.category=?",
+        @page.path, cat.downcase).order('title ASC')
     else
       @posts = []
     end
   end
 
-  # Load posts newest first
   def load_posts_desc
     @posts = Post.where('posts.page_path=?', @page.path)
     .order('created_at DESC')
