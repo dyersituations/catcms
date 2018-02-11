@@ -1,32 +1,32 @@
 <%= form_for locals[:post] do |f| %>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :title %>
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label 'Page' %>
       <%= f.collection_select(:page_path, pages_with_posts, :path, :path, {}, { :class => 'form-control' }) %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :category %>
       <%= f.text_field :category, :class => 'form-control' %>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :image %>
       <%= f.file_field :image, :class => 'form-control-file' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= f.label :content %>
       <%= f.text_area :content, :class => 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= link_to 'Cancel', root_url, :class => 'btn btn-secondary' %>
       <%= button_tag (new_action ? 'Create' : 'Save') + ' Post', class: 'btn btn-primary' %>
     </div>
