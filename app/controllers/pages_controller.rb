@@ -76,20 +76,18 @@ class PagesController < ApplicationController
   end
 
   def load_page
-    # Redirects to admin page if no admin pass
-    if !Settings.instance.admin_pass
-      redirect_to admin_path
-    # Redirects to new page if no pages
-    elsif !Page.any?
+    if !Page.any?
       redirect_to new_page_path
     else
+      # Id means the page is edited.
+      # Path means the page is shown.
+      id = params[:id]
       path = params[:path]
-      @page = Page.find_by_path(path)
-      if !@page
-        # Redirects to root if pages exist but path has no match
-        if path
-          redirect_to root_path
-        end
+      if id
+        @page = Page.find_by_id(id)
+      elsif path
+        @page = Page.find_by_path(path)
+      else
         @page = Page.first
       end
     end

@@ -1,30 +1,43 @@
 <div class="jumbotron">
-  <h1 class="display-5">New Post</h1>
-  <p class="lead">
-    Title: The title of the image or blog post.<br />
-    Page: The page of the post.<br />
-    Category: The sub-section of the page.<br />
-    Image: The image content of the post.<br />
-    Content: The HTML content of the post.<br />
-  </p>
+  <h5>New Post</h5>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Title</div>
+    <div class="col-sm-12 col-md-10">The title of the image or blog post.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Page</div>
+    <div class="col-sm-12 col-md-10">The page of the post.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Category</div>
+    <div class="col-sm-12 col-md-10">The sub-section of the page.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Image</div>
+    <div class="col-sm-12 col-md-10">The image content of the post.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Content</div>
+    <div class="col-sm-12 col-md-10">The HTML content of the post.</div>
+  </div>
 </div>
 <%= form_for @post do |f| %>
   <div class="form-group row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-12 col-md-6">
       <%= f.label :title %>
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-12 col-md-6">
       <%= f.label 'Page' %>
       <%= f.collection_select(:page_path, pages_with_posts, :path, :path, {}, { :class => 'form-control' }) %>
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-12 col-md-6">
       <%= f.label :category %>
       <%= f.text_field :category, :class => 'form-control' %>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-12 col-md-6">
       <%= f.label :image %>
       <%= f.file_field :image, :class => 'form-control-file' %>
     </div>

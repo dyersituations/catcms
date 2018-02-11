@@ -8,24 +8,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <% @pages.each do |page| %>
-        <% if page.page_type == Page::PAGETYPES[:GALLERY] %>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= page.path %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <% Post.pluck(:category).uniq{ |c| c.downcase }.sort.each do |category| %>
-                <%= link_to category, root_url + page.path + '/' + category.downcase.delete(' '), :class => 'dropdown-item' %>
-              <% end %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to root_url + page.path, :class => 'nav-link' do %>
-              <%= page.path %>
-            <% end %>
-          </li>
-        <% end %>
+        <li class="nav-item">
+          <%= link_to root_url + page.path, :class => 'nav-link' do %>
+            <%= page.path %>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
