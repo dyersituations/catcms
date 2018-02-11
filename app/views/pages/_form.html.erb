@@ -1,48 +1,48 @@
 <div class="jumbotron">
   <h5><%= new_action ? 'New' : 'Edit' %> Page</h5>
   <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Path</div>
-    <div class="col-sm-12 col-md-10">The name of the page and the path to access it. Converted to capitalized words.</div>
+    <div class="col-12 col-sm-2 font-weight-bold">Path</div>
+    <div class="col-12 col-sm-10">The name of the page and the path to access it. Converted to capitalized words.</div>
   </div>
   <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Page type</div>
-    <div class="col-sm-12 col-md-10">The basic page format.</div>
+    <div class="col-12 col-sm-2 font-weight-bold">Page type</div>
+    <div class="col-12 col-sm-10">The basic page format.</div>
   </div>
   <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Banner</div>
-    <div class="col-sm-12 col-md-10">The optional image that spans the top of the page.</div>
+    <div class="col-12 col-sm-2 font-weight-bold">Banner</div>
+    <div class="col-12 col-sm-10">The optional image that spans the top of the page.</div>
   </div>
   <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Content</div>
-    <div class="col-sm-12 col-md-10">The HTML content of the page.</div>
+    <div class="col-12 col-sm-2 font-weight-bold">Content</div>
+    <div class="col-12 col-sm-10">The HTML content of the page.</div>
   </div>
 </div>
 <%= form_for @page do |f| %>
   <%= f.hidden_field :path %>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= f.label :path %>
       <%= f.text_field :path, :class => 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-md-6 col-sm-12">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type %>
       <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control' %>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :banner %>
       <%= f.file_field :banner, :class => 'form-control-file' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= f.label :content %>
       <%= f.text_area :content, :class => 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= link_to 'Cancel', @page.path ? root_url + @page.path : root_url, :class => 'btn btn-secondary' %>
       <%= button_tag (new_action ? 'Create' : 'Save') + ' Page', class: 'btn btn-primary' %>
     </div>

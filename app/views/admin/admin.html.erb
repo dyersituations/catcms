@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h5>Admin</h5>
   <div class="row">
-    <div class="col-sm-12">General settings and appearance options.</div>
+    <div class="col-12">General settings and appearance options.</div>
   </div>
 </div>
 <% if !@settings.admin_pass %>
@@ -10,46 +10,46 @@
   </div>
 <% end %>
 <%= form_tag(:controller => :admin, :action => :save) do %>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Admin Password' %>
       <%= password_field_tag :admin_pass, @settings.admin_pass ? '****' : '', class: 'form-control' %>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Site Name' %>
       <%= text_field_tag :site_name, @settings.site_name, class: 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Nav Bar Background Color' %>
       <%= text_field_tag :navbar_bg_color, @settings.navbar_bg_color, class: 'form-control' %>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Nav Bar Font Color' %>
       <%= text_field_tag :navbar_font_color, @settings.navbar_font_color, class: 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Page Background Color' %>
       <%= text_field_tag :page_bg_color, @settings.page_bg_color, class: 'form-control' %>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-12 col-sm-6 form-group">
       <%= label_tag 'Copyright Name' %>
       <%= text_field_tag :copyright_name, @settings.copyright_name, class: 'form-control' %>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12 col-md-6">
+  <div class="row">
+    <div class="col-12 col-sm-6 form-group">
       <div class="form-check form-check-inline">
         <%= check_box_tag :gallery_captions, nil, @settings.gallery_captions, class: 'form-check-input' %>
         <%= label_tag :gallery_captions, 'Display Gallery Captions', class: 'form-check-label' %>
       </div>
     </div>
   </div>
-  <div class="form-group row">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-12 form-group">
       <%= button_tag 'Save Settings', class: 'btn btn-primary' %>
     </div>
   </div>
