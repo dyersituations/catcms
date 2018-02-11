@@ -1,27 +1,4 @@
-<div class="jumbotron">
-  <h5>New Post</h5>
-  <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Title</div>
-    <div class="col-sm-12 col-md-10">The title of the image or blog post.</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Page</div>
-    <div class="col-sm-12 col-md-10">The page of the post.</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Category</div>
-    <div class="col-sm-12 col-md-10">The sub-section of the page.</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Image</div>
-    <div class="col-sm-12 col-md-10">The image content of the post.</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-2 font-weight-bold">Content</div>
-    <div class="col-sm-12 col-md-10">The HTML content of the post.</div>
-  </div>
-</div>
-<%= form_for @post do |f| %>
+<%= form_for locals[:post] do |f| %>
   <div class="form-group row">
     <div class="col-sm-12 col-md-6">
       <%= f.label :title %>
@@ -51,7 +28,7 @@
   <div class="form-group row">
     <div class="col-sm-12">
       <%= link_to 'Cancel', root_url, :class => 'btn btn-secondary' %>
-      <%= button_tag 'Create', class: 'btn btn-primary' %>
+      <%= button_tag (new_action ? 'Create' : 'Save') + ' Post', class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>

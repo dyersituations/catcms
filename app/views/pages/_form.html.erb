@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h5><%= params[:action] == 'new' ? 'New' : 'Edit' %> Page</h5>
+  <h5><%= new_action ? 'New' : 'Edit' %> Page</h5>
   <div class="row">
     <div class="col-sm-12 col-md-2 font-weight-bold">Path</div>
     <div class="col-sm-12 col-md-10">The name of the page and the path to access it. Converted to capitalized words.</div>
@@ -44,7 +44,7 @@
   <div class="form-group row">
     <div class="col-sm-12">
       <%= link_to 'Cancel', @page.path ? root_url + @page.path : root_url, :class => 'btn btn-secondary' %>
-      <%= button_tag params[:action] == 'new' ? 'Create' : 'Save', class: 'btn btn-primary' %>
+      <%= button_tag (new_action ? 'Create' : 'Save') + ' Page', class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
