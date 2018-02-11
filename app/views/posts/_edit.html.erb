@@ -35,7 +35,7 @@
       <div class="col-sm-12 col-md-7">
         <%= render 'posts/form', :locals => { :post => post } %>
         <%= link_to 'Remove Post', post,
-          :confirm => 'Are you sure you want to remove this image permanently?',
+          :data => { :confirm => 'Are you sure you want to remove this image permanently?' },
           :method => :delete %>
       </div>
     </div>
