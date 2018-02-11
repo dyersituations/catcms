@@ -1,11 +1,21 @@
 <div class="jumbotron">
-  <h1 class="display-5"><%= params[:action] == 'new' ? 'New' : 'Edit' %> Page</h1>
-  <p class="lead">
-    Path: The name of the page and the path to access it.<br />
-    Page type: The basic page format.<br />
-    Banner: The optional image that spans the top of the page.<br />
-    Content: The HTML content of the page.<br />
-  </p>
+  <h5><%= params[:action] == 'new' ? 'New' : 'Edit' %> Page</h5>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Path</div>
+    <div class="col-sm-12 col-md-10">The name of the page and the path to access it. Converted to capitalized words.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Page type</div>
+    <div class="col-sm-12 col-md-10">The basic page format.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Banner</div>
+    <div class="col-sm-12 col-md-10">The optional image that spans the top of the page.</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-2 font-weight-bold">Content</div>
+    <div class="col-sm-12 col-md-10">The HTML content of the page.</div>
+  </div>
 </div>
 <%= form_for @page do |f| %>
   <%= f.hidden_field :path %>
@@ -33,7 +43,7 @@
   </div>
   <div class="form-group row">
     <div class="col-sm-12">
-      <%= button_tag params[:action] == 'new' ? 'Create' : 'Edit', class: 'btn btn-primary' %>
+      <%= button_tag params[:action] == 'new' ? 'Create' : 'Save', class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
