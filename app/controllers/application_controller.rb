@@ -15,12 +15,6 @@ class ApplicationController < ActionController::Base
     @pages = Page.all
   end
 
-  protected
-
-  def post_cats
-    Post.pluck(:category).uniq{ |c| c.downcase }.sort
-  end
-
   private
 
   def pages_with_posts

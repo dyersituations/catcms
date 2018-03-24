@@ -89,17 +89,18 @@ class PagesController < ApplicationController
 
   def load_posts_alpha
     if Post.count > 0
+      @posts = Post.where("posts.page_id=?", @page.id)
       cat = params[:category]
-      cat = cat ? cat : post_cats.first
-      @posts = Post.where("posts.page_id=? and posts.category=?",
-        @page.id, cat.downcase).order('title ASC')
+      if cat == nil
+        cat = @posts.pluck(:category).uniq{ |c| c.downcase }.sort.first
+      end
+      @posts = @posts.where("posts.category=?", cat.downcase).order('title ASC')
     else
       @posts = []
     end
   end
 
   def load_posts_desc
-    @posts = Post.where('posts.page_id=?', @page.id)
-    .order('created_at DESC')
+    @posts = Post.where('posts.page_id=?', @page.id).order('created_at DESC')
   end
 end
