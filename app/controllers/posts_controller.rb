@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     @posts = Post.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @posts }
     end
   end
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @post }
     end
   end
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @post = Post.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.json { render json: @post }
     end
   end
@@ -38,7 +38,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to root_path + URI.encode(@post.page_path), notice: 'Post was successfully created.' }
+        page = Page.find(@post.page_id)
+        format.html { redirect_to root_path + URI.encode(page.path), notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
         format.html { render action: 'new' }
@@ -74,6 +75,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image, :title, :page_path, :category)
+    params.require(:post).permit(:content, :image, :title, :category, :page_id)
   end
 end
