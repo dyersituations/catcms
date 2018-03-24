@@ -56,7 +56,7 @@ class PagesController < ApplicationController
   end
 
   def edit_posts
-    @posts = Post.where('posts.page_path=?', @page.path).order('title ASC')
+    @posts = Post.where('posts.page_id=?', @page.id).order('title ASC')
   end
 
   private
@@ -91,15 +91,15 @@ class PagesController < ApplicationController
     if Post.count > 0
       cat = params[:category]
       cat = cat ? cat : post_cats.first
-      @posts = Post.where("posts.page_path=? and posts.category=?",
-        @page.path, cat.downcase).order('title ASC')
+      @posts = Post.where("posts.page_id=? and posts.category=?",
+        @page.id, cat.downcase).order('title ASC')
     else
       @posts = []
     end
   end
 
   def load_posts_desc
-    @posts = Post.where('posts.page_path=?', @page.path)
+    @posts = Post.where('posts.page_id=?', @page.id)
     .order('created_at DESC')
   end
 end
