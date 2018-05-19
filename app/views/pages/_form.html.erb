@@ -37,7 +37,9 @@
       <%= f.file_field :banner, :class => 'form-control-file' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
-      <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
+      <% if @page.banner? %>
+        <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
+      <% end %>
     </div>
   </div>
   <div class="row">

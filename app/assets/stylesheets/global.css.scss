@@ -115,7 +115,7 @@ textarea {
     padding: 20px 25px;
   }
   .gallery-thumbnail-wrapper {
-    float: left;
+    text-align: center;
     .gallery-thumbnail {
       width: 205px;
       padding: 15px;
@@ -123,7 +123,7 @@ textarea {
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: .9em;
-      float: left;
+      display: inline-block;
     }
   }
 }

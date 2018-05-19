@@ -88,8 +88,8 @@ class PagesController < ApplicationController
   end
 
   def load_posts_alpha
-    if Post.count > 0
-      @posts = Post.where("posts.page_id=?", @page.id)
+    @posts = Post.where("posts.page_id=?", @page.id)
+    if @posts.count > 0
       cat = params[:category]
       if cat == nil
         cat = @posts.pluck(:category).uniq{ |c| c.downcase }.sort.first
