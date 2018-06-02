@@ -14,6 +14,9 @@ h1, h2, h3, h4, p {
   padding: 10px 0;
   margin: 0;
 }
+a, a:hover {
+  color: inherit;
+}
 img {
   vertical-align: top;
   border: none;
@@ -116,9 +119,6 @@ textarea {
   }
   .gallery-cats {
     text-align: center;
-    a {
-      color: inherit;
-    }
   }
   .gallery-thumbnail-wrapper {
     text-align: center;
