@@ -1,5 +1,5 @@
 ## CatCMS
-**_C_ool _A_r_t_ _C_ontent _M_anagement _S_ystem**
+_**C**ool **A**r**t** **C**ontent **M**anagement **S**ystem_
 
 The typical website a visual artist uses to display their work is both expensive to buy and expensive to maintain. CatCMS was born from the desire to create a simple and powerful tool that empowers an artist to both create and maintain their own website. 
 
