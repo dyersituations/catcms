@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap', '~> 4.3.1'
 group :development do
   gem 'listen', '~> 3.0.5'
 end
