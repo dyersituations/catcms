@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.2'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.13'
 gem 'unicorn'
 gem 'sass', '~> 3.5.4'
 gem 'sass-rails', '~> 5.0.4'
