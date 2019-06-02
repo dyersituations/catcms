@@ -6,7 +6,6 @@ $c-border: #ddd;
 body {
   width: 100%;
   margin: 0;
-  color: #333;
   font-size: 12px;
   font-family: 'Raleway', sans-serif;
 }
@@ -38,6 +37,16 @@ img {
 // *********
 .jumbotron {
   padding: 2rem;
+  border: 1px solid #aaa;
+  color: #212529;
+
+  .row + .row {
+    margin-top: .5rem;
+  }
+}
+footer .btn-group {
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 // Section
 // *******

@@ -12,7 +12,7 @@ class AdminController < ApplicationController
   end
 
   def login
-    if !Settings.instance.admin_pass
+    if !Settings.instance.is_admin_pass
       redirect_to admin_path
     end
   end
