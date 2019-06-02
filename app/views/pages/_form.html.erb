@@ -1,20 +1,20 @@
 <div class="jumbotron">
   <h5><%= new_action ? 'New' : 'Edit' %> Page</h5>
   <div class="row">
-    <div class="col-12 col-sm-2 font-weight-bold">Path</div>
-    <div class="col-12 col-sm-10">The name of the page and the path to access it. Converted to capitalized words.</div>
+    <div class="col-12 col-sm-3 col-lg-2 font-weight-bold">Path</div>
+    <div class="col-12 col-sm-9 col-lg-10">The name of the page and the path to access it. Converted to capitalized words.</div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-2 font-weight-bold">Page type</div>
-    <div class="col-12 col-sm-10">The basic page format.</div>
+    <div class="col-12 col-sm-3 col-lg-2 font-weight-bold">Page type</div>
+    <div class="col-12 col-sm-9 col-lg-10">The basic page format.</div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-2 font-weight-bold">Banner</div>
-    <div class="col-12 col-sm-10">The optional image that spans the top of the page. The size is 1500 x 300 px.</div>
+    <div class="col-12 col-sm-3 col-lg-2 font-weight-bold">Banner</div>
+    <div class="col-12 col-sm-9 col-lg-10">The optional image that spans the top of the page. The size is 1500 x 300 px.</div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-2 font-weight-bold">Content</div>
-    <div class="col-12 col-sm-10">The HTML content of the page.</div>
+    <div class="col-12 col-sm-3 col-lg-2 font-weight-bold">Content</div>
+    <div class="col-12 col-sm-9 col-lg-10">The HTML content of the page.</div>
   </div>
 </div>
 <%= form_for @page do |f| %>
@@ -27,7 +27,7 @@
   </div>
   <div class="row">
     <div class="col-12 form-group">
-      <%= f.label :page_type %>
+      <%= f.label :page_type, "Page Type" %>
       <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control' %>
     </div>
   </div>
