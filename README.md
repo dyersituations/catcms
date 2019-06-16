@@ -31,7 +31,6 @@ This tool can be used to build any simple website without the developer needing 
     - Rails 6.0.0.rc1.
     - https://gorails.com/setup/ubuntu/19.04.
 - Install Figaro for DB credentials:
-    - https://github.com/laserlemon/figaro.
     - bundle exec figaro install
     - Enter the following into the new application.yml:
         ```yml
