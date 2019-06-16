@@ -17,8 +17,8 @@ class Settings
 
   # Checks the passed-in password against the saved admin salt and hash.
   def admin_authenticate?(password)
-    salt = get_setting(:admin_pass_salt)
-    hash = get_setting(:admin_pass_hash)
+    salt = get_setting(:admin_pass_salt, '')
+    hash = get_setting(:admin_pass_hash, '')
     hash == BCrypt::Engine.hash_secret(password, salt)
   end
 
