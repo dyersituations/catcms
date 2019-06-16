@@ -34,9 +34,11 @@ This tool can be used to build any simple website without the developer needing 
     - https://github.com/laserlemon/figaro.
     - bundle exec figaro install
     - Enter the following into the new application.yml:
+        ```yml
         development:
             db_username: <username>
             db_password: <password>
+        ```
 
 ## Deployment
 
