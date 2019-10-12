@@ -27,9 +27,9 @@ This tool can be used to build any simple website without the developer needing 
 - For W10 machines, set up Linux subsystem with Ubuntu: 
     - https://docs.microsoft.com/en-us/windows/wsl/install-win10.
 - Setup Rails and PostgreSQL:
-    - Ruby 2.6.3.
+    - Ruby 2.6.0.
     - Rails 6.0.0.rc1.
-    - https://gorails.com/setup/ubuntu/19.04.
+    - Postgres 9+.
 - Install Figaro for DB credentials:
     - bundle exec figaro install
     - Enter the following into the new application.yml:
