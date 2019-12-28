@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html.
+  # Loading images from PostgreSQL.
+  mount PostgresqlLoStreamer::Engine => "/page_banner"
   # Page display routes.
   root :to => 'pages#show'
   # Admin routes.
