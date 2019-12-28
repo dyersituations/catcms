@@ -9,9 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
+gem 'carrierwave-postgresql'
+gem 'postgresql_lo_streamer'
 gem 'mini_magick', '>= 4.9.4'
 gem 'bootstrap', '~> 4.3.1'
 gem 'figaro'
 group :development do
   gem 'listen', '~> 3.0.5'
+  gem 'solargraph'
 end
