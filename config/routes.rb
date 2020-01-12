@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Loading images from PostgreSQL.
-  mount PostgresqlLoStreamer::Engine => "/page_banner"
+  mount PostgresqlLoStreamer::Engine => 'image/:path'
   # Page display routes.
   root :to => 'pages#show'
   # Admin routes.

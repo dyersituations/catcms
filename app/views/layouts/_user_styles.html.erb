@@ -19,7 +19,7 @@
   <% if @page && !@page.banner.blank? && params[:action] == 'show' %>
     .banner {
       height: 300px;
-      background: url(<%= @page.banner %>) center;
+      background: url('image<%= @page.banner %>') center;
     }
   <% end %>
 </style>

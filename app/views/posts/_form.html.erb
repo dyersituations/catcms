@@ -1,22 +1,28 @@
 <%= form_for locals[:post] do |f| %>
   <div class="row">
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 form-group">
       <%= f.label :title %>
       <%= f.text_field :title, :class => 'form-control' %>
-    </div>
-    <div class="col-12 col-sm-6 form-group">
-      <%= f.label 'Page' %>
-      <%= f.collection_select(:page_id, pages_with_posts, :id, :path, {}, { :class => 'form-control' }) %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
+      <%= f.label 'Page' %>
+      <%= f.collection_select(:page_id, pages_with_posts, :id, :path, {}, { :class => 'form-control' }) %>
+    </div>
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :category %>
       <%= f.text_field :category, :class => 'form-control' %>
     </div>
+  </div>
+  <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :image %>
       <%= f.file_field :image, :class => 'form-control-file' %>
+    </div>
+    <div class="col-12 col-sm-6 form-group">
+      <%= f.label :thumbnail %>
+      <%= f.file_field :thumbnail, :class => 'form-control-file' %>
     </div>
   </div>
   <div class="row">

@@ -27,7 +27,8 @@ ActiveRecord::Schema.define(version: 2016_02_21_203927) do
   create_table "posts", id: :serial, force: :cascade do |t|
     t.integer "page_id"
     t.string "title"
-    t.string "image"
+    t.oid "image"
+    t.oid "thumbnail"
     t.text "content"
     t.string "category"
     t.datetime "created_at"
