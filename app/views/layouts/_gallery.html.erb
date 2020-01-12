@@ -12,10 +12,10 @@
       <div class="gallery-thumbnail-wrapper">
     <% end %>
     <div class="gallery-thumbnail">
-      <a href="<%= image_path(post.image.full) %>" rel="lightbox[gallery]"
+      <a href="image<%= post.image %>" rel="lightbox[gallery]"
           data-title="<%= post.title %>"
           data-caption="<%= post.content %>">
-        <%= image_tag post.image.thumb %>
+        <%= image_tag "/image#{post.thumbnail}" %>
       </a>
       <% if Settings.instance.gallery_captions %>
         <%= post.title.html_safe %>

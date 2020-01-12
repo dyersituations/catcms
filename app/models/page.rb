@@ -7,6 +7,6 @@ class Page < ActiveRecord::Base
   private
 
   def cap_path
-    self.path = self.path.split.map(&:capitalize)*' '
+    self.path = self.path.downcase.split.map(&:capitalize)*''
   end
 end
