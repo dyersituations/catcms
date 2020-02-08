@@ -25,6 +25,9 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.new(page_params)
+    if @page.page_type == Page::PAGETYPES[:GALLERY]
+      @page.content = ''
+    end
     respond_to do |format|
       if @page.save
         format.html {
@@ -93,9 +96,9 @@ class PagesController < ApplicationController
     if @posts.count > 0
       cat = params[:category]
       if cat == nil
-        cat = @cats.uniq{ |c| c.downcase }.sort.first
+        cat = @cats.uniq.sort.first
       end
-      @posts = @posts.where('posts.category=?', cat.downcase).order('title ASC')
+      @posts = @posts.where('posts.category=?', cat).order('title ASC')
     else
       @posts = []
     end

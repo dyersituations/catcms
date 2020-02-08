@@ -28,7 +28,7 @@
   <div class="row">
     <div class="col-12 form-group">
       <%= f.label :page_type, "Page Type" %>
-      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control' %>
+      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control', :onchange => 'onChangeType(this)' %>
     </div>
   </div>
   <div class="row">
@@ -38,14 +38,14 @@
     </div>
     <div class="col-12 col-sm-6 form-group">
       <% if @page.banner? %>
-        <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
+        <div class="banner-thumb" style="background-image: url(/image<%= @page.banner %>);"></div>
       <% end %>
     </div>
   </div>
-  <div class="row">
+  <div id="content" class="row">
     <div class="col-12 form-group">
       <%= f.label :content %>
-      <%= f.text_area :content, :class => 'form-control' %>
+      <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
     </div>
   </div>
   <div class="row">
@@ -55,3 +55,12 @@
     </div>
   </div>
 <% end %>
+
+<%= tinymce %>
+
+<script>
+  function onChangeType(select) {
+    const hasContent = +select.value !== <%= Page::PAGETYPES[:GALLERY] %>;
+    $('#content').toggle(hasContent);
+  }
+</script>
