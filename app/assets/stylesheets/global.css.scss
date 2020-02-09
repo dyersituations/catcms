@@ -3,11 +3,17 @@
 $c-border: #ddd;
 // General
 // *******
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   width: 100%;
   margin: 0;
   font-size: 12px;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 h1, h2, h3, h4, p {
   padding: 10px 0;
@@ -22,6 +28,11 @@ img {
 }
 .clear {
   clear: both;
+}
+// Nav
+// ***
+#nav {
+  height: 57px;
 }
 // Banner
 // ******
@@ -52,6 +63,12 @@ footer .btn-group {
 // *******
 section {
   padding: 1rem 0;
+}
+// Container
+// *********
+#container {
+  flex: 1;
+  overflow-y: auto;
 }
 // Footer
 // ******
