@@ -41,10 +41,10 @@ class PagesController < ApplicationController
   end
 
   def update
-    page = Page.find_by_id(params[:id])
+    @page = Page.find_by_id(params[:id])
     respond_to do |format|
-      if page.update_attributes(page_params)
-        format.html { redirect_to page_view_path(page.path) }
+      if @page.update(page_params)
+        format.html { redirect_to page_view_path(@page.path) }
       else
         format.html { render action: 'edit' }
       end

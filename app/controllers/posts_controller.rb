@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attributes(post_params)
+      if @post.update(post_params)
         format.html { redirect_to request.referer, notice: 'Successfully updated.' }
       else
         format.html { redirect_to request.referer, notice: 'Updated not successful.' }
