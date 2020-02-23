@@ -1,4 +1,5 @@
 class Page < ActiveRecord::Base
+  has_many :posts, :dependent => :destroy
   mount_uploader :banner, BannerUploader
   before_save :cap_path
   after_save :empty_oid
