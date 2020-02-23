@@ -41,7 +41,7 @@
       <% end %>
     </div>
   </div>
-  <div id="content" class="row">
+  <div id="content" class="row <%= @page.page_type == Page::PAGETYPES[:GALLERY] ? 'hidden' : '' %>">
     <div class="col-12 form-group">
       <%= f.label :content %>
       <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
