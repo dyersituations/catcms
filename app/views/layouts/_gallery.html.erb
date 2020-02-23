@@ -12,7 +12,7 @@
       <div class="gallery-thumbnail-wrapper">
     <% end %>
     <div class="gallery-thumbnail">
-      <a href="image<%= post.image %>" rel="lightbox[gallery]"
+      <a href="/image<%= post.image %>" rel="lightbox[gallery]"
           data-title="<%= post.title %>"
           data-caption="<%= post.content %>">
         <%= image_tag "/image#{post.thumbnail}" %>
