@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(version: 2016_02_21_203927) do
   enable_extension "plpgsql"
 
   create_table "pages", id: :serial, force: :cascade do |t|
-    t.integer "page_type"
-    t.string "path"
+    t.integer "page_type", null: false
+    t.string "path", null: false
     t.oid "banner"
     t.text "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["path"], name: "index_pages_on_path", unique: true
   end
 
   create_table "posts", id: :serial, force: :cascade do |t|

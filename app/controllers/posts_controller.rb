@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_pages, :only => [:show, :new, :edit]
 
   def index
     @posts = Post.all

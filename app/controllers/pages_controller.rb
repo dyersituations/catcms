@@ -1,13 +1,11 @@
 class PagesController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_page, :only => [:show, :edit, :edit_posts]
-  before_action :load_pages, :only => [:show, :new, :edit, :edit_posts]
+  before_action :load_page
   before_action :plain, :only => [:new, :edit]
+  after_action -> { flash.discard }
 
   def show
     case @page.page_type
-      when Page::PAGETYPES[:HOME]
-        @view = 'layouts/home'
       when Page::PAGETYPES[:BLOG]
         load_posts_desc
         @view = 'layouts/blog'
@@ -24,31 +22,11 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(page_params)
-    if @page.page_type == Page::PAGETYPES[:GALLERY]
-      @page.content = ''
-    end
-    respond_to do |format|
-      if @page.save
-        format.html {
-          redirect_to page_view_path(@page.path),
-                      notice: 'Page was successfully created.'
-        }
-      else
-        format.html { render action: 'new' }
-      end
-    end
+    save_page
   end
 
   def update
-    @page = Page.find_by_id(params[:id])
-    respond_to do |format|
-      if @page.update(page_params)
-        format.html { redirect_to page_view_path(@page.path) }
-      else
-        format.html { render action: 'edit' }
-      end
-    end
+    save_page
   end
 
   def destroy
@@ -65,7 +43,10 @@ class PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:page_type, :banner, :path, :content)
+    page = params[:page]
+    if !page.nil?
+      page.permit(:path, :page_type, :banner, :content)
+    end
   end
 
   def plain
@@ -73,20 +54,20 @@ class PagesController < ApplicationController
   end
 
   def load_page
-    if !Page.any?
+    if params[:id]
+      # Id means the page is edited.
+      @page = Page.find_by_id(params[:id])
+    elsif params[:path]
+      # Path means the page is shown.
+      @page = Page.find_by_path(params[:path])
+    elsif !page_params.nil?
+      # Page not nil when failing to save new page.
+      @page = Page.new(page_params)
+    elsif !Page.any? && action_name != 'new'
       redirect_to new_page_path
     else
-      # Id means the page is edited.
-      # Path means the page is shown.
-      id = params[:id]
-      path = params[:path]
-      if id
-        @page = Page.find_by_id(id)
-      elsif path
-        @page = Page.find_by_path(path)
-      else
-        @page = Page.first
-      end
+      # When loading root.
+      @page = Page.first
     end
   end
 
@@ -106,5 +87,45 @@ class PagesController < ApplicationController
 
   def load_posts_desc
     @posts = Post.where('posts.page_id=?', @page.id).order('created_at DESC')
+  end
+
+  def save_page
+    error_message = 'Error saving page. Unique path is required. Please choose banner again if needed.'
+    updated_params = params[:page].permit(:path, :page_type, :banner, :content)
+    begin
+      updated_params.require(:path)
+    rescue ActionController::ParameterMissing
+      flash[:notice] = error_message
+      render :edit
+      return
+    end
+    if params[:id]
+      @page = Page.find_by_id(params[:id])
+    else
+      @page = Page.new(updated_params)
+    end
+    # Page content not needed for GALLERY or BLOG.
+    if @page.page_type == Page::PAGETYPES[:GALLERY] || @page.page_type == Page::PAGETYPES[:BLOG]
+      @page.content = ''
+    end
+    begin
+      if params[:id]
+        success =  @page.update(updated_params)
+      else
+        success = @page.save
+      end
+    rescue ActiveRecord::RecordNotUnique => e
+      flash[:notice] = error_message
+      render :new
+      return
+    end
+    if success
+      respond_to do |format|
+        format.html { redirect_to page_view_path(@page.path) }
+      end
+    else
+      flash[:notice] = error_message
+      render :new
+    end
   end
 end

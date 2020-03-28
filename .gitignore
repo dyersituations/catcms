@@ -14,12 +14,6 @@
 # Ignore precompiled assets.
 /public/assets
 
-# Ignore user CarrierWave uploads.
-/public/uploads
-
-# Ignore temp home page image.
-/public/home.jpg
-
 # Ignore Mac OS X Finder files.
 .DS_Store
 

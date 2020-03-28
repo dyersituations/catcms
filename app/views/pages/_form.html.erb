@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h5><%= new_action ? 'New' : 'Edit' %> Page</h5>
+  <h5><%= !@page.id ? 'New' : 'Edit' %> Page</h5>
   <div class="row">
     <div class="col-12 col-sm-3 col-lg-2 font-weight-bold">Path</div>
     <div class="col-12 col-sm-9 col-lg-10">The name of the page and the path to access it. Converted to capitalized words.</div>
@@ -17,6 +17,7 @@
     <div class="col-12 col-sm-9 col-lg-10">The HTML content of the page.</div>
   </div>
 </div>
+<div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
 <%= form_for @page do |f| %>
   <div class="row">
     <div class="col-12 form-group">
@@ -41,7 +42,7 @@
       <% end %>
     </div>
   </div>
-  <div id="content" class="row <%= @page.page_type == Page::PAGETYPES[:GALLERY] ? 'hidden' : '' %>">
+  <div id="content" class="row <%= @page.page_type.nil? || @page.page_type == Page::PAGETYPES[:PLAIN] ? '' : 'hidden' %>">
     <div class="col-12 form-group">
       <%= f.label :content %>
       <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
@@ -50,16 +51,14 @@
   <div class="row">
     <div class="col-12 form-group">
       <%= link_to 'Cancel', @page.path ? root_url + @page.path : root_url, :class => 'btn btn-secondary' %>
-      <%= button_tag (new_action ? 'Create' : 'Save') + ' Page', class: 'btn btn-primary' %>
+      <%= button_tag (!@page.id ? 'Create' : 'Save') + ' Page', class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
-
 <%= tinymce %>
-
 <script>
   function onChangeType(select) {
-    const hasContent = +select.value !== <%= Page::PAGETYPES[:GALLERY] %>;
+    const hasContent = +select.value === <%= Page::PAGETYPES[:PLAIN] %>;
     $('#content').toggle(hasContent);
   }
 </script>
