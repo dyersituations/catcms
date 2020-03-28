@@ -94,8 +94,13 @@ footer {
 }
 // Form
 // ****
-textarea {
-  overflow-x: hidden;
+.tox-tinymce {
+  min-height: 600px;
+}
+.form-error {
+  padding-bottom: 10px;
+  color: red;
+  font-weight: bold;
 }
 // Blog post
 // *********

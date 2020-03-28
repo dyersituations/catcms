@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   before_save :cap_path
   after_save :empty_oid
 
-  PAGETYPES = { :PLAIN => 0, :HOME => 1, :BLOG => 2, :GALLERY => 3 }
+  PAGETYPES = { :PLAIN => 0, :BLOG => 2, :GALLERY => 3 }
 
   private
 
