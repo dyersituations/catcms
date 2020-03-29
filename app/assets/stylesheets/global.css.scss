@@ -82,12 +82,8 @@ footer {
   line-height: 60px;
   padding: 0 1rem;
 
-  span:last-of-type {
-    display: block;
-  }
-
   @media (min-width: 768px) {
-    span:last-of-type {
+    div:last-of-type {
       float: right;
     }
   }
