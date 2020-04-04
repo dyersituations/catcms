@@ -20,4 +20,5 @@ gem 'mini_racer'
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'solargraph'
+  gem 'rufo'
 end
