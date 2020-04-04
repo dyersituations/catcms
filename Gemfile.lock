@@ -122,7 +122,7 @@ GEM
     popper_js (1.14.5)
     postgresql_lo_streamer (1.2.1)
       rails (>= 4.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.0.rc1)
