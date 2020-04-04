@@ -3,6 +3,7 @@ class BaseUploader < CarrierWave::Uploader::Base
 
   storage :postgresql_lo
   process :fix_exif_rotation
+  after :store, :delete_tmp_dir
 
   def extension_white_list
     %w(jpg jpeg gif png)
@@ -14,5 +15,10 @@ class BaseUploader < CarrierWave::Uploader::Base
     manipulate! do |img|
       img.tap(&:auto_orient)
     end
+  end
+
+  # CarrierWave wasn't removing the uploads folder when adding a new page.
+  def delete_tmp_dir(new_file)
+    FileUtils.rm_rf(File.join(root, 'uploads'))
   end
 end
