@@ -9,9 +9,8 @@ Rails.application.routes.draw do
   get 'admin' => 'admin#admin'
   post 'admin/save' => 'admin#save'
   get 'logout' => 'admin#logout'
-  # Default post and page routes.
-  resources :posts
-  resources :pages
+  resources :posts, only: [:new, :create, :update, :destroy]
+  resources :pages, only: [:show, :new, :edit, :create, :update, :destroy]
   # Post display and edit routes.
   get 'edit_posts' => 'pages#edit_posts'
   get ':path' => 'pages#show', :as => 'page_view'
