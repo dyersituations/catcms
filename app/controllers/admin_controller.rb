@@ -24,7 +24,7 @@ class AdminController < ApplicationController
       session.delete(:login_redirect)
       redirect_to login_redirect ? login_redirect : root_path
     else
-      flash[:error] = 'Admin password incorrect! Please try again.'
+      flash[:error] = "Admin password incorrect! Please try again."
       redirect_to admin_path
     end
   end

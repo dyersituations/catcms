@@ -6,14 +6,14 @@ class PagesController < ApplicationController
 
   def show
     case @page.page_type
-      when Page::PAGETYPES[:BLOG]
-        load_posts_desc
-        @view = 'layouts/blog'
-      when Page::PAGETYPES[:GALLERY]
-        load_posts_alpha
-        @view = 'layouts/gallery'
-      else
-        @view = 'layouts/plain'
+    when Page::PAGETYPES[:BLOG]
+      load_posts_desc
+      @view = "layouts/blog"
+    when Page::PAGETYPES[:GALLERY]
+      load_posts_alpha
+      @view = "layouts/gallery"
+    else
+      @view = "layouts/plain"
     end
   end
 
@@ -37,7 +37,7 @@ class PagesController < ApplicationController
   end
 
   def edit_posts
-    @posts = Post.where('posts.page_id=?', @page.id).order('title ASC')
+    @posts = Post.where("posts.page_id=?", @page.id).order("title ASC")
   end
 
   private
@@ -63,7 +63,7 @@ class PagesController < ApplicationController
     elsif !page_params.nil?
       # Page not nil when failing to save new page.
       @page = Page.new(page_params)
-    elsif !Page.any? && action_name != 'new'
+    elsif !Page.any? && action_name != "new"
       redirect_to new_page_path
     else
       # When loading root.
@@ -72,25 +72,25 @@ class PagesController < ApplicationController
   end
 
   def load_posts_alpha
-    @posts = Post.where('posts.page_id=?', @page.id)
-    @cats = @posts.order('category ASC').pluck(:category)
+    @posts = Post.where("posts.page_id=?", @page.id)
+    @cats = @posts.order("category ASC").pluck(:category)
     if @posts.count > 0
       cat = params[:category]
       if cat == nil
         cat = @cats.uniq.sort.first
       end
-      @posts = @posts.where('posts.category=?', cat).order('title ASC')
+      @posts = @posts.where("posts.category=?", cat).order("title ASC")
     else
       @posts = []
     end
   end
 
   def load_posts_desc
-    @posts = Post.where('posts.page_id=?', @page.id).order('created_at DESC')
+    @posts = Post.where("posts.page_id=?", @page.id).order("created_at DESC")
   end
 
   def save_page
-    error_message = 'Error saving page. Unique path is required. Please choose banner again if needed.'
+    error_message = "Error saving page. Unique path is required. Please choose banner again if needed."
     updated_params = params[:page].permit(:path, :page_type, :banner, :content)
     begin
       updated_params.require(:path)
@@ -106,11 +106,11 @@ class PagesController < ApplicationController
     end
     # Page content not needed for GALLERY or BLOG.
     if @page.page_type == Page::PAGETYPES[:GALLERY] || @page.page_type == Page::PAGETYPES[:BLOG]
-      @page.content = ''
+      @page.content = ""
     end
     begin
       if params[:id]
-        success =  @page.update(updated_params)
+        success = @page.update(updated_params)
       else
         success = @page.save
       end

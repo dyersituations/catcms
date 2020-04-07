@@ -34,14 +34,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
+    add_thumbnail
     respond_to do |format|
       if @post.save
         page = Page.find(@post.page_id)
-        format.html { redirect_to root_path + URI.encode(page.path), notice: 'Post was successfully created.' }
+        format.html { redirect_to root_path + URI.encode(page.path), notice: "Post was successfully created." }
         format.json { render json: @post, status: :created, location: @post }
       else
-        format.html { render action: 'new' }
+        format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -49,12 +49,12 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-
+    add_thumbnail
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to request.referer, notice: 'Successfully updated.' }
+        format.html { redirect_to request.referer, notice: "Successfully updated." }
       else
-        format.html { redirect_to request.referer, notice: 'Updated not successful.' }
+        format.html { redirect_to request.referer, notice: "Updated not successful." }
       end
     end
   end
@@ -64,9 +64,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.destroy
-        format.html { redirect_to request.referer, notice: 'Successfully removed.' }
+        format.html { redirect_to request.referer, notice: "Successfully removed." }
       else
-        format.html { redirect_to request.referer, notice: 'Remove not successful.' }
+        format.html { redirect_to request.referer, notice: "Remove not successful." }
       end
     end
   end
@@ -74,6 +74,10 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image, :thumbnail, :title, :category, :page_id)
+    params.require(:post).permit(:content, :image, :title, :category, :page_id)
+  end
+
+  def add_thumbnail
+    @post.thumbnail = File.open(post_params[:image].tempfile)
   end
 end
