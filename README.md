@@ -41,7 +41,11 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Deployment
 
-Details on setting up the server and deploying the site coming soon!
+- [Digital Ocean](https://www.digitalocean.com/).
+    - $5 Ubunutu Droplet.
+- [Setup Ruby on Rails](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04).
+- [Setup Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04).
+- [Setup Automatic Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps).
 
 ## License
 
