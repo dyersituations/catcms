@@ -11,16 +11,21 @@ body {
   width: 100%;
   margin: 0;
   font-size: 12px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   padding: 10px 0;
   margin: 0;
 }
-a, a:hover {
+a,
+a:hover {
   color: inherit;
 }
 img {
@@ -56,7 +61,7 @@ img {
   color: #212529;
 
   .row + .row {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 footer .btn-group {
@@ -123,7 +128,7 @@ footer {
         font-size: 1.3em;
       }
       .month {
-        font-size: .6em;
+        font-size: 0.6em;
       }
     }
     .text {
@@ -142,7 +147,7 @@ footer {
   }
 }
 .blog-post.alpha {
-  border:0;
+  border: 0;
 }
 // Gallery
 // *******
@@ -156,13 +161,16 @@ footer {
   .gallery-thumbnail-wrapper {
     text-align: center;
     .gallery-thumbnail {
-      width: 205px;
+      width: 235px;
       padding: 15px;
       text-align: center;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: .9em;
+      font-size: 0.9em;
       display: inline-block;
+      a {
+        display: block;
+      }
     }
   }
 }
