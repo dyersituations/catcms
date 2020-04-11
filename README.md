@@ -25,27 +25,39 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Development
 - For W10 machines, set up Linux subsystem with Ubuntu: 
-    - https://docs.microsoft.com/en-us/windows/wsl/install-win10.
+  - https://docs.microsoft.com/en-us/windows/wsl/install-win10.
 - Setup Rails and PostgreSQL:
-    - Ruby 2.6.0.
-    - Rails 6.0.0.rc1.
-    - Postgres 9+.
+  - Ruby 2.6.0.
+  - Rails 6.0.0.
+  - Postgres 9+.
 - Install Figaro for DB credentials:
-    - bundle exec figaro install
-    - Enter the following into the new application.yml:
-        ```yml
-        development:
-            db_username: <username>
-            db_password: <password>
-        ```
+  - bundle exec figaro install
+  - Enter the following into the new application.yml:
+      ```yml
+      development:
+        db_username: <username>
+        db_password: <password>
+      production:
+        db_username: <username>
+        db_password: <password>
+      ```
 
 ## Deployment
 
 - [Digital Ocean](https://www.digitalocean.com/).
     - $5 Ubunutu Droplet.
-- [Setup Ruby on Rails](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04).
-- [Setup Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04).
-- [Setup Automatic Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps).
+- [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
+  - ```gem install bundler -v 2.0.1```
+- [Capistrano::FigaroYml]https://github.com/chouandy/capistrano-figaro-yml
+  - ```bundle exec cap production setup```
+  - ```bundle exec cap production deploy```
+- Firewall.
+  - ```sudo ufw allow OpenSSH```
+  - ```sudo ufw allow 80/tcp```
+  - ```sudo ufw allow 443/tcp```
+- Domain
+- SSL Certificate
+- Log Rotation
 
 ## License
 
