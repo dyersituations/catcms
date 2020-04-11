@@ -7,10 +7,10 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Features
 
-- You can create, edit, and delete pages.
-- You can change the website title and content.
-- You can populate image galleries and blogs.
-- You can change the website appearance without writing code.
+- You can create, edit, and delete pages
+- You can change the website title and content
+- You can populate image galleries and blogs
+- You can change the website appearance without writing code
 
 ## Tech Stack
 
@@ -25,11 +25,11 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Development
 - For W10 machines, set up Linux subsystem with Ubuntu: 
-  - https://docs.microsoft.com/en-us/windows/wsl/install-win10.
+  - https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Setup Rails and PostgreSQL:
-  - Ruby 2.6.0.
-  - Rails 6.0.0.
-  - Postgres 9+.
+  - Ruby 2.6.0
+  - Rails 6.0.0
+  - Postgres 9+
 - Install Figaro for DB credentials:
   - bundle exec figaro install
   - Enter the following into the new application.yml:
@@ -44,8 +44,8 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Deployment
 
-- [Digital Ocean](https://www.digitalocean.com/).
-    - $5 Ubunutu Droplet.
+- [Digital Ocean](https://www.digitalocean.com/)
+    - $5 Ubunutu Droplet
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
   - ```gem install bundler -v 2.0.1```
 - [Capistrano::FigaroYml](https://github.com/chouandy/capistrano-figaro-yml)
