@@ -48,7 +48,7 @@ This tool can be used to build any simple website without the developer needing 
     - $5 Ubunutu Droplet.
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
   - ```gem install bundler -v 2.0.1```
-- [Capistrano::FigaroYml]https://github.com/chouandy/capistrano-figaro-yml
+- [Capistrano::FigaroYml](https://github.com/chouandy/capistrano-figaro-yml)
   - ```bundle exec cap production setup```
   - ```bundle exec cap production deploy```
 - Firewall.
