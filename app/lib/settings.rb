@@ -6,6 +6,7 @@ class Settings
   include Singleton
 
   # Default settings.
+  ADMIN_PASS = "******"
   IS_ADMIN_PASS = false
   SITE_NAME = 'CatCMS'
   NAVBAR_BG_COLOR = '#343a40'
@@ -111,7 +112,7 @@ class Settings
 
   # Saves the admin password salt, hash, and whether the password exists.
   def save_admin_pass(val)
-    if !val.blank?
+    if val != ADMIN_PASS
       pass_salt = BCrypt::Engine.generate_salt
       pass_hash = BCrypt::Engine.hash_secret(val, pass_salt)
       save_setting(:admin_pass_salt, pass_salt)

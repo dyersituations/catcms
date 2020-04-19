@@ -42,7 +42,7 @@
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :admin_pass, 'Admin Password' %>
-      <%= password_field_tag :admin_pass, @settings.is_admin_pass && !@settings.is_admin_pass.empty? ? '********' : '', class: 'form-control' %>
+      <%= password_field_tag :admin_pass, @settings.is_admin_pass && !@settings.is_admin_pass.empty? ? Settings::ADMIN_PASS : '', class: 'form-control' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :site_name, 'Site Name' %>
