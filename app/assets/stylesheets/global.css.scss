@@ -10,7 +10,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
@@ -42,6 +42,14 @@ img {
 // ***
 #nav {
   min-height: 57px;
+
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
 }
 // Banner
 // ******
@@ -56,7 +64,7 @@ img {
 // Bootstrap
 // *********
 .jumbotron {
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   border: 1px solid #aaa;
   color: #212529;
 
@@ -89,6 +97,7 @@ footer {
 
   @media (min-width: 768px) {
     div:last-of-type {
+      font-size: 12px;
       float: right;
     }
   }
