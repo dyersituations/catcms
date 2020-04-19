@@ -24,8 +24,10 @@ This tool can be used to build any simple website without the developer needing 
 - [PostgreSQL](https://www.postgresql.org/)
 
 ## Development
-- For W10 machines, set up Linux subsystem with Ubuntu: 
-  - https://docs.microsoft.com/en-us/windows/wsl/install-win10
+- For W10 machines:
+  - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+  - [VSCode](https://code.visualstudio.com/)
+  - Open app folder in WSL
 - Setup Rails and PostgreSQL:
   - Ruby 2.6.0
   - Rails 6.0.0
@@ -44,20 +46,25 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Deployment
 
+- Run Figaro locally (see above)
 - [Digital Ocean](https://www.digitalocean.com/)
     - $5 Ubunutu Droplet
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
-  - ```gem install bundler -v 2.0.1```
+  - If an earlier version of bundler installs:
+    - ```gem install bundler -v 2.0.1```
+    - Firewall.
+      - ```sudo ufw allow OpenSSH```
+      - ```sudo ufw allow 80/tcp```
+      - ```sudo ufw allow 443/tcp```
 - [Capistrano::FigaroYml](https://github.com/chouandy/capistrano-figaro-yml)
+  - Create the remote application.yml file:
   - ```bundle exec cap production setup```
+- Capistrano deployment:
   - ```bundle exec cap production deploy```
-- Firewall.
-  - ```sudo ufw allow OpenSSH```
-  - ```sudo ufw allow 80/tcp```
-  - ```sudo ufw allow 443/tcp```
-- Domain
-- SSL Certificate
-- Log Rotation
+- More to come:
+  - Domain
+  - SSL Certificate
+  - Log Rotation
 
 ## License
 
