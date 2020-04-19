@@ -52,13 +52,13 @@ This tool can be used to build any simple website without the developer needing 
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
   - If an earlier version of bundler installs:
     - ```gem install bundler -v 2.0.1```
-    - Firewall.
+    - Firewall setup:
       - ```sudo ufw allow OpenSSH```
       - ```sudo ufw allow 80/tcp```
       - ```sudo ufw allow 443/tcp```
 - [Capistrano::FigaroYml](https://github.com/chouandy/capistrano-figaro-yml)
   - Create the remote application.yml file:
-  - ```bundle exec cap production setup```
+    - ```bundle exec cap production setup```
 - Capistrano deployment:
   - ```bundle exec cap production deploy```
 - More to come:
