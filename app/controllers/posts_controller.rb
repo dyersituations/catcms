@@ -53,6 +53,8 @@ class PostsController < ApplicationController
   end
 
   def add_thumbnail
-    @post.thumbnail = File.open(post_params[:image].tempfile)
+    if post_params[:image]
+      @post.thumbnail = File.open(post_params[:image].tempfile)
+    end
   end
 end
