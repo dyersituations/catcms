@@ -123,14 +123,13 @@ footer {
     min-height: 60px;
     position: relative;
     border: 1px solid $c-border;
-    border-left: 0;
     background: #eee;
     .date {
       position: absolute;
       top: 5px;
       left: 0;
       text-align: center;
-      padding: 2px;
+      padding: 6px 2px 2px;
       width: 70px;
       height: calc(100% - 10px);
       border-right: 1px solid $c-border;
