@@ -21,32 +21,19 @@ This tool can be used to build any simple website without the developer needing 
 
 <b>Backend</b>
 - [Ruby on Rails](https://rubyonrails.org/)
-- [PostgreSQL](https://www.postgresql.org/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ## Development
 - For W10 machines:
   - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
   - [VSCode](https://code.visualstudio.com/)
   - Open app folder in WSL
-- Setup Rails and PostgreSQL:
+- Setup Rails:
   - Ruby 2.6.0
   - Rails 6.0.0
-  - Postgres 9+
-- Install Figaro for DB credentials:
-  - bundle exec figaro install
-  - Enter the following into the new application.yml:
-      ```yml
-      development:
-        db_username: <username>
-        db_password: <password>
-      production:
-        db_username: <username>
-        db_password: <password>
-      ```
 
 ## Deployment
 
-- Run Figaro locally (see above)
 - [Digital Ocean](https://www.digitalocean.com/)
     - $5 Ubunutu Droplet
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
@@ -56,9 +43,6 @@ This tool can be used to build any simple website without the developer needing 
       - ```sudo ufw allow OpenSSH```
       - ```sudo ufw allow 80/tcp```
       - ```sudo ufw allow 443/tcp```
-- [Capistrano::FigaroYml](https://github.com/chouandy/capistrano-figaro-yml)
-  - Create the remote application.yml file:
-    - ```bundle exec cap production setup```
 - Capistrano deployment:
   - ```bundle exec cap production deploy```
 - More to come:

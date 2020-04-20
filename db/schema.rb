@@ -12,31 +12,27 @@
 
 ActiveRecord::Schema.define(version: 2016_02_21_203927) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "pages", id: :serial, force: :cascade do |t|
+  create_table "pages", force: :cascade do |t|
     t.integer "page_type", null: false
     t.string "path", null: false
-    t.oid "banner"
+    t.string "banner"
     t.text "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["path"], name: "index_pages_on_path", unique: true
   end
 
-  create_table "posts", id: :serial, force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.integer "page_id"
     t.string "title"
-    t.oid "image"
-    t.oid "thumbnail"
+    t.string "image"
     t.text "content"
     t.string "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "settings", id: :serial, force: :cascade do |t|
+  create_table "settings", force: :cascade do |t|
     t.string "key"
     t.string "value"
     t.datetime "created_at"

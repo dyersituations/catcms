@@ -59,12 +59,12 @@ class PagesController < ApplicationController
       @page = Page.find_by_id(params[:id])
     elsif params[:path]
       # Path means the page is shown.
-      @page = Page.find_by_path(params[:path])
+      @page = Page.where("lower(pages.path)=?", params[:path].downcase).first
     elsif !page_params.nil?
       # Page not nil when failing to save new page.
       @page = Page.new(page_params)
     elsif !Page.any? && action_name != "new"
-      redirect_to new_page_path
+      redirect_to admin_path
     else
       # When loading root.
       @page = Page.first
