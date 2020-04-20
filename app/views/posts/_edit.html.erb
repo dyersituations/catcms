@@ -30,7 +30,7 @@
     <% end %>
     <div class="row">
       <div class="col-12 col-sm-5 form-group">
-        <%= image_tag "/image#{post.thumbnail}" %>
+        <%= image_tag image_path(post.image.thumb) %>
       </div>
       <div class="col-12 col-sm-7 form-group">
         <%= render 'posts/form', :locals => { :post => post } %>

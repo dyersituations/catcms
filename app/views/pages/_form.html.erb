@@ -38,7 +38,7 @@
     </div>
     <div class="col-12 col-sm-6 form-group">
       <% if @page.banner? %>
-        <div class="banner-thumb" style="background-image: url(/image<%= @page.banner %>);"></div>
+        <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
       <% end %>
     </div>
   </div>

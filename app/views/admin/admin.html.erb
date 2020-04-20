@@ -52,21 +52,21 @@
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :navbar_bg_color, 'Navbar Background Color' %>
-      <%= text_field_tag :navbar_bg_color, @settings.navbar_bg_color, class: 'form-control' %>
+      <%= color_field_tag :navbar_bg_color, @settings.navbar_bg_color, class: 'form-control' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :navbar_font_color, 'Navbar Font Color' %>
-      <%= text_field_tag :navbar_font_color, @settings.navbar_font_color, class: 'form-control' %>
+      <%= color_field_tag :navbar_font_color, @settings.navbar_font_color, class: 'form-control' %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :page_bg_color, 'Page Background Color' %>
-      <%= text_field_tag :page_bg_color, @settings.page_bg_color, class: 'form-control' %>
+      <%= color_field_tag :page_bg_color, @settings.page_bg_color, class: 'form-control' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <%= label_tag :page_font_color, 'Page Font Color' %>
-      <%= text_field_tag :page_font_color, @settings.page_font_color, class: 'form-control' %>
+      <%= color_field_tag :page_font_color, @settings.page_font_color, class: 'form-control' %>
     </div>
   </div>
   <div class="row align-items-center">

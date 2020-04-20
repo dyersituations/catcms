@@ -9,7 +9,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    add_thumbnail
     respond_to do |format|
       if @post.save
         page = Page.find(@post.page_id)
@@ -24,7 +23,6 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    add_thumbnail
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to request.referer, notice: "Successfully updated." }
@@ -50,11 +48,5 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:content, :image, :title, :category, :page_id)
-  end
-
-  def add_thumbnail
-    if post_params[:image]
-      @post.thumbnail = File.open(post_params[:image].tempfile)
-    end
   end
 end
