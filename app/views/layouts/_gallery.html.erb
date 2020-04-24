@@ -3,7 +3,7 @@
     <% if @cats.length > 1 %>
       <% @cats.uniq.each_with_index do |cat, index| %>
         <% if index != 0 %>|<% end %>
-        <a href="?category=<%= cat %>"><%= cat %></a>
+        <a href="?category=<%= cat.downcase %>"><%= cat.upcase %></a>
       <% end %>
     <% end %>
   </div>

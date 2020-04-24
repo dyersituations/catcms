@@ -79,7 +79,7 @@ class PagesController < ApplicationController
       if cat == nil
         cat = @cats.uniq.sort.first
       end
-      @posts = @posts.where("posts.category=?", cat).order("title ASC")
+      @posts = @posts.where("lower(posts.category)=?", cat.downcase).order("title ASC")
     else
       @posts = []
     end

@@ -10,26 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2016_02_21_203927) do
+ActiveRecord::Schema.define(version: 2020_04_21_023849) do
 
   create_table "pages", force: :cascade do |t|
     t.integer "page_type", null: false
-    t.string "path", null: false
-    t.string "banner"
+    t.string "path", limit: 255, null: false
+    t.string "banner", limit: 255
     t.text "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["path"], name: "index_pages_on_path", unique: true
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "page_id"
-    t.string "title"
-    t.string "image"
+    t.string "title", limit: 255
+    t.string "image", limit: 255
     t.text "content"
-    t.string "category"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "category", limit: 255
+    t.integer "page_id"
   end
 
   create_table "settings", force: :cascade do |t|
