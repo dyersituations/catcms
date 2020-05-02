@@ -45,12 +45,12 @@
   <div id="content" class="row <%= @page.page_type.nil? || @page.page_type == Page::PAGETYPES[:PLAIN] ? '' : 'hidden' %>">
     <div class="col-12 form-group">
       <%= f.label :content %>
-      <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+      <%= f.text_area :content, :class => "tinymce" %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 form-group">
-      <%= link_to 'Cancel', @page.path ? root_url + @page.path : root_url, :class => 'btn btn-secondary' %>
+      <%= link_to 'Cancel', "/page_edit_cancel/#{@page.path}", :class => 'btn btn-secondary' %>
       <%= button_tag (!@page.id ? 'Create' : 'Save') + ' Page', class: 'btn btn-primary' %>
     </div>
   </div>

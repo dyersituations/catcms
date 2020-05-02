@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_21_023849) do
+ActiveRecord::Schema.define(version: 2020_04_25_190106) do
+
+  create_table "editor_images", force: :cascade do |t|
+    t.string "file"
+    t.string "alt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", force: :cascade do |t|
     t.integer "page_type", null: false

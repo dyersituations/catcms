@@ -1,7 +1,7 @@
 toolbar:
   - styleselect | bold italic | undo redo
-  - image | link
+  - uploadimage | link
 plugins:
-  - image
+  - uploadimage
   - link
-  
+height: 400

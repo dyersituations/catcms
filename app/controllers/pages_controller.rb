@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :authorize, :except => :show
-  before_action :load_page
+  before_action :load_page, :except => :cancel
   before_action :plain, :only => [:new, :edit]
   after_action -> { flash.discard }
 
@@ -29,8 +29,17 @@ class PagesController < ApplicationController
     save_page
   end
 
+  def cancel
+    clear_old_images
+    path = params[:path]
+    respond_to do |format|
+      format.html { redirect_to path ? root_url + path : root_url }
+    end
+  end
+
   def destroy
     Page.find_by_id(params[:id]).destroy
+    clear_old_images
     respond_to do |format|
       format.html { redirect_to root_path }
     end
@@ -99,6 +108,9 @@ class PagesController < ApplicationController
       render :edit
       return
     end
+    # TinyMCE overwrites image URLs.
+    updated_params[:content] = updated_params[:content]
+      .gsub(/(".*\/uploads)/, "\"/uploads")
     if params[:id]
       @page = Page.find_by_id(params[:id])
     else
@@ -120,12 +132,34 @@ class PagesController < ApplicationController
       return
     end
     if success
+      clear_old_images
       respond_to do |format|
         format.html { redirect_to page_view_path(@page.path) }
       end
     else
       flash[:notice] = error_message
       render :new
+    end
+  end
+
+  def clear_old_images
+    pages = Page.all
+    EditorImage.all.each do |editor_image|
+      found = false
+      pages.each do |page|
+        images = page.content
+          .scan(/editor_image\/file\/[\d]+\/[\w]+.(?:jpg|jpeg|gif|png)/i)
+        images.each do |image|
+          id = image.scan(/\/file\/([\d]+)\/[\w]+/i).first.first
+          if id.to_i == editor_image.id
+            found = true
+            break
+          end
+        end
+      end
+      if !found
+        editor_image.destroy
+      end
     end
   end
 end

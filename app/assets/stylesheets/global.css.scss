@@ -24,6 +24,12 @@ p {
   padding: 10px 0;
   margin: 0;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
 a,
 a:hover {
   color: inherit;
@@ -64,15 +70,6 @@ img {
 }
 // Bootstrap
 // *********
-.jumbotron {
-  padding: 1.5rem 2rem;
-  border: 1px solid #aaa;
-  color: #212529;
-
-  .row + .row {
-    margin-top: 0.5rem;
-  }
-}
 footer .btn-group {
   border: 1px solid #ccc;
   border-radius: 3px;

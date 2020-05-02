@@ -4,6 +4,7 @@ class BaseUploader < CarrierWave::Uploader::Base
   storage :file
   process :fix_exif_rotation
   after :store, :delete_tmp_dir
+  after :remove, :remove_folder
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
@@ -28,7 +29,12 @@ class BaseUploader < CarrierWave::Uploader::Base
   end
 
   def delete_tmp_dir(new_file)
-    # CarrierWave wasn't removing the uploads folder when adding a new page.
+    # CarrierWave doesn't remove the tmp folder when adding a new page.
     FileUtils.rm_rf(File.join(root, "uploads", "tmp"))
+  end
+
+  def remove_folder
+    # CarrierWave doesn't remove the folder when the image is removed.
+    FileUtils.remove_dir(File.join(root, store_dir), :force => true)
   end
 end
