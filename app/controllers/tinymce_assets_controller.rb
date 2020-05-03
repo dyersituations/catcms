@@ -1,5 +1,6 @@
 class TinymceAssetsController < ApplicationController
   def create
+    p 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
     begin
       image = EditorImage.create(params.permit(:file, :alt))
     rescue StandardError => e
