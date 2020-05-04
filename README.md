@@ -37,14 +37,14 @@ This tool can be used to build any simple website without the developer needing 
 - [Digital Ocean](https://www.digitalocean.com/)
     - $5 Ubunutu Droplet for a small website
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
-  - If an earlier version of bundler installs:
-    - ```gem install bundler -v 2.0.1```
-    - Firewall setup:
-      - ```sudo ufw allow OpenSSH```
-      - ```sudo ufw allow 80/tcp```
-      - ```sudo ufw allow 443/tcp```
-- Capistrano deployment:
-  - ```bundle exec cap production deploy```
+  - Install image editor for CarrierWave
+    - ```cd /home/deploy```
+    - ```sudo apt-get install imagemagick libmagickwand-dev```
+  - Capistrano:
+    - Create shared sqlite3 DB:
+      - ```mkdir /home/deploy/shared```
+      - ```scp development.sqlite3 deploy@x.x.x.x /home/deploy/myapp/shared/production.sqlite3```
+    - ```cap production deploy```
 - More to come:
   - Domain
   - SSL Certificate
