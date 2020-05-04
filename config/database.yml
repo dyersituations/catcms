@@ -13,4 +13,4 @@ test:
 
 production:
   <<: *default
-  database: /home/deploy/shared/production.sqlite3
+  database: /home/deploy/myapp/shared/production.sqlite3
