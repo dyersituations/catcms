@@ -45,10 +45,11 @@ This tool can be used to build any simple website without the developer needing 
       - ```mkdir /home/deploy/shared```
       - ```scp development.sqlite3 deploy@x.x.x.x /home/deploy/myapp/shared/production.sqlite3```
     - ```cap production deploy```
+  -[Log Rotation](https://gorails.com/guides/rotating-rails-production-logs-with-logrotate)
+    - Access the site between manual logrotate commands to see expected log items
+  -[SSL Certification](https://gorails.com/guides/free-ssl-with-rails-and-nginx-using-let-s-encrypt)
 - More to come:
   - Domain
-  - SSL Certificate
-  - Log Rotation
 
 ## License
 

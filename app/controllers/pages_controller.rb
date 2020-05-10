@@ -110,7 +110,7 @@ class PagesController < ApplicationController
     end
     # TinyMCE overwrites image URLs.
     updated_params[:content] = updated_params[:content]
-      .gsub(/(".*\/uploads)/, "\"/uploads")
+      .gsub(/src=".*\/uploads/, "src=\"/uploads")
     if params[:id]
       @page = Page.find_by_id(params[:id])
     else
