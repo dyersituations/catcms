@@ -68,7 +68,8 @@ class PagesController < ApplicationController
       @page = Page.find_by_id(params[:id])
     elsif params[:path]
       # Path means the page is shown.
-      @page = Page.where("lower(pages.path)=?", params[:path].downcase).first
+      @path = params[:path].downcase
+      @page = Page.where("lower(pages.path)=?", @path).first
     elsif !page_params.nil?
       # Page not nil when failing to save new page.
       @page = Page.new(page_params)
@@ -84,11 +85,12 @@ class PagesController < ApplicationController
     @posts = Post.where("posts.page_id=?", @page.id)
     @cats = @posts.order("category ASC").pluck(:category)
     if @posts.count > 0
-      cat = params[:category]
-      if cat == nil
-        cat = @cats.uniq.sort.first
+      @cat = params[:category]
+      if @cat == nil
+        @cat = @cats.uniq.sort.first
       end
-      @posts = @posts.where("lower(posts.category)=?", cat.downcase).order("title ASC")
+      @cat = @cat.downcase
+      @posts = @posts.where("lower(posts.category)=?", @cat).order("title ASC")
     else
       @posts = []
     end

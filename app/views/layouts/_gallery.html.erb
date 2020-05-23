@@ -1,12 +1,11 @@
-<div id="gallery-wrapper">
-  <div class="gallery-cats">
-    <% if @cats.length > 1 %>
+<div id="gallery-wrapper">  
+  <% if @cats.length > 1 %>
+    <div class="gallery-cats btn-group">
       <% @cats.uniq.each_with_index do |cat, index| %>
-        <% if index != 0 %>|<% end %>
-        <a href="?category=<%= cat.downcase %>"><%= cat.upcase %></a>
+        <a href="?category=<%= cat %>" class="btn btn-secondary <%= @cat == cat.downcase ? "btn-active" : "" %>"><%= cat %></a>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
   <% if @posts.each_with_index do |post, index| %>
     <% if index % 4 == 0 %>
       <div class="gallery-thumbnail-wrapper">

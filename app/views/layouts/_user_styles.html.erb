@@ -10,11 +10,22 @@
   .navbar a {
     color: <%= Settings.instance.navbar_font_color %>;
   }
+  .navbar a:hover {
+    background: <%= Settings.instance.lighten_color(Settings.instance.navbar_bg_color) %>;
+  }
   .navbar-toggler {
     border-color: <%= Settings.instance.navbar_font_color %>;
   }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='<%= CGI.escape(Settings.instance.navbar_font_color) %>' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .btn-group a {
+    background: <%= Settings.instance.subnav_bg_color %>;
+    color: <%= Settings.instance.subnav_font_color %>;
+  }
+  .btn-group a:hover {
+    background: <%= Settings.instance.lighten_color(Settings.instance.subnav_bg_color) %>;
+    color: <%= Settings.instance.subnav_font_color %>;
   }
   <% if @page && !@page.banner.blank? && params[:action] == 'show' %>
     .banner {

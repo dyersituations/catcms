@@ -69,16 +69,26 @@
       <%= color_field_tag :page_font_color, @settings.page_font_color, class: 'form-control' %>
     </div>
   </div>
-  <div class="row align-items-center">
+  <div class="row">
     <div class="col-12 col-sm-6 form-group">
-      <%= label_tag :copyright_name, 'Copyright Name' %>
-      <%= text_field_tag :copyright_name, @settings.copyright_name, class: 'form-control' %>
+      <%= label_tag :subnav_bg_color, 'Subnav Background Color' %>
+      <%= color_field_tag :subnav_bg_color, @settings.subnav_bg_color, class: 'form-control' %>
     </div>
+    <div class="col-12 col-sm-6 form-group">
+      <%= label_tag :subnav_font_color, 'Subnav Font Color' %>
+      <%= color_field_tag :subnav_font_color, @settings.subnav_font_color, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="row align-items-center">    
     <div class="col-12 col-sm-6 form-group">
       <div class="form-check form-check-inline">
         <%= check_box_tag :gallery_captions, nil, @settings.gallery_captions, class: 'form-check-input' %>
         <%= label_tag :gallery_captions, 'Display Gallery Captions', class: 'form-check-label' %>
       </div>
+    </div>
+    <div class="col-12 col-sm-6 form-group">
+      <%= label_tag :copyright_name, 'Copyright Name' %>
+      <%= text_field_tag :copyright_name, @settings.copyright_name, class: 'form-control' %>
     </div>
   </div>
   <div class="row">
