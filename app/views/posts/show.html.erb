@@ -1,0 +1,12 @@
+<div class="post-show">
+  <div>
+    <div class="btn-group">
+      <a href="/<%= @page_path %>" class="btn btn-secondary">Back</a>
+    </div>
+    <h5><%= @post.title %></h5>
+  </div>
+  <div>
+    <%= image_tag image_path(@post.image) %>
+    <div><%= @post.content %></div>
+  </div>
+</div>

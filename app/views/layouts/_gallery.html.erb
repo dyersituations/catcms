@@ -11,9 +11,7 @@
       <div class="gallery-thumbnail-wrapper">
     <% end %>
     <div class="gallery-thumbnail">
-      <a href="<%= image_path(post.image) %>" rel="lightbox[gallery]"
-          data-title="<%= post.title %>"
-          data-caption="<%= post.content %>">
+      <a href="<%= post_path(:id => post.id) %>">
         <%= image_tag image_path(post.image.thumb) %>
       </a>
       <% if Settings.instance.gallery_captions %>

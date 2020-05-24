@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get "admin" => "admin#admin"
   post "admin/save" => "admin#save"
   get "logout" => "admin#logout"
-  resources :posts, only: [:new, :create, :update, :destroy]
-  resources :pages, only: [:show, :new, :edit, :create, :update, :destroy]
+  resources :posts, only: [:new, :create, :show, :update, :destroy]
+  resources :pages, only: [:new, :create, :show, :edit, :update, :destroy]
   get "page_edit_cancel(/:path)" => "pages#cancel"
   # Post display and edit routes.
   get "edit_posts" => "pages#edit_posts"

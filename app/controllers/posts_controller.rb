@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :load_post, :only => [:show, :update, :destroy]
+
   def new
     @post = Post.new
     respond_to do |format|
@@ -21,8 +23,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @page_path = Page.find(@post.page_id).path
+  end
+
   def update
-    @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to request.referer, notice: "Successfully updated." }
@@ -33,8 +38,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-
     respond_to do |format|
       if @post.destroy
         format.html { redirect_to request.referer, notice: "Successfully removed." }
@@ -48,5 +51,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:content, :image, :title, :category, :page_id)
+  end
+
+  def load_post
+    @post = Post.find(params[:id])
   end
 end
