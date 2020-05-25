@@ -149,8 +149,16 @@ footer {
       }
     }
 
-    img {
-      margin-right: 10px;
+    &:last-of-type {
+      flex-wrap: wrap;
+
+      img {
+        margin: 0 10px 10px 0;
+      }
+  
+      div {
+        flex: 1 1 200px;
+      }
     }
   }
 }
