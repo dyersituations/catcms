@@ -34,7 +34,11 @@ class BaseUploader < CarrierWave::Uploader::Base
   end
 
   def remove_folder
-    # CarrierWave doesn't remove the folder when the image is removed.
-    FileUtils.remove_dir(File.join(root, store_dir), :force => true)
+    path = ::File.expand_path(store_dir, root)
+     # Fails if path not empty dir such as when another image has been added.
+    Dir.delete(path)
+  rescue SystemCallError
+    # Nothing, the dir is not empty.
+    true
   end
 end

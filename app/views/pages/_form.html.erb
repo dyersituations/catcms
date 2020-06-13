@@ -19,6 +19,7 @@
 </div>
 <div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
 <%= form_for @page do |f| %>
+  <%= f.hidden_field :remove_banner %>
   <div class="row">
     <div class="col-12 form-group">
       <%= f.label :path %>
@@ -34,7 +35,8 @@
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :banner %>
-      <%= f.file_field :banner, :class => 'form-control-file' %>
+      <%= f.file_field :banner, :class => 'form-control-file', :onchange => "onAddBanner()" %>
+      <%= link_to 'Remove Banner', '#', :class => 'banner-remove ' + (@page.banner.present? ? '' : 'hidden'), :onclick => 'onRemoveBanner()' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <% if @page.banner? %>
@@ -60,5 +62,30 @@
   function onChangeType(select) {
     const hasContent = +select.value === <%= Page::PAGETYPES[:PLAIN] %>;
     $('#content').toggle(hasContent);
+  }
+
+  function onAddBanner() {
+    hideBannerThumb();
+    toggleBannderRemove(true);
+    setRemoveBanner(false);
+  }
+
+  function onRemoveBanner() {
+    $('#page_banner').val('');
+    hideBannerThumb();
+    toggleBannderRemove(false);
+    setRemoveBanner(true);
+  }
+
+  function hideBannerThumb() {
+    $('.banner-thumb').hide();
+  }
+
+  function toggleBannderRemove(isShow) {
+    $('.banner-remove').toggle(isShow);
+  }
+
+  function setRemoveBanner(isRemove) {
+    $('#page_remove_banner').val(isRemove);
   }
 </script>
