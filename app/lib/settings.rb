@@ -9,8 +9,9 @@ class Settings
   ADMIN_PASS = "******"
   IS_ADMIN_PASS = false
   SITE_NAME = "CatCMS"
-  NAVBAR_BG_COLOR = "#343a40"
-  NAVBAR_FONT_COLOR = "#fff"
+  NAVBAR_BG_COLOR = "#fff"
+  NAVBAR_FONT_COLOR = "#000"
+  NAVBAR_BORDER_COLOR = "#000"
   PAGE_BG_COLOR = "#fff"
   PAGE_FONT_COLOR = "#000"
   SUBNAV_BG_COLOR = "#6c757d"
@@ -31,6 +32,7 @@ class Settings
     save_setting(:site_name, params[:site_name])
     save_setting(:navbar_bg_color, params[:navbar_bg_color])
     save_setting(:navbar_font_color, params[:navbar_font_color])
+    save_setting(:navbar_border_color, params[:navbar_border_color])
     save_setting(:page_bg_color, params[:page_bg_color])
     save_setting(:page_font_color, params[:page_font_color])
     save_setting(:subnav_bg_color, params[:subnav_bg_color])
@@ -54,6 +56,10 @@ class Settings
 
   def navbar_font_color
     get_setting(:navbar_font_color, NAVBAR_FONT_COLOR)
+  end
+
+  def navbar_border_color
+    get_setting(:navbar_border_color, NAVBAR_BORDER_COLOR)
   end
 
   def page_bg_color
@@ -86,6 +92,7 @@ class Settings
       :site_name => site_name,
       :navbar_bg_color => navbar_bg_color,
       :navbar_font_color => navbar_font_color,
+      :navbar_border_color => navbar_border_color,
       :page_bg_color => page_bg_color,
       :page_font_color => page_font_color,
       :subnav_bg_color => subnav_bg_color,
