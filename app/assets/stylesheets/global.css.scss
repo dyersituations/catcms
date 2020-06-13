@@ -51,6 +51,10 @@ img {
     font-size: 1.4rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .nav-item {
