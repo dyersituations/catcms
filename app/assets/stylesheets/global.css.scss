@@ -93,7 +93,7 @@ img {
   text-transform: uppercase;
   border: 0;
 
-  &.btn-active {
+  &:hover, &.btn-active {
     text-decoration: underline;
   }
 }
