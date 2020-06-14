@@ -61,7 +61,7 @@
     </div>
   </div>
 <% end %>
-<%= tinymce %>
+<%= tinymce content_css: asset_path('application.css') %>
 <script>
   function onChangeType(select) {
     const hasContent = +select.value === <%= Page::PAGETYPES[:PLAIN] %>;
