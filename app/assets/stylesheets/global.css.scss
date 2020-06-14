@@ -111,6 +111,11 @@ section {
 #container {
   flex: 1;
   overflow-y: auto;
+
+  > section {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 // Footer
 // ******
