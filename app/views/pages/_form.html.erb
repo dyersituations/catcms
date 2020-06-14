@@ -27,9 +27,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 form-group">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type, "Page Type" %>
       <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control', :onchange => 'onChangeType(this)' %>
+    </div>
+    <div class="col-12 col-sm-6 form-group">
+      <%= f.label :page_type, "Page Order" %>
+      <%= f.select :page_order, @pages.map.with_index { |x, i| [ i + 1, i ] }, {}, :class => 'form-control' %>
     </div>
   </div>
   <div class="row">

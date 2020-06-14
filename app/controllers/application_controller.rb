@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   private
 
   def load_pages
-    @pages = Page.all
+    @pages = Page.all.order("page_order ASC")
   end
 
   def pages_with_posts

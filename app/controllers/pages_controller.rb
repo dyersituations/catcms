@@ -54,7 +54,7 @@ class PagesController < ApplicationController
   def page_params
     page = params[:page]
     if !page.nil?
-      page.permit(:path, :page_type, :banner, :content)
+      page.permit(:path, :page_type, :page_order, :banner, :content)
     end
   end
 
@@ -103,7 +103,7 @@ class PagesController < ApplicationController
 
   def save_page
     error_message = "Error saving page. Unique path is required. Please choose banner again if needed."
-    updated_params = params[:page].permit(:path, :page_type, :remove_banner, :banner, :content)
+    updated_params = params[:page].permit(:path, :page_type, :page_order, :remove_banner, :banner, :content)
     begin
       updated_params.require(:path)
     rescue ActionController::ParameterMissing
