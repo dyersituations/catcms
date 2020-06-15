@@ -1,7 +1,9 @@
 toolbar:
-  - styleselect | bold italic | undo redo
-  - uploadimage | link
+  - undo redo | bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify | outdent indent | uploadimage link
 plugins:
+  - image
+  - imagetools
   - uploadimage
   - link
-height: 400
+height: 600
+image_advtab: true

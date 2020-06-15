@@ -15,6 +15,7 @@ gem 'tinymce-rails', '~> 4.0'
 gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 gem 'execjs'
 gem 'mini_racer'
+gem 'sprockets-rails', '2.3.3'
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'solargraph'
