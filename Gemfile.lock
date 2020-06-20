@@ -249,24 +249,24 @@ DEPENDENCIES
   bootstrap (~> 4.3.1)
   capistrano (~> 3.13.0)
   capistrano-passenger (~> 0.2.0)
-  capistrano-rails (~> 1.4)
-  capistrano-rbenv (~> 2.1, >= 2.1.4)
-  carrierwave
-  execjs
-  jquery-rails
+  capistrano-rails (~> 1.5.0)
+  capistrano-rbenv (~> 2.1.4)
+  carrierwave (~> 2.1.0)
+  execjs (~> 2.7.0)
+  jquery-rails (~> 4.4.0)
   listen (~> 3.0.5)
-  mini_magick (>= 4.9.4)
-  mini_racer
+  mini_magick (~> 4.10.1)
+  mini_racer (~> 0.2.14)
   rails (~> 5.2.4.3)
-  rufo
-  sass
-  sassc-rails
-  solargraph
-  sqlite3
-  tinymce-rails (~> 4.0)
+  rufo (~> 0.12.0)
+  sass (~> 3.7.4)
+  sassc-rails (~> 2.1.2)
+  solargraph (~> 0.39.8)
+  sqlite3 (~> 1.4.2)
+  tinymce-rails (~> 4.9.10)
   tinymce-rails-imageupload (~> 4.0.17.beta.3)
-  uglifier (>= 1.3.0)
-  unicorn
+  uglifier (~> 4.2.0)
+  unicorn (~> 5.5.5)
 
 BUNDLED WITH
    1.17.2
