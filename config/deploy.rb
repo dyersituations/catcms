@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "~> 3.13.0"
 
 set :application, "myapp"
 set :repo_url, "https://github.com/dyersituations/catcms.git"
