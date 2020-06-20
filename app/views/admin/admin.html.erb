@@ -38,59 +38,60 @@
     Welcome to CatCMS! To start building, enter at least an admin password below and click "Save Settings".
   </div>
 <% end %>
+<div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
 <%= form_tag(:controller => :admin, :action => :save) do %>
   <div class="row">
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :admin_pass, 'Admin Password' %>
       <%= password_field_tag :admin_pass, @settings.is_admin_pass && !@settings.is_admin_pass.empty? ? Settings::ADMIN_PASS : '', class: 'form-control' %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
+      <%= label_tag :admin_pass, 'Confirm Admin Password' %>
+      <%= password_field_tag :confirm_admin_pass, @settings.is_admin_pass && !@settings.is_admin_pass.empty? ? Settings::ADMIN_PASS : '', class: 'form-control' %>
+    </div>
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :site_name, 'Site Name' %>
       <%= text_field_tag :site_name, @settings.site_name, class: 'form-control' %>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12 col-sm-6 form-group">
+  <div class="row">    
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :navbar_bg_color, 'Navbar Background Color' %>
       <%= color_field_tag :navbar_bg_color, @settings.navbar_bg_color, class: 'form-control' %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :navbar_font_color, 'Navbar Font Color' %>
       <%= color_field_tag :navbar_font_color, @settings.navbar_font_color, class: 'form-control' %>
     </div>
-  </div>
-  <div class="row">
-  <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :navbar_border_color, 'Navbar Border Color' %>
       <%= color_field_tag :navbar_border_color, @settings.navbar_border_color, class: 'form-control' %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :page_bg_color, 'Page Background Color' %>
       <%= color_field_tag :page_bg_color, @settings.page_bg_color, class: 'form-control' %>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :page_font_color, 'Page Font Color' %>
       <%= color_field_tag :page_font_color, @settings.page_font_color, class: 'form-control' %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :subnav_bg_color, 'Subnav Background Color' %>
       <%= color_field_tag :subnav_bg_color, @settings.subnav_bg_color, class: 'form-control' %>
     </div>
   </div>
-  <div class="row align-items-center">
-    <div class="col-12 col-sm-6 form-group">
+  <div class="row">    
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :subnav_font_color, 'Subnav Font Color' %>
       <%= color_field_tag :subnav_font_color, @settings.subnav_font_color, class: 'form-control' %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :copyright_name, 'Copyright Name' %>
       <%= text_field_tag :copyright_name, @settings.copyright_name, class: 'form-control' %>
     </div>
-  </div>
-  <div class="row align-items-center">
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :copyright_name, 'Display Gallery Captions' %>
       <div class="form-check">
         <%= check_box_tag :gallery_captions, nil, @settings.gallery_captions, class: 'form-check-input' %>

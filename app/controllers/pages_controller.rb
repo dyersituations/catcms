@@ -102,12 +102,11 @@ class PagesController < ApplicationController
   end
 
   def save_page
-    error_message = "Error saving page. Unique path is required. Please choose banner again if needed."
     updated_params = params[:page].permit(:path, :page_type, :page_order, :remove_banner, :banner, :content)
     begin
       updated_params.require(:path)
     rescue ActionController::ParameterMissing
-      flash[:notice] = error_message
+      flash[:notice] = "Page parameter missing. Choose banner again if needed."
       render :edit
       return
     end
@@ -130,7 +129,7 @@ class PagesController < ApplicationController
         success = @page.save
       end
     rescue ActiveRecord::RecordNotUnique => e
-      flash[:notice] = error_message
+      flash[:notice] = "Unique path required. Choose banner again if needed."
       render :new
       return
     end
@@ -140,7 +139,7 @@ class PagesController < ApplicationController
         format.html { redirect_to page_view_path(@page.path) }
       end
     else
-      flash[:notice] = error_message
+      flash[:notice] = "Error saving page. Choose banner again if needed."
       render :new
     end
   end

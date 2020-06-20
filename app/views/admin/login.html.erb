@@ -1,4 +1,5 @@
 <h4>Admin</h4>
+<div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
 <%= form_tag('login_admin') do %>
   <div class="row">
     <div class="col-12 form-group">
@@ -10,5 +11,3 @@
     </div>
   </div>
 <% end %>
-
-<%= flash[:error] %>

@@ -7,7 +7,13 @@ class AdminController < ApplicationController
   end
 
   def save
-    Settings.instance.save(params)
+    admin_pass = params[:admin_pass]
+    confirm_admin_pass = params[:confirm_admin_pass]
+    if admin_pass != Settings::ADMIN_PASS && admin_pass != confirm_admin_pass
+      flash[:notice] = "Confirmation password doesn't match!"
+    else
+      Settings.instance.save(params)
+    end    
     redirect_to admin_path
   end
 
@@ -24,7 +30,7 @@ class AdminController < ApplicationController
       session.delete(:login_redirect)
       redirect_to login_redirect ? login_redirect : root_path
     else
-      flash[:error] = "Admin password incorrect! Please try again."
+      flash[:notice] = "Admin password incorrect!"
       redirect_to admin_path
     end
   end

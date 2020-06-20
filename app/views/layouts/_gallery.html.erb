@@ -7,7 +7,7 @@
     </div>
   <% end %>
   <% if @posts.each_with_index do |post, index| %>
-    <% if index % 4 == 0 %>
+    <% if index % 5 == 0 %>
       <div class="gallery-thumbnail-wrapper">
     <% end %>
     <div class="gallery-thumbnail">
@@ -18,7 +18,7 @@
         <%= post.title.html_safe %>
       <% end %>
     </div>
-    <% if index % 4 == 3 || index == @posts.length - 1 %>
+    <% if index % 5 == 4 || index == @posts.length - 1 %>
       </div>
     <% end %>
   <% end.empty? %>
