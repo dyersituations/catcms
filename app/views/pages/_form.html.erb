@@ -67,28 +67,28 @@
     const hasContent = +select.value === <%= Page::PAGETYPES[:PLAIN] %>;
     $('#content').toggle(hasContent);
   }
-
+  
   function onAddBanner() {
     hideBannerThumb();
     toggleBannderRemove(true);
     setRemoveBanner(false);
   }
-
+  
   function onRemoveBanner() {
     $('#page_banner').val('');
     hideBannerThumb();
     toggleBannderRemove(false);
     setRemoveBanner(true);
   }
-
+  
   function hideBannerThumb() {
     $('.banner-thumb').hide();
   }
-
+  
   function toggleBannderRemove(isShow) {
     $('.banner-remove').toggle(isShow);
   }
-
+  
   function setRemoveBanner(isRemove) {
     $('#page_remove_banner').val(isRemove);
   }

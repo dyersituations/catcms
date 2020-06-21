@@ -1,6 +1,6 @@
 <footer>
   <% if session[:admin] %>
-    <div class="btn-group btn-group-sm">
+    <div class="sub-nav btn-group btn-group-sm">
       <%= link_to 'Admin', admin_path, :class => 'btn btn-secondary ' + (request.path == admin_path ? "btn-active" : "") %>
       <%= link_to 'New Page', new_page_path, :class => 'btn btn-secondary ' + (request.path == new_page_path ? "btn-active" : "") %>
       <% if pages_with_posts.any? %>
