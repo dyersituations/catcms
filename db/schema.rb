@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_14_163405) do
+ActiveRecord::Schema.define(version: 2020_06_21_194106) do
 
   create_table "editor_images", force: :cascade do |t|
     t.string "file"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_06_14_163405) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "page_order", default: 0
+    t.integer "page_sub_type", default: 0
     t.index ["path"], name: "index_pages_on_path", unique: true
   end
 

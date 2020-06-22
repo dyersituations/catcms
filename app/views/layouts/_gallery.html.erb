@@ -1,3 +1,4 @@
+<% is_small = @page.page_sub_type == Page::PAGE_SUB_TYPE[:SMALL_THUMBNAIL] %>
 <% if @cats.length > 1 %>
   <div class="gallery-cats sub-nav btn-group">
     <% @cats.uniq.each_with_index do |cat, index| %>
@@ -6,8 +7,8 @@
   </div>
 <% end %>
 <% if @posts.each_with_index do |post, index| %>
-  <% if index % 5 == 0 %>
-    <div class="gallery-thumbnail-wrapper">
+  <% if index % (is_small ? 5 : 3) == 0 %>
+    <div class="gallery-thumbnail-wrapper <%= Page::PAGE_SUB_TYPE.key(@page.page_sub_type).to_s.downcase.gsub('_', '-') %>">
     <% end %>
     <div class="gallery-thumbnail">
       <a href="<%= post_path(:id => post.id) %>">
@@ -17,7 +18,7 @@
         <%= post.title.html_safe %>
       <% end %>
     </div>
-    <% if index % 5 == 4 || index == @posts.length - 1 %>
+    <% if index % (is_small ? 5 : 3) == (is_small ? 4 : 2) || index == @posts.length - 1 %>
     </div>
   <% end %>
 <% end.empty? %>

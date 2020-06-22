@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type, "Page Type" %>
-      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control', :onchange => 'onChangeType(this)' %>
+      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control', :onchange => 'onChangePageType(this)' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type, "Page Order" %>
@@ -43,9 +43,18 @@
       <%= link_to 'Remove Banner', '#', :class => 'banner-remove ' + (@page.banner.present? ? '' : 'hidden'), :onclick => 'onRemoveBanner()' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
+      <%= f.label :banner_thumbnail, "Banner Thumbnail" %>
       <% if @page.banner? %>
         <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
+      <% else %>
+        <div>None</div>
       <% end %>
+    </div>
+  </div>
+  <div id="gallery-type" class="row <%= @page.page_type == Page::PAGETYPES[:GALLERY] ? '' : 'hidden' %>">
+    <div class="col-12 col-sm-6 form-group">
+      <%= f.label :page_sub_type, "Page Sub Type" %>
+      <%= f.select :page_sub_type, Page::PAGE_SUB_TYPE.map { |t| [t[0].to_s.gsub('_', ' '), t[1]] }, {}, :class => 'form-control' %>
     </div>
   </div>
   <div id="content" class="row <%= @page.page_type.nil? || @page.page_type == Page::PAGETYPES[:PLAIN] ? '' : 'hidden' %>">
@@ -63,9 +72,12 @@
 <% end %>
 <%= tinymce content_css: [asset_path('common.css'), "https://fonts.googleapis.com/css?family=Raleway:400"] %>
 <script>
-  function onChangeType(select) {
-    const hasContent = +select.value === <%= Page::PAGETYPES[:PLAIN] %>;
+  function onChangePageType(select) {
+    const pageType = +select.value;
+    const hasContent = pageType === <%= Page::PAGETYPES[:PLAIN] %>;
+    const isGallery = pageType === <%= Page::PAGETYPES[:GALLERY] %>;
     $('#content').toggle(hasContent);
+    $('#gallery-type').toggle(isGallery);
   }
   
   function onAddBanner() {
