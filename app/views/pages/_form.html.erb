@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type, "Page Type" %>
-      <%= f.select :page_type, Page::PAGETYPES, {}, :class => 'form-control', :onchange => 'onChangePageType(this)' %>
+      <%= f.select :page_type, Page::PAGE_TYPE, {}, :class => 'form-control', :onchange => 'onChangePageType(this)' %>
     </div>
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_type, "Page Order" %>
@@ -51,13 +51,13 @@
       <% end %>
     </div>
   </div>
-  <div id="gallery-type" class="row <%= @page.page_type == Page::PAGETYPES[:GALLERY] ? '' : 'hidden' %>">
+  <div id="gallery-type" class="row <%= @page.page_type == Page::PAGE_TYPE[:GALLERY] ? '' : 'hidden' %>">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :page_sub_type, "Page Sub Type" %>
       <%= f.select :page_sub_type, Page::PAGE_SUB_TYPE.map { |t| [t[0].to_s.gsub('_', ' '), t[1]] }, {}, :class => 'form-control' %>
     </div>
   </div>
-  <div id="content" class="row <%= @page.page_type.nil? || @page.page_type == Page::PAGETYPES[:PLAIN] ? '' : 'hidden' %>">
+  <div id="content" class="row <%= @page.page_type.nil? || @page.page_type == Page::PAGE_TYPE[:PLAIN] ? '' : 'hidden' %>">
     <div class="col-12 form-group">
       <%= f.label :content %>
       <%= f.text_area :content, :class => "tinymce" %>
@@ -74,8 +74,8 @@
 <script>
   function onChangePageType(select) {
     const pageType = +select.value;
-    const hasContent = pageType === <%= Page::PAGETYPES[:PLAIN] %>;
-    const isGallery = pageType === <%= Page::PAGETYPES[:GALLERY] %>;
+    const hasContent = pageType === <%= Page::PAGE_TYPE[:PLAIN] %>;
+    const isGallery = pageType === <%= Page::PAGE_TYPE[:GALLERY] %>;
     $('#content').toggle(hasContent);
     $('#gallery-type').toggle(isGallery);
   }

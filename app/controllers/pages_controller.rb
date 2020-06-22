@@ -6,10 +6,10 @@ class PagesController < ApplicationController
 
   def show
     case @page.page_type
-    when Page::PAGETYPES[:BLOG]
+    when Page::PAGE_TYPE[:BLOG]
       load_posts_desc
       @view = "layouts/blog"
-    when Page::PAGETYPES[:GALLERY]
+    when Page::PAGE_TYPE[:GALLERY]
       load_posts_alpha
       @view = "layouts/gallery"
     else
@@ -59,7 +59,7 @@ class PagesController < ApplicationController
   end
 
   def plain
-    @plain = @page == nil || @page.page_type == Page::PAGETYPES[:PLAIN]
+    @plain = @page == nil || @page.page_type == Page::PAGE_TYPE[:PLAIN]
   end
 
   def load_page
@@ -119,7 +119,7 @@ class PagesController < ApplicationController
       @page = Page.new(updated_params)
     end
     # Page content not needed for GALLERY or BLOG.
-    if @page.page_type == Page::PAGETYPES[:GALLERY] || @page.page_type == Page::PAGETYPES[:BLOG]
+    if @page.page_type == Page::PAGE_TYPE[:GALLERY] || @page.page_type == Page::PAGE_TYPE[:BLOG]
       @page.content = ""
     end
     begin

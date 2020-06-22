@@ -9,7 +9,7 @@
       <% if params[:controller] != 'admin' && @page && @page.id %>
         <%= link_to 'Edit Page', edit_page_path(:id => @page.id), :class => 'btn btn-secondary ' + (request.path == edit_page_path(:id => @page.id) ? "btn-active" : "") %>
       <% end %>
-      <% if @page && (@page.page_type == Page::PAGETYPES[:GALLERY] || @page.page_type == Page::PAGETYPES[:BLOG]) %>
+      <% if @page && (@page.page_type == Page::PAGE_TYPE[:GALLERY] || @page.page_type == Page::PAGE_TYPE[:BLOG]) %>
         <%= link_to 'Edit Posts', edit_posts_path(:id => @page.id), :class => 'btn btn-secondary ' + ("#{request.path}?#{request.query_string}" == edit_posts_path(:id => @page.id) ? "btn-active" : "") %>
       <% end %>
       <%= link_to 'Log Out', logout_path, :class => 'btn btn-secondary' %>

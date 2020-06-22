@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def pages_with_posts
-    Page.where('pages.page_type IN (?, ?)', Page::PAGETYPES[:BLOG], Page::PAGETYPES[:GALLERY])
+    Page.where('pages.page_type IN (?, ?)', Page::PAGE_TYPE[:BLOG], Page::PAGE_TYPE[:GALLERY])
   end
 
   def new_action
