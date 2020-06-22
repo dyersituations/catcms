@@ -1,7 +1,8 @@
 <% is_small = @page.page_sub_type == Page::PAGE_SUB_TYPE[:SMALL_THUMBNAIL] %>
-<% if @cats.length > 1 %>
+<% cats = @cats.uniq %>
+<% if cats.length > 1 %>
   <div class="gallery-cats sub-nav btn-group">
-    <% @cats.uniq.each_with_index do |cat, index| %>
+    <% cats.each_with_index do |cat, index| %>
       <a href="?category=<%= cat %>" class="btn btn-secondary <%= @cat == cat.downcase ? "btn-active" : "" %>"><%= cat %></a>
     <% end %>
   </div>
