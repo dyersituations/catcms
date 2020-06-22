@@ -35,7 +35,7 @@ This tool can be used to build any simple website without the developer needing 
 ## Deployment
 
 - [Digital Ocean](https://www.digitalocean.com/)
-    - $5 Ubunutu Droplet for a small website
+    - $5 Ubuntu Droplet for a small website
 - [Server Setup](https://gorails.com/deploy/ubuntu/18.04)
   - Install image editor for CarrierWave
     - ```cd /home/deploy```
