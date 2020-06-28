@@ -100,6 +100,12 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-12 col-sm-8 form-group">
+      <%= label_tag :meta_description, 'Meta Description' %>
+      <%= text_area_tag :meta_description, @settings.meta_description, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-12 form-group">
       <%= button_tag 'Save Settings', class: 'btn btn-primary' %>
     </div>

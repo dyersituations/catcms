@@ -18,6 +18,7 @@ class Settings
   SUBNAV_FONT_COLOR = "#fff"
   COPYRIGHT_NAME = ""
   GALLERY_CAPTIONS = false
+  META_DESCRIPTION = ""
 
   # Checks the passed-in password against the saved admin salt and hash.
   def admin_authenticate?(password)
@@ -39,6 +40,7 @@ class Settings
     save_setting(:subnav_font_color, params[:subnav_font_color])
     save_setting(:copyright_name, params[:copyright_name])
     save_setting(:gallery_captions, params[:gallery_captions])
+    save_setting(:meta_description, params[:meta_description])
   end
 
   # Admin page is public until a password is saved.
@@ -86,6 +88,10 @@ class Settings
     get_setting(:gallery_captions, GALLERY_CAPTIONS)
   end
 
+  def meta_description
+    get_setting(:meta_description, META_DESCRIPTION)
+  end
+
   def get_settings
     OpenStruct.new(
       :is_admin_pass => is_admin_pass,
@@ -99,6 +105,7 @@ class Settings
       :subnav_font_color => subnav_font_color,
       :copyright_name => copyright_name,
       :gallery_captions => gallery_captions,
+      :meta_description => meta_description,
     )
   end
 
