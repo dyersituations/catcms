@@ -19,6 +19,7 @@ class Settings
   COPYRIGHT_NAME = ""
   GALLERY_CAPTIONS = false
   META_DESCRIPTION = ""
+  FAVICON = "favicon_1593978991.ico"
 
   # Checks the passed-in password against the saved admin salt and hash.
   def admin_authenticate?(password)
@@ -41,6 +42,7 @@ class Settings
     save_setting(:copyright_name, params[:copyright_name])
     save_setting(:gallery_captions, params[:gallery_captions])
     save_setting(:meta_description, params[:meta_description])
+    save_setting(:favicon, params[:favicon])
   end
 
   # Admin page is public until a password is saved.
@@ -92,6 +94,10 @@ class Settings
     get_setting(:meta_description, META_DESCRIPTION)
   end
 
+  def favicon
+    get_setting(:favicon, FAVICON)
+  end
+
   def get_settings
     OpenStruct.new(
       :is_admin_pass => is_admin_pass,
@@ -106,6 +112,7 @@ class Settings
       :copyright_name => copyright_name,
       :gallery_captions => gallery_captions,
       :meta_description => meta_description,
+      :favicon => favicon,
     )
   end
 

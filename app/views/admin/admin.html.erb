@@ -39,7 +39,7 @@
   </div>
 <% end %>
 <div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
-<%= form_tag(:controller => :admin, :action => :save) do %>
+<%= form_tag({ controller: :admin, action: :save }, multipart: true) do %>
   <div class="row">
     <div class="col-12 col-sm-4 form-group">
       <%= label_tag :admin_pass, 'Admin Password' %>
@@ -103,6 +103,10 @@
     <div class="col-12 col-sm-8 form-group">
       <%= label_tag :meta_description, 'Meta Description' %>
       <%= text_area_tag :meta_description, @settings.meta_description, class: 'form-control' %>
+    </div>
+    <div class="col-12 col-sm-4 form-group">
+      <%= label_tag :favicon, 'Favicon' %>
+      <%= file_field_tag :favicon, class: 'form-control-file' %>
     </div>
   </div>
   <div class="row">

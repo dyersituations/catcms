@@ -17,7 +17,7 @@ gem 'execjs', '~> 2.7.0'
 gem 'mini_racer', '~> 0.2.14'
 group :development do
   gem 'listen', '~> 3.0.5'
-  gem 'solargraph', '~> 0.39.8'
+  gem 'solargraph', '~> 0.39.11'
   gem 'rufo', '~> 0.12.0'
   gem 'htmlbeautifier', '~> 1.3.1'
   gem 'capistrano', '~> 3.13.0'

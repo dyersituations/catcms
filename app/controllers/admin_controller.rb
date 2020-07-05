@@ -12,8 +12,20 @@ class AdminController < ApplicationController
     if admin_pass != Settings::ADMIN_PASS && admin_pass != confirm_admin_pass
       flash[:notice] = "Confirmation password doesn't match!"
     else
-      Settings.instance.save(params)
-    end    
+      begin
+        if Settings.instance.favicon != "" && Settings.instance.favicon != Settings::FAVICON
+          File.delete(Rails.root.join("public", Settings.instance.favicon))
+        end
+        new_favicon = "favicon_#{Time.now.to_i}.ico"
+        File.open(Rails.root.join("public", new_favicon), "wb") do |file|
+          file.write(params[:favicon].read)
+        end
+        params[:favicon] = new_favicon
+        Settings.instance.save(params)
+      rescue ActionController::ParameterMissing
+        flash[:notice] = "Error uploading favicon. Try again!"
+      end
+    end
     redirect_to admin_path
   end
 

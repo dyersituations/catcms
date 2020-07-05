@@ -3,6 +3,7 @@
   <head>
     <title><%= Settings.instance.site_name %><%= @page && @page.path ? ' - ' + @page.path.upcase : '' %></title>
     <meta name="description" content="<%= Settings.instance.meta_description %>" />
+    <link rel="shortcut icon" href="<%= Settings.instance.favicon %>" />
     <%= stylesheet_link_tag "application", :media => "all" %>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet" type="text/css">
     <%= javascript_include_tag "application" %>
