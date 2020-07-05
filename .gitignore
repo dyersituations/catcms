@@ -19,3 +19,6 @@
 
 # Ignore image uploads.
 /public/uploads/*
+
+# Favicon.
+/public/favicon*
