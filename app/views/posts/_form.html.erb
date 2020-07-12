@@ -1,18 +1,29 @@
 <%= form_for locals[:post] do |f| %>
   <div class="row">
-    <div class="col-12 form-group">
+    <div class="col-12 col-sm-8 form-group">
       <%= f.label :title %>
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-6 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= f.label 'Page' %>
       <%= f.collection_select(:page_id, pages_with_posts, :id, :path, {}, { :class => 'form-control' }) %>
     </div>
-    <div class="col-12 col-sm-6 form-group">
+  </div>
+  <div class="row">    
+    <div class="col-12 col-sm-4 form-group">
       <%= f.label :category %>
       <%= f.text_field :category, :class => 'form-control' %>
+    </div>
+    <div class="col-12 col-sm-4 form-group">
+      <%= f.label :price %>
+      <%= f.text_field :price, :class => 'form-control' %>
+    </div>
+    <div class="col-12 col-sm-4 form-group">
+      <%= f.label :in_stock %>
+      <div class="form-check">
+        <%= f.check_box :in_stock, class: 'form-check-input' %>
+        <%= f.label :in_stock, 'Yes', class: 'form-check-label' %>
+      </div>
     </div>
   </div>
   <div class="row">

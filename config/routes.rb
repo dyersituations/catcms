@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get "gallery/:category" => "pages#show", :defaults => { :path => "gallery" }
   # Post editor image.
   post "tinymce_assets" => "tinymce_assets#create"
+  get "posts/:id/sold" => "posts#sold"
 end

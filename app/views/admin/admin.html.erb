@@ -110,6 +110,12 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-12 col-sm-4 form-group">
+      <%= label_tag :paypal_client_id, 'PayPal Client ID' %>
+      <%= text_field_tag :paypal_client_id, @settings.paypal_client_id, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-12 form-group">
       <%= button_tag 'Save Settings', class: 'btn btn-primary' %>
     </div>

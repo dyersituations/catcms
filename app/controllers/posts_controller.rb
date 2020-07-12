@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :load_post, :only => [:show, :update, :destroy]
+  before_action :load_post, :only => [:show, :update, :destroy, :sold]
 
   def new
     @post = Post.new
@@ -47,10 +47,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def sold
+    @post.update(:in_stock => false)
+    respond_to do |format|
+      format.html { redirect_to request.referer, notice: "Sale complete. Thanks!" }
+    end
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:content, :image, :title, :category, :page_id)
+    params.require(:post).permit(:content, :image, :title, :category, :page_id, :price, :in_stock)
   end
 
   def load_post

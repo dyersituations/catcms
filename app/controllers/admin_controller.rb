@@ -13,14 +13,9 @@ class AdminController < ApplicationController
       flash[:notice] = "Confirmation password doesn't match!"
     else
       begin
-        if Settings.instance.favicon != "" && Settings.instance.favicon != Settings::FAVICON
-          File.delete(Rails.root.join("public", Settings.instance.favicon))
+        if !params[:favicon].blank?
+          save_favicon
         end
-        new_favicon = "favicon_#{Time.now.to_i}.ico"
-        File.open(Rails.root.join("public", new_favicon), "wb") do |file|
-          file.write(params[:favicon].read)
-        end
-        params[:favicon] = new_favicon
         Settings.instance.save(params)
       rescue ActionController::ParameterMissing
         flash[:notice] = "Error uploading favicon. Try again!"
@@ -50,5 +45,18 @@ class AdminController < ApplicationController
   def logout
     reset_session
     redirect_to root_path
+  end
+
+  private
+
+  def save_favicon
+    if Settings.instance.favicon != "" && Settings.instance.favicon != Settings::FAVICON
+      File.delete(Rails.root.join("public", Settings.instance.favicon))
+    end
+    new_favicon = "favicon_#{Time.now.to_i}.ico"
+    File.open(Rails.root.join("public", new_favicon), "wb") do |file|
+      file.write(params[:favicon].read)
+    end
+    params[:favicon] = new_favicon
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_21_194106) do
+ActiveRecord::Schema.define(version: 2020_07_11_203031) do
 
   create_table "editor_images", force: :cascade do |t|
     t.string "file"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2020_06_21_194106) do
     t.datetime "updated_at", null: false
     t.string "category", limit: 255
     t.integer "page_id"
+    t.decimal "price"
+    t.boolean "in_stock"
   end
 
   create_table "settings", force: :cascade do |t|
