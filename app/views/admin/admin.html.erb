@@ -1,38 +1,4 @@
-<div class="jumbotron">
-  <h4>Admin</h4>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Admin Password</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The password used to access these settings. The admin page is public until a password is saved.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Site Name</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The name of this site. The name is displayed both in the navbar and the title of the browser page.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Navbar Background Color</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The background color of the navbar.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Navbar Font Color</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The font color of the navbar.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Page Background Color</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The background color of the page.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Page Font Color</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The font color of the page.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Copyright Name</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">The name used for the copyright in the footer.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-lg-3 col-xl-3 font-weight-bold">Display Gallery Captions</div>
-    <div class="col-12 col-sm-8 col-lg-9 col-xl-9">Whether to display the post titles under the thumbnails in the galleries.</div>
-  </div>
-</div>
+<h3>Admin Settings</h3>
 <% if !@settings.is_admin_pass || @settings.is_admin_pass.empty? %>
   <div class="alert alert-success">
     Welcome to CatCMS! To start building, enter at least an admin password below and click "Save Settings".
@@ -100,7 +66,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-8 form-group">
+    <div class="col-12 col-sm-4 form-group">
       <%= label_tag :meta_description, 'Meta Description' %>
       <%= text_area_tag :meta_description, @settings.meta_description, class: 'form-control' %>
     </div>
@@ -108,8 +74,6 @@
       <%= label_tag :favicon, 'Favicon' %>
       <%= file_field_tag :favicon, class: 'form-control-file' %>
     </div>
-  </div>
-  <div class="row">
     <div class="col-12 col-sm-4 form-group">
       <%= label_tag :paypal_client_id, 'PayPal Client ID' %>
       <%= text_field_tag :paypal_client_id, @settings.paypal_client_id, class: 'form-control' %>

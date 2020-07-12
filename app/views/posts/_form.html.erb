@@ -2,46 +2,47 @@
   <div class="row">
     <div class="col-12 col-sm-8 form-group">
       <%= f.label :title %>
-      <%= f.text_field :title, :class => 'form-control' %>
+      <%= f.text_field :title, :class => "form-control" %>
     </div>
     <div class="col-12 col-sm-4 form-group">
-      <%= f.label 'Page' %>
-      <%= f.collection_select(:page_id, pages_with_posts, :id, :path, {}, { :class => 'form-control' }) %>
+      <%= f.label "Page" %>
+      <%= f.collection_select(:page_id, pages_with_posts, :id, :path, {}, { :class => "form-control" }) %>
     </div>
   </div>
-  <div class="row">    
+  <div class="row">
     <div class="col-12 col-sm-4 form-group">
       <%= f.label :category %>
-      <%= f.text_field :category, :class => 'form-control' %>
+      <%= f.text_field :category, :class => "form-control" %>
     </div>
     <div class="col-12 col-sm-4 form-group">
       <%= f.label :price %>
-      <%= f.text_field :price, :class => 'form-control' %>
+      <%= f.text_field :price, :class => "form-control" %>
     </div>
     <div class="col-12 col-sm-4 form-group">
       <%= f.label :in_stock %>
       <div class="form-check">
-        <%= f.check_box :in_stock, class: 'form-check-input' %>
-        <%= f.label :in_stock, 'Yes', class: 'form-check-label' %>
+        <%= f.check_box :in_stock, class: "form-check-input" %>
+        <%= f.label :in_stock, "Yes", class: "form-check-label" %>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-sm-6 form-group">
       <%= f.label :image %>
-      <%= f.file_field :image, :class => 'form-control-file' %>
+      <sub>650 px</sub>
+      <%= f.file_field :image, :class => "form-control-file" %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 form-group">
       <%= f.label :content %>
-      <%= f.text_area :content, :class => 'form-control' %>
+      <%= f.text_area :content, :class => "form-control" %>
     </div>
   </div>
   <div class="row">
     <div class="col-12 form-group">
-      <%= link_to 'Cancel', root_url, :class => 'btn btn-secondary' %>
-      <%= button_tag (new_action ? 'Create' : 'Save') + ' Post', class: 'btn btn-primary' %>
+      <%= link_to "Cancel", root_url, :class => "btn btn-secondary" %>
+      <%= button_tag (new_action ? "Create" : "Save") + " Post", class: "btn btn-primary" %>
     </div>
   </div>
 <% end %>

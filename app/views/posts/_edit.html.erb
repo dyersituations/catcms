@@ -1,28 +1,6 @@
-<div class="jumbotron">
-  <h4><%= new_action ? 'New Post' : 'Edit Posts' %></h4>
-  <div class="row">
-    <div class="col-12 col-sm-3 font-weight-bold">Title</div>
-    <div class="col-12 col-sm-9">The title of the image or blog post.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-3 font-weight-bold">Page</div>
-    <div class="col-12 col-sm-9">The page of the post.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-3 font-weight-bold">Category</div>
-    <div class="col-12 col-sm-9">The sub-section of the page.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-3 font-weight-bold">Image</div>
-    <div class="col-12 col-sm-9">The image content of the post. The size is 650 x 650 px.</div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-sm-3 font-weight-bold">Content</div>
-    <div class="col-12 col-sm-9">The HTML content of the post.</div>
-  </div>
-</div>
+<h3><%= new_action ? "New Post" : "Edit Posts" %></h3>
 <% if new_action %>
-  <%= render 'form', :locals => { :post => @post } %>
+  <%= render "form", :locals => { :post => @post } %>
 <% else %>
   <% if @posts.each_with_index do |post, i| %>
     <% if i > 0 %>
@@ -33,9 +11,9 @@
         <%= image_tag image_path(post.image.thumb) %>
       </div>
       <div class="col-12 col-sm-7 form-group">
-        <%= render 'posts/form', :locals => { :post => post } %>
-        <%= link_to 'Remove Post', post,
-          :data => { :confirm => 'Are you sure you want to remove this image permanently?' },
+        <%= render "posts/form", :locals => { :post => post } %>
+        <%= link_to "Remove Post", post,
+          :data => { :confirm => "Are you sure you want to remove this image permanently?" },
           :method => :delete %>
       </div>
     </div>

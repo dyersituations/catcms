@@ -155,7 +155,9 @@ footer {
         float: left;
       }
 
-      .alert, #paypal-button-container, .spinner-border {
+      .alert,
+      #paypal-button-container,
+      .spinner-border {
         margin-top: 20px;
 
         &:not(.hidden) {
