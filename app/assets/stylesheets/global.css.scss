@@ -253,11 +253,11 @@ footer {
     }
   }
 
-  &.large-thumbnail .gallery-thumbnail {
-    width: 390px;
+  &.large-thumbnail {
+    flex-wrap: wrap;
 
     img {
-      width: 360px;
+      height: 450px;
     }
   }
 
