@@ -9,7 +9,7 @@
   </div>
   <div>
     <%= image_tag image_path(@post.image) %>
-    <div>
+    <div class="post-content">
       <div><%= @post.content %></div>
       <% if has_price %>
         <div class="post-price">$<%= "%.2f" % @post.price %></div>
@@ -56,6 +56,7 @@
     function toggleButtons() {
       $("#paypal-button-container").toggle();
       $(".spinner-border").toggleClass("hidden");
+      $(".alert").addClass("hidden");
     }
   </script>
 <% end %>

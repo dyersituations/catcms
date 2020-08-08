@@ -172,16 +172,26 @@ footer {
     }
   }
 
-  .post-price, .post-quantity {
-    margin-top: 5px;
-  }
+  .post-content {
+    display: flex;
+    flex-direction: column;
 
-  .post-price {
-    font-weight: bold;
-  }
+    .alert {
+      align-self: flex-start;
+      margin-bottom: 5px;
+    }
 
-  .post-quantity {
-    font-style: italic;
+    .post-price, .post-quantity {
+      margin-top: 5px;
+    }
+  
+    .post-price {
+      font-weight: bold;
+    }
+  
+    .post-quantity {
+      font-style: italic;
+    }
   }
 }
 
