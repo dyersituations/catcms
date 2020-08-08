@@ -1,4 +1,5 @@
 <% has_price = !@post.price.blank? %>
+<% has_quantity = @post.quantity > 0 %>
 <div class="post-show">
   <div>
     <div class="sub-nav btn-group">
@@ -13,6 +14,9 @@
       <% if has_price %>
         <div class="post-price">$<%= "%.2f" % @post.price %></div>
       <% end %>
+      <% if has_quantity %>
+        <div class="post-quantity"><%= @post.quantity %> available</div>
+      <% end %>
       <div class="alert alert-success <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
       <div class="alert alert-danger hidden">Error with transaction. Refresh the page and try again!</div>
       <div class="spinner-border hidden" role="status">
@@ -22,7 +26,7 @@
     </div>
   </div>
 </div>
-<% if @post.in_stock && has_price && !Settings.instance.paypal_client_id.blank? %>
+<% if @post.quantity > 0 && has_price && !Settings.instance.paypal_client_id.blank? %>
   <script src="https://www.paypal.com/sdk/js?client-id=<%= Settings.instance.paypal_client_id %>"></script>
   <script>
     paypal.Buttons({

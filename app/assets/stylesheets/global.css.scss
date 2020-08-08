@@ -167,14 +167,21 @@ footer {
       }
 
       #paypal-button-container {
-        width: 300px;
+        width: 215px;
       }
     }
   }
 
+  .post-price, .post-quantity {
+    margin-top: 5px;
+  }
+
   .post-price {
     font-weight: bold;
-    margin-top: 5px;
+  }
+
+  .post-quantity {
+    font-style: italic;
   }
 }
 

@@ -48,7 +48,8 @@ class PostsController < ApplicationController
   end
 
   def sold
-    @post.update(:in_stock => false)
+    quantity = @post.quantity - 1
+    @post.update(:quantity => quantity)
     respond_to do |format|
       format.html { redirect_to request.referer, notice: "Sale complete. Thanks!" }
     end
@@ -57,7 +58,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image, :title, :category, :page_id, :price, :in_stock)
+    params.require(:post).permit(:content, :image, :title, :category, :page_id, :price, :quantity)
   end
 
   def load_post

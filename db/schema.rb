@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_11_203031) do
+ActiveRecord::Schema.define(version: 2020_08_08_203447) do
 
   create_table "editor_images", force: :cascade do |t|
     t.string "file"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_07_11_203031) do
     t.string "category", limit: 255
     t.integer "page_id"
     t.decimal "price"
-    t.boolean "in_stock"
+    t.integer "quantity", default: 0
   end
 
   create_table "settings", force: :cascade do |t|
