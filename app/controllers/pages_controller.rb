@@ -54,7 +54,7 @@ class PagesController < ApplicationController
   def page_params
     page = params[:page]
     if !page.nil?
-      page.permit(:path, :page_type, :page_sub_type, :page_order, :banner, :content)
+      page.permit(:path, :page_type, :page_sub_type, :page_order, :remove_banner, :banner, :content, :title, :banner_cache)
     end
   end
 
@@ -102,11 +102,11 @@ class PagesController < ApplicationController
   end
 
   def save_page
-    updated_params = params[:page].permit(:path, :page_type, :page_sub_type, :page_order, :remove_banner, :banner, :content)
+    updated_params = page_params
     begin
       updated_params.require(:path)
     rescue ActionController::ParameterMissing
-      flash[:notice] = "Page parameter missing. Choose banner again if needed."
+      flash[:notice] = "Path required."
       render :edit
       return
     end
