@@ -166,8 +166,9 @@ footer {
         }
       }
 
-      #paypal-button-container {
-        width: 215px;
+      #paypal-button-container > div {
+        width: 145px;
+        min-width: 0;
       }
     }
   }
