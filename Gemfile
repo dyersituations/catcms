@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.2.4.3'
 gem 'sqlite3', '~> 1.4.2'
-gem 'unicorn', '~> 5.5.5'
+gem 'puma'
 gem 'sass', '~> 3.7.4'
 gem 'sassc-rails', '~> 2.1.2'
 gem 'uglifier', '~> 4.2.0'
@@ -20,8 +20,4 @@ group :development do
   gem 'solargraph', '~> 0.39.11'
   gem 'rufo', '~> 0.12.0'
   gem 'htmlbeautifier', '~> 1.3.1'
-  gem 'capistrano', '~> 3.13.0'
-  gem 'capistrano-rails', '~> 1.5.0'
-  gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rbenv', '~> 2.1.4'
 end

@@ -1,9 +1,5 @@
 $c-border: #ddd;
 
-@mixin text-shadow {
-  text-shadow: -0.02ex 0 #000, 0.02ex 0 #000;
-}
-
 html {
   height: 100%;
 }
@@ -32,20 +28,12 @@ body {
     &:hover {
       text-decoration: underline;
     }
-
-    &:active {
-      @include text-shadow;
-    }
   }
 
   .nav-item {
     &:hover,
     &.nav-item-active {
       text-decoration: underline;
-    }
-
-    &:active {
-      @include text-shadow;
     }
 
     .nav-link {
@@ -88,10 +76,6 @@ body {
     text-decoration: underline;
   }
 
-  &:active {
-    @include text-shadow;
-  }
-
   &:focus,
   &:focus:active {
     box-shadow: none;
@@ -109,7 +93,7 @@ section {
   > section {
     width: 1170px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 15px;
   }
 }
 
@@ -291,13 +275,6 @@ footer {
       display: block;
     }
   }
-}
-
-#lightbox {
-  top: 0 !important;
-  height: 100%;
-  overflow: auto;
-  padding: 40px;
 }
 
 .hidden {

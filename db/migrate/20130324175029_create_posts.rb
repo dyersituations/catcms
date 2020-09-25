@@ -1,4 +1,4 @@
-class CreatePosts < ActiveRecord::Migration[4.2]
+class CreatePosts < ActiveRecord::Migration[5.2]
   def change
     create_table :posts do |t|
       t.string :page_path

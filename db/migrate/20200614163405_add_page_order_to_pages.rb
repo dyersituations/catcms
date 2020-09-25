@@ -1,4 +1,4 @@
-class AddPageOrderToPages < ActiveRecord::Migration[6.0]
+class AddPageOrderToPages < ActiveRecord::Migration[5.2]
   def change
     add_column :pages, :page_order, :integer, :default => 0
   end

@@ -6,6 +6,8 @@
 <% end %>
 <div class="alert alert-danger <%= !notice ? 'hidden' : '' %>"><%= notice %></div>
 <%= form_tag({ controller: :admin, action: :save }, multipart: true) do %>
+  <input type="text" class="hidden">
+  <input type="password" class="hidden">
   <div class="row">
     <div class="col-12 col-sm-4 form-group">
       <%= label_tag :admin_pass, 'Admin Password' %>

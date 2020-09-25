@@ -17,7 +17,6 @@ This tool can be used to build any simple website without the developer needing 
 <b>Frontend</b>
 - [jQuery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Lightbox](https://lokeshdhakar.com/projects/lightbox2/)
 
 <b>Backend</b>
 - [Ruby on Rails](https://rubyonrails.org/)
@@ -40,11 +39,6 @@ This tool can be used to build any simple website without the developer needing 
   - Install image editor for CarrierWave
     - ```cd /home/deploy```
     - ```sudo apt-get install imagemagick libmagickwand-dev```
-  - Capistrano:
-    - Create shared sqlite3 DB:
-      - ```mkdir /home/deploy/shared```
-      - ```scp development.sqlite3 deploy@x.x.x.x /home/deploy/myapp/shared/production.sqlite3```
-    - ```cap production deploy```
   - [Log Rotation](https://gorails.com/guides/rotating-rails-production-logs-with-logrotate)
     - Access the site between manual logrotate commands to see expected log items
   - [SSL Certification](https://gorails.com/guides/free-ssl-with-rails-and-nginx-using-let-s-encrypt)

@@ -1,4 +1,4 @@
-class ChangePostPagePathToPageId < ActiveRecord::Migration[5.0]
+class ChangePostPagePathToPageId < ActiveRecord::Migration[5.2]
   def change
     # Add new page_id column and update based on page_path.
     add_column :posts, :page_id, :integer
