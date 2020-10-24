@@ -17,3 +17,6 @@ group :development do
   gem 'rufo', '~> 0.12.0'
   gem 'htmlbeautifier', '~> 1.3.1'
 end
+group :production do
+  gem 'lograge', '~> 0.11.2'
+end
