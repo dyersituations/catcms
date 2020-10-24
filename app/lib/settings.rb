@@ -137,12 +137,12 @@ class Settings
   # Gets the value of the setting with the passed-in key, otherwise, default.
   def get_setting(key, default)
     setting = Setting.where(key: key).first
-    setting ? setting.value : default
+    setting && !setting.value.blank? ? setting.value : default
   end
 
   # Saves the settings with the passed-in key and val.
   def save_setting(key, val)
-    # Check for nil, since unchecked checkboxes don't sent a value.
+    # Check for nil, since unchecked checkboxes don't send a value.
     # Check for whether a boolean, since .blank? returns true for false.
     # Check for a blank string.
     if val == nil || !!val == val || !val.blank?
