@@ -9,13 +9,13 @@ class Settings
   ADMIN_PASS = "******"
   IS_ADMIN_PASS = false
   SITE_NAME = "CatCMS"
-  NAVBAR_BG_COLOR = "#fff"
-  NAVBAR_FONT_COLOR = "#000"
-  NAVBAR_BORDER_COLOR = "#000"
-  PAGE_BG_COLOR = "#fff"
-  PAGE_FONT_COLOR = "#000"
+  NAVBAR_BG_COLOR = "#ffffff"
+  NAVBAR_FONT_COLOR = "#000000"
+  NAVBAR_BORDER_COLOR = "#000000"
+  PAGE_BG_COLOR = "#ffffff"
+  PAGE_FONT_COLOR = "#000000"
   SUBNAV_BG_COLOR = "#6c757d"
-  SUBNAV_FONT_COLOR = "#fff"
+  SUBNAV_FONT_COLOR = "#ffffff"
   COPYRIGHT_NAME = ""
   GALLERY_CAPTIONS = false
   META_DESCRIPTION = ""
@@ -137,12 +137,12 @@ class Settings
   # Gets the value of the setting with the passed-in key, otherwise, default.
   def get_setting(key, default)
     setting = Setting.where(key: key).first
-    setting ? setting.value : default
+    setting && !setting.value.blank? ? setting.value : default
   end
 
   # Saves the settings with the passed-in key and val.
   def save_setting(key, val)
-    # Check for nil, since unchecked checkboxes don't sent a value.
+    # Check for nil, since unchecked checkboxes don't send a value.
     # Check for whether a boolean, since .blank? returns true for false.
     # Check for a blank string.
     if val == nil || !!val == val || !val.blank?

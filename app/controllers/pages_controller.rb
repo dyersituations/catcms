@@ -78,7 +78,7 @@ class PagesController < ApplicationController
     else
       # When loading root.
       @page = Page.first
-      @path = @page.path.downcase
+      @path = @page.nil? ? "" : @page.path.downcase
     end
   end
 

@@ -36,4 +36,11 @@
   footer {
     background: <%= Settings.instance.page_bg_color %>;
   }
+  #nav .navbar-brand:active,
+  #nav .nav-item:active {
+    text-shadow: -0.02ex 0 <%= Settings.instance.navbar_font_color %>, 0.02ex 0 <%= Settings.instance.navbar_font_color %>;
+  }
+  .sub-nav.btn-group .btn:active {
+    text-shadow: -0.02ex 0 <%= Settings.instance.subnav_font_color %>, 0.02ex 0 <%= Settings.instance.subnav_font_color %>;
+  }
 </style>
