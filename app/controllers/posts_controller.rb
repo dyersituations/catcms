@@ -49,10 +49,7 @@ class PostsController < ApplicationController
 
   def sold
     quantity = @post.quantity - 1
-    @post.update(:quantity => quantity)
-    respond_to do |format|
-      format.html { redirect_to request.referer, notice: "Sale complete. Thanks!" }
-    end
+    @post.update(:quantity => quantity)    
   end
 
   private
