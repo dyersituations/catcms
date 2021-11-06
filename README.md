@@ -1,7 +1,8 @@
 ## CatCMS
+
 _**C**ool **A**r**t** **C**ontent **M**anagement **S**ystem_
 
-The typical website a visual artist uses to display their work is both expensive to buy and expensive to maintain. CatCMS was born from the desire to create a simple and powerful tool that empowers an artist to both create and maintain their own website. 
+The typical website a visual artist uses to display their work is both expensive to buy and expensive to maintain. CatCMS was born from the desire to create a simple and powerful tool that empowers an artist to both create and maintain their own website.
 
 This tool can be used to build any simple website without the developer needing to upload any code and without the user needing to know how the website works behind the scenes. Once an instance of CatCMS has been deployed to a server, the developer is entirely hands-off, and the user can take control of the website creation and maintenance.
 
@@ -15,26 +16,30 @@ This tool can be used to build any simple website without the developer needing 
 ## Tech Stack
 
 <b>Frontend</b>
+
 - [jQuery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)
 
 <b>Backend</b>
+
 - [Ruby on Rails](https://rubyonrails.org/)
 - [SQLite](https://www.sqlite.org/index.html)
 
 ## Development
 
-- Docker
-- Docker Compose
-- Ruby 2.7.0
-- Rails 5.2.4.4
-- ```sudo apt-get install -y imagemagick libmagickwand-dev```
+- [Install Ruby 2.7.0 and Rails 5.2.4.4](https://gorails.com/setup/ubuntu/21.04)
+- `sudo apt-get install -y imagemagick libmagickwand-dev`
+- `gem install bundler:2.1.4`
+- `bundle`
+- `rails db:setup`
+- `rails s`
 
 ## Deployment
 
+- Install Docker and Docker Compose
 - [CatDocker](https://github.com/dyersituations/catdocker)
 - [Digital Ocean](https://www.digitalocean.com/)
-    - $5 Ubuntu Droplet
+  - $5 Ubuntu Droplet
 
 ## License
 
