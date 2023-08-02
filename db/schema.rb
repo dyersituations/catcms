@@ -10,35 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_09_170638) do
+ActiveRecord::Schema.define(version: 2023_07_29_184530) do
 
   create_table "editor_images", force: :cascade do |t|
     t.string "file"
     t.string "alt"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", force: :cascade do |t|
     t.integer "page_type", null: false
-    t.string "path", null: false
-    t.string "banner"
+    t.string "path", limit: 255, null: false
+    t.string "banner", limit: 255
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "page_order", default: 0
     t.integer "page_sub_type", default: 0
     t.text "title"
+    t.boolean "hide", default: false
     t.index ["path"], name: "index_pages_on_path", unique: true
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
+    t.string "title", limit: 255
+    t.string "image", limit: 255
     t.text "content"
-    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category", limit: 255
     t.integer "page_id"
     t.decimal "price"
     t.integer "quantity", default: 0
@@ -47,8 +48,8 @@ ActiveRecord::Schema.define(version: 2020_08_09_170638) do
   create_table "settings", force: :cascade do |t|
     t.string "key"
     t.string "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -54,7 +54,7 @@ class PagesController < ApplicationController
   def page_params
     page = params[:page]
     if !page.nil?
-      page.permit(:path, :page_type, :page_sub_type, :page_order, :remove_banner, :banner, :content, :title, :banner_cache)
+      page.permit(:path, :page_type, :page_sub_type, :page_order, :remove_banner, :banner, :content, :title, :banner_cache, :hide)
     end
   end
 

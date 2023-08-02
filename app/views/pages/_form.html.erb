@@ -5,37 +5,44 @@
   <%= f.hidden_field :banner_cache %>
   <%= f.hidden_field :remove_banner %>
   <div class="row">
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-3 form-group">
       <%= f.label :path %>
       <%= f.text_field :path, :class => 'form-control' %>
     </div>
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-6 form-group">
       <%= f.label :title %>
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-3 form-group">
       <%= f.label :page_type, "Page Type" %>
       <%= f.select :page_type, Page::PAGE_TYPE, {}, :class => 'form-control', :onchange => 'onChangePageType(this)' %>
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-4 form-group">
-      <%= f.label :page_type, "Page Order" %>
+    <div class="col-12 col-sm-3 form-group">
+      <%= f.label :page_order, "Page Order" %>
       <%= f.select :page_order, @pages.map.with_index { |x, i| [i + 1, i] }, {}, :class => 'form-control' %>
     </div>
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-3 form-group">
       <%= f.label :banner %>
       <sub>2400 x 300 px</sub>
       <%= f.file_field :banner, :class => 'form-control-file', :onchange => "onAddBanner()" %>
       <%= link_to 'Remove Banner', '#', :class => 'banner-remove ' + (@page.banner.present? ? '' : 'hidden'), :onclick => 'onRemoveBanner()' %>
     </div>
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-3 form-group">
       <%= f.label :banner_thumbnail, "Banner Thumbnail" %>
       <% if @page.banner? %>
         <div class="banner-thumb" style="background-image: url(<%= @page.banner %>);"></div>
       <% else %>
         <div>None</div>
       <% end %>
+    </div>
+    <div class="col-12 col-sm-3 form-group">
+      <%= f.label :hide %>
+      <div class="custom-control custom-switch">
+        <%= f.check_box :hide, :class => 'custom-control-input', :id => 'hide-switch' %>
+        <label class="custom-control-label" for="hide-switch"></label>
+      </div>
     </div>
   </div>
   <div id="gallery-type" class="row <%= @page.page_type == Page::PAGE_TYPE[:GALLERY] ? '' : 'hidden' %>">

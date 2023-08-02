@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-4 form-group">
+    <div class="col-12 col-sm-8 form-group">
       <%= label_tag :meta_description, 'Meta Description' %>
       <sub>150 characters</sub>
       <%= text_area_tag :meta_description, @settings.meta_description, class: 'form-control' %>
@@ -77,9 +77,18 @@
       <%= label_tag :favicon, 'Favicon' %>
       <%= file_field_tag :favicon, class: 'form-control-file' %>
     </div>
+  </div>
+  <div class="row">
     <div class="col-12 col-sm-4 form-group">
       <%= label_tag :paypal_client_id, 'PayPal Client ID' %>
       <%= text_field_tag :paypal_client_id, @settings.paypal_client_id, class: 'form-control' %>
+    </div>
+    <div class="col-12 col-sm-4 form-group">
+      <%= label_tag :show_hidden_pages, 'Show Hidden Pages' %>
+      <div class="custom-control custom-switch">
+        <%= check_box_tag :show_hidden_pages, nil, @settings.show_hidden_pages, :class => 'custom-control-input' %>
+        <%= label_tag :show_hidden_pages, '', :class => 'custom-control-label' %>
+      </div>
     </div>
   </div>
   <div class="row">

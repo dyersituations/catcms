@@ -27,7 +27,7 @@ This tool can be used to build any simple website without the developer needing 
 
 ## Development
 
-- [Install Ruby 2.7.0 and Rails 5.2.4.4](https://gorails.com/setup/ubuntu/21.04)
+- [Install Ruby 2.7.0, Rails 5.2.4.4, and Node.js](https://gorails.com/setup)
 - `sudo apt-get install -y imagemagick libmagickwand-dev`
 - `gem install bundler:2.1.4`
 - `bundle`
