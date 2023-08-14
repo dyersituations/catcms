@@ -11,6 +11,7 @@ gem 'mini_magick', '~> 4.10.1'
 gem 'tinymce-rails', '~> 4.9.10'
 gem 'tinymce-rails-imageupload', '~> 4.0.17.beta.3'
 gem 'execjs', '~> 2.7.0'
+gem 'mini_portile2', '~> 2.6.1'
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'solargraph', '~> 0.39.11'
